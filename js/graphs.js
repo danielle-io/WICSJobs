@@ -62,7 +62,6 @@ $(document).ready(function () {
     if (stateJobs[i] >= 10) {
       opacity = 1.0;
     }
-    console.log(opacity);
     stateColors[i] = {};
     stateColors[i]["fill"] = "#ff0c7b";
     stateColors[i]["opacity"] = opacity;
@@ -77,13 +76,11 @@ $(document).ready(function () {
       var textString = data.name;
       if (data.name in stateJobs) {
         for (i in stateJobs[data.name]) {
-          textString += "<br>" + i + '\t' + stateJobs[data.name][i];
+          textString += "<br>" + i + "\t" + stateJobs[data.name][i];
         }
       }
 
       document.getElementById("stateInfo").innerHTML = textString;
-
-      document.inner
     },
   });
 
