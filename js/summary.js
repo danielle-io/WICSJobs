@@ -1,3 +1,6 @@
+var jobCounts = {};
+var stateJobs = {};
+
 function parseData(raw_data) {
   if (raw_data === undefined) {
     return;
@@ -12,18 +15,31 @@ function parseData(raw_data) {
 }
 
 function getCounts(data_array) {
-  var jobCounts = {};
   for (var i in data_array) {
-    if (data_array[i].standardizedCompanyName in jobCounts) {
-      jobCounts[data_array[i].standardizedCompanyName] += 1;
+    var companyName = data_array[i].standardizedCompanyName;
+    var state = data_array[i].stateAbbreviation.state;
+    if (companyName in jobCounts) {
+      jobCounts[companyName] += 1;
     } else {
-      jobCounts[data_array[i].standardizedCompanyName] = 1;
+      jobCounts[companyName] = 1;
+    }
+    // State is in the dictionary
+    if (state in stateJobs) {
+      // Company is in the dictionary under the state name
+      if (companyName in stateJobs[state]) {
+        stateJobs[state][companyName] += 1;
+      }
+      // Company is not under the state name in the dictionary
+      else {
+        stateJobs[state][companyName] = 1;
+      }
+      // State is not in the dictionary
+    } else {
+      stateJobs[state] = {};
+      stateJobs[state][companyName] = 1;
     }
   }
-  // console.log(jobCounts);
-
   var jobArray = createJobArray(jobCounts);
-  // console.log(jobArray);
 
   jobArray.sort((a, b) => (jobCounts[a] < jobCounts[b] ? -1 : 1));
 
@@ -34,7 +50,7 @@ function getCounts(data_array) {
     var cell2 = row.insertCell(1);
 
     cell1.innerHTML = jobArray[i].job;
-    cell2.innerHTML =  jobArray[i].count;
+    cell2.innerHTML = jobArray[i].count;
   }
 }
 

@@ -18,4 +18,23 @@ class Job {
         // lowercase with first letter capital
         return this.companyName.charAt(0).toUpperCase() + this.companyName.slice(1);
     }
+    get stateAbbreviation() {
+        var cityState;
+        var state;
+        var stateAbbrev;
+        if (!this.location.includes(",")) {
+            state = this.location;
+        }
+        else {
+            cityState = this.location.split(",");
+            state = cityState[1].trim();
+        }
+        if (state.length === 2) {
+            stateAbbrev = new StateAbbreviationConversions(state.toUpperCase());
+        }
+        else {
+            stateAbbrev = new StateAbbreviationConversions(state.charAt(0).toUpperCase() + state.slice(1));
+        }
+        return stateAbbrev;
+    }
 }
