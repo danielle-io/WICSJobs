@@ -42,7 +42,6 @@ html, body {
 	margin-right: 6px;
 }
 
-
 .card {
 	margin: 1em auto;
 	width: 80%;
@@ -59,5 +58,23 @@ html, body {
 
 .card:hover {
 	box-shadow: 0 0 1em rgb(145, 140, 140) !important;
-	zoom: 1.2;
+	/* zoom: 1.2; */
+}
+
+.card-button.aria-expanded {
+	content: '+';
+	display: block;
+	width: 15px;
+}
+
+.card-button:before {
+	/* content:'-' ;
+    display:block;
+    width:15px; */
+}
+
+/* Styling active collapse buttons */
+
+.active-card-button {
+	box-shadow: 0 0 1em rgb(145, 140, 140) !important;
 }

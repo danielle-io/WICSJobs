@@ -28,17 +28,17 @@
   <div class="container" id="containers">
     <div class="row">
       <div class="col-sm">
-        <div id="mapView" class="card" data-toggle="collapse" href="#mapViewContainer">
-          Map & Summary
+        <div id="aboutView" class="card card-button" href="#aboutViewContainer">
+          About & Summary
         </div>
       </div>
       <div class="col-sm">
-        <div id="sortAndContactView" class="card" data-toggle="collapse" href="#sortAndContactViewContainer">
-          Sort & Contact
+        <div id="sortAndContactView" class="card card-button" href="#sortAndContactViewContainer">
+          Browse Data
         </div>
       </div>
       <div class="col-sm">
-        <div id="submitRatingView" class="card" data-toggle="collapse" href="#submitRatingViewContainer">
+        <div id="submitRatingView" class="card card-button" href="#submitRatingViewContainer">
           Submit Your Rating
         </div>
       </div>
@@ -47,30 +47,85 @@
 
     <div class="container">
 
-      <!-- <div id="mapViewContainer" class="panel-collapse collapse in"> -->
-      <div id="mapViewContainer" class="panel-collapse collapse" data-parent="#containers">
-
+      <div id="aboutViewContainer" class="panel-collapse collapse">
         <div style="margin-top:20px;">
-          <h1>WICS Map</h1>
 
-          <div id="mapVis"></div>
+          <div id="summaryResults">
+            <h1>The Data</h1>
 
-          <div id="map" style="margin-top: 10px; width: 350px; height: 250px; margin: auto;"></div>
-          <div id="clicked-state"></div>
+            <div class="row">
+              <div class="col-sm">
+                Total Participants:
+              </div>
+              <div class="col-sm" id="participants">
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-sm">
+                Total Number of Companies:
+              </div>
+              <div class="col-sm" id="companyCount">
+              </div>
+            </div>
+
+            <div class="row">
+
+              <div class="col-sm">
+                Average Overall Job Rating:
+              </div>
+              <div class="col-sm" id="averageOverallRating">
+              </div>
+            </div>
 
 
-          <div id="stateInfo"></div>
-          <div id="map2" style="width: 300px; height: 300px;"></div>
+            <div class="row">
+
+              <div class="col-sm">
+                Average Learn & Grow Rating:
+              </div>
+              <div class="col-sm" id="averageLearnGrowRating">
+              </div>
+            </div>
+            <div class="row">
+
+              <div class="col-sm">
+                Average Rating for Recommendation to Others:
+              </div>
+              <div class="col-sm" id="averageRecRating">
+              </div>
+            </div>
+          </div>
+
+          </h4>
+          <h1>The Creators</h1>
+          <h1>The Mission</h1>
+
         </div>
+
       </div>
 
-
-      <div id="sortAndContactViewContainer" class="panel-collapse collapse" data-parent="#containers">
+      <div id="sortAndContactViewContainer" class="panel-collapse collapse">
         <div style="margin-top:20px;">
-          <h1>Sort Info</h1>
+          <h1>The Data</h1>
           <table id="companyCountTable" style="width:100%">
           </table>
 
+
+
+          <div id="mapViewContainer" class="panel-collapse collapse" data-parent="#views">
+
+            <div style="margin-top:20px;">
+              <h1>WICS Map</h1>
+
+              <div id="mapVis"></div>
+
+              <div id="map" style="margin-top: 10px; width: 350px; height: 250px; margin: auto;"></div>
+              <div id="clicked-state"></div>
+              <div id="stateInfo"></div>
+              <div id="map2" style="width: 300px; height: 300px;"></div>
+            </div>
+          </div>
         </div>
       </div>
 

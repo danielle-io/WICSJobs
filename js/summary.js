@@ -2,6 +2,16 @@
 var jobData = {};
 var stateJobs = {};
 var companyRatings = {};
+var totalSummary = {
+  participants: 0,
+  companyCount: 0,
+  sumOfRecRatings: 0,
+  sumOfLearnGrowRating: 0,
+  sumOfOverallRatings: 0,
+  averageOverallRating: 0,
+  averageLearnGrowRating: 0,
+  averageRecRating: 0,
+};
 
 function parseData(raw_data) {
   if (raw_data === undefined) {
@@ -23,10 +33,12 @@ function getCounts(data_array) {
     var recRating = data_array[i].recRating;
     var learnRating = data_array[i].learningGrowthRating;
 
+    // Company exists in disctionary
     if (companyName in jobData) {
       jobData[companyName]["employeeCount"] += 1;
       jobData[companyName]["sumOfOverallRatings"] += overallRating;
       jobData[companyName]["sumOfRecRatings"] += recRating;
+      jobData[companyName]["sumOfLearnGrowRating"] += learnRating;
     } else {
       jobData[companyName] = {};
       jobData[companyName]["employeeCount"] = 1;
@@ -38,7 +50,16 @@ function getCounts(data_array) {
       jobData[companyName]["averageOverallRating"] = 0;
       jobData[companyName]["averageRecRating"] = 0;
       jobData[companyName]["averageLearnGrowRating"] = 0;
+
+      // Add overall summary data
+      totalSummary["companyCount"] += 1;
     }
+
+    // Add overall summary data
+    totalSummary["participants"] += 1;
+    totalSummary["sumOfOverallRatings"] += overallRating;
+    totalSummary["sumOfRecRatings"] += recRating;
+    totalSummary["sumOfLearnGrowRating"] += learnRating;
 
     // State is in the dictionary
     if (state in stateJobs) {
@@ -85,7 +106,17 @@ function createJobArray(jobData) {
     jobData[i]["averageRecRating"] =
       jobData[i]["sumOfRecRatings"] / jobData[i]["employeeCount"];
     jobData[i]["averageLearnGrowRating"] =
-      jobData[i]["sumOfLearnGrowRating"] / jobData[i]["employeeCount"];
+      jobData[i]["sumOfLearnGrowRating"] / totalSummary["employeeCount"];
+
+    // Add overall summary data
+    totalSummary["averageOverallRating"] =
+      totalSummary["sumOfOverallRatings"] / totalSummary["participants"];
+    totalSummary["averageRecRating"] =
+      totalSummary["sumOfRecRatings"] / totalSummary["participants"];
+    totalSummary["averageLearnGrowRating"] =
+      totalSummary["sumOfLearnGrowRating"] / totalSummary["participants"];
+
+    insertOverallSummary();
 
     jobArr.push({
       companyName: i,
@@ -103,9 +134,13 @@ function getPercent(sourceCount) {
   return ((sourceCount / data_array.length) * 100).toFixed(2);
 }
 
-function clearTable() {
-  $("#jobsTable").empty();
-  return data_array;
+// Update the HTML summary text
+function insertOverallSummary() {
+  $("#participants").text(totalSummary.participants);
+  $("#companyCount").text(totalSummary.companyCount);
+  $("#averageOverallRating").text(totalSummary.averageOverallRating.toFixed(2));
+  $("#averageLearnGrowRating").text(totalSummary.averageLearnGrowRating.toFixed(2));
+  $("#averageRecRating").text(totalSummary.averageRecRating.toFixed(2));
 }
 
 function displayJobs() {
@@ -121,15 +156,33 @@ function displayJobs() {
 
 // Clicking a card opens up the relevant container
 $(".card").on("click", function (event) {
-  collapseAndExpandContainers("#" + this.id + "Containter");
+  collapseAndExpandContainers(this.id);
 });
 
-function collapseAndExpandContainers(itemName) {
-  console.log(itemName);
-  // Apply the active styling 
+function collapseAndExpandContainers(itemId) {
+  // Apply the active and inactive styling
+  var containerId = "#" + itemId + "Containter";
+  var items = document.getElementsByClassName("card-button");
+
+  // If everything is closed do not close the section
+  if ($("#" + itemId).hasClass("active-card-button")) {
+    return;
+  }
+
+  for (var item in items) {
+    if (items[item].id !== itemId) {
+      $("#" + items[item].id).removeClass("active-card-button");
+      $("#" + items[item].id + "Container").removeClass("show");
+    }
+  }
+
+  // Make current item active
+  $("#" + itemId).addClass("active-card-button");
+  $("#" + itemId + "Container").addClass("show");
 }
 
 $(document).ready(function () {
   loadData().then(parseData);
+  // Start with about expanded
+  $("#aboutView").trigger("click");
 });
-
