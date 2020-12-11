@@ -1,5 +1,7 @@
-var jobCounts = {};
+// A dictionary of average ratings and amount of employees per job
+var jobData = {};
 var stateJobs = {};
+var companyRatings = {};
 
 function parseData(raw_data) {
   if (raw_data === undefined) {
@@ -10,7 +12,6 @@ function parseData(raw_data) {
     return new Job(data);
   });
 
-  // Set earliest and latest dates
   getCounts(data_array);
 }
 
@@ -18,11 +19,27 @@ function getCounts(data_array) {
   for (var i in data_array) {
     var companyName = data_array[i].standardizedCompanyName;
     var state = data_array[i].stateAbbreviation.state;
-    if (companyName in jobCounts) {
-      jobCounts[companyName] += 1;
+    var overallRating = data_array[i].overallRating;
+    var recRating = data_array[i].recRating;
+    var learnRating = data_array[i].learningGrowthRating;
+
+    if (companyName in jobData) {
+      jobData[companyName]["employeeCount"] += 1;
+      jobData[companyName]["sumOfOverallRatings"] += overallRating;
+      jobData[companyName]["sumOfRecRatings"] += recRating;
     } else {
-      jobCounts[companyName] = 1;
+      jobData[companyName] = {};
+      jobData[companyName]["employeeCount"] = 1;
+      jobData[companyName]["sumOfOverallRatings"] = overallRating;
+      jobData[companyName]["sumOfRecRatings"] = recRating;
+      jobData[companyName]["sumOfLearnGrowRating"] = learnRating;
+
+      // Start averages at 0 - will be calculated later
+      jobData[companyName]["averageOverallRating"] = 0;
+      jobData[companyName]["averageRecRating"] = 0;
+      jobData[companyName]["averageLearnGrowRating"] = 0;
     }
+
     // State is in the dictionary
     if (state in stateJobs) {
       // Company is in the dictionary under the state name
@@ -39,29 +56,46 @@ function getCounts(data_array) {
       stateJobs[state][companyName] = 1;
     }
   }
-  var jobArray = createJobArray(jobCounts);
+  // Create an array of job data so it can be sorted and displayed
+  var jobArray = createJobArray(jobData);
 
-  jobArray.sort((a, b) => (jobCounts[a] < jobCounts[b] ? -1 : 1));
+  // jobArray.sort((a, b) => (jobData[a].employeeCount < jobData[b].employeeCount ? -1 : 1));
+
+  console.log(jobData);
 
   for (var i in jobArray) {
+    // Calculate average ratings
     var table = document.getElementById("companyCountTable");
     var row = table.insertRow(-1);
     var cell1 = row.insertCell(0);
     var cell2 = row.insertCell(1);
+    console.log(jobArray[i]);
 
-    cell1.innerHTML = jobArray[i].job;
-    cell2.innerHTML = jobArray[i].count;
+    cell1.innerHTML = jobArray[i].companyName;
+    cell2.innerHTML = jobArray[i].employeeCount;
   }
 }
 
-function createJobArray(jobCounts) {
+function createJobArray(jobData) {
   var jobArr = [];
-  for (i in jobCounts) {
+  for (i in jobData) {
+    // Calculate Averages
+    jobData[i]["averageOverallRating"] =
+      jobData[i]["sumOfOverallRatings"] / jobData[i]["employeeCount"];
+    jobData[i]["averageRecRating"] =
+      jobData[i]["sumOfRecRatings"] / jobData[i]["employeeCount"];
+    jobData[i]["averageLearnGrowRating"] =
+      jobData[i]["sumOfLearnGrowRating"] / jobData[i]["employeeCount"];
+
     jobArr.push({
-      job: i,
-      count: jobCounts[i],
+      companyName: i,
+      employeeCount: jobData[i]["employeeCount"],
+      averageOverallRating: jobData[i]["averageOverallRating"],
+      averageRecRating: jobData[i]["averageRecRating"],
+      averageLearnGrowRating: jobData[i]["averageLearnGrowRating"],
     });
   }
+  console.log(jobArr);
   return jobArr;
 }
 
@@ -85,14 +119,17 @@ function displayJobs() {
   }
 }
 
-function searchJobs(searchWords) {
-  // Ignore casing of search and results
-  var lowerCaseSearch = searchWords.toLowerCase();
+// Clicking a card opens up the relevant container
+$(".card").on("click", function (event) {
+  collapseAndExpandContainers("#" + this.id + "Containter");
+});
 
-  return currentSearch;
+function collapseAndExpandContainers(itemName) {
+  console.log(itemName);
+  // Apply the active styling 
 }
 
-//Wait for the DOM to load
 $(document).ready(function () {
   loadData().then(parseData);
 });
+

@@ -17,3 +17,47 @@ a:active {
 	color: #B32B00;
 	text-decoration: underline;
 }
+
+body {
+	background-color: #bce6eb;
+	font-family: 'Roboto', sans-serif;
+}
+
+.page-header {
+	text-align: center;
+	font-size: 4em;
+	font-family: 'Poppins', sans-serif;
+	color: #98acf8;
+	font-weight: 800;
+	font-size: 3.8em;
+}
+
+html, body {
+	scroll-behavior: smooth;
+}
+
+.material-icons {
+	vertical-align: middle;
+	margin-left: 6px;
+	margin-right: 6px;
+}
+
+
+.card {
+	margin: 1em auto;
+	width: 80%;
+	border: solid 1em white;
+	border-radius: 0.5em;
+	transform-style: preserve-3d;
+	-moz-transform-style: preserve-3d;
+	-webkit-transform-style: preserve-3d;
+	transition: 0.7s;
+	-moz-transition: 0.7s;
+	-webkit-transition: 0.7s;
+	cursor: pointer;
+}
+
+.card:hover {
+	box-shadow: 0 0 1em rgb(145, 140, 140) !important;
+	zoom: 1.2;
+}

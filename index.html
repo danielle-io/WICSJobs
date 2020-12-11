@@ -3,10 +3,17 @@
 
 <head>
   <meta charset="utf-8">
-  <meta name="author" content="">
-  <meta name="description" content="">
+  <meta name="author" content="Danielle Scott, Archita Ganesh">
+  <meta name="description" content="WICS Jobs Experience Webpage">
 
-
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Roboto:wght@300&display=swap"
+    rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
     integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
   <link rel="stylesheet" href="css/style.css">
@@ -14,44 +21,70 @@
   <title>WICS Jobs</title>
 </head>
 
-<body class="container">
-  <nav class="navbar navbar-expand-lg sticky-top navbar-dark bg-primary">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item navbar-brand">
-        <span class="navbar-brand">
-          WICS Jobs </span>
-      </li>
-      <li class="nav-item active">
-        <a href="index.html" class="nav-link">
-          Summary
-        </a>
-      </li>
-      <li class="nav-item">
-        <a href="" class="nav-link">
-          Ratings </a>
-      </li>
-      <li class="nav-item">
-        <a href="" class="nav-link">
-          Map </a>
-      </li>
-    </ul>
-  </nav>
-  <main>
-    <h1>About the data</h1>
+<body>
 
-    <table id="companyCountTable" style="width:100%">
-    </table>
+  <header class="page-header">WICS Jobs</header>
 
-    <div id="mapVis"></div>
-
-    <div id="map" style="margin-top: 10px; width: 350px; height: 250px; margin: auto;"></div>
-    <div id="clicked-state"></div>
+  <div class="container" id="containers">
+    <div class="row">
+      <div class="col-sm">
+        <div id="mapView" class="card" data-toggle="collapse" href="#mapViewContainer">
+          Map & Summary
+        </div>
+      </div>
+      <div class="col-sm">
+        <div id="sortAndContactView" class="card" data-toggle="collapse" href="#sortAndContactViewContainer">
+          Sort & Contact
+        </div>
+      </div>
+      <div class="col-sm">
+        <div id="submitRatingView" class="card" data-toggle="collapse" href="#submitRatingViewContainer">
+          Submit Your Rating
+        </div>
+      </div>
+    </div>
 
 
-    <div id="stateInfo"></div>
-    <div id="map2" style="width: 300px; height: 300px;"></div>
-  </main>
+    <div class="container">
 
+      <!-- <div id="mapViewContainer" class="panel-collapse collapse in"> -->
+      <div id="mapViewContainer" class="panel-collapse collapse" data-parent="#containers">
+
+        <div style="margin-top:20px;">
+          <h1>WICS Map</h1>
+
+          <div id="mapVis"></div>
+
+          <div id="map" style="margin-top: 10px; width: 350px; height: 250px; margin: auto;"></div>
+          <div id="clicked-state"></div>
+
+
+          <div id="stateInfo"></div>
+          <div id="map2" style="width: 300px; height: 300px;"></div>
+        </div>
+      </div>
+
+
+      <div id="sortAndContactViewContainer" class="panel-collapse collapse" data-parent="#containers">
+        <div style="margin-top:20px;">
+          <h1>Sort Info</h1>
+          <table id="companyCountTable" style="width:100%">
+          </table>
+
+        </div>
+      </div>
+
+
+      <div id="submitRatingViewContainer" class="panel-collapse collapse" data-parent="#containers">
+        <div style="margin-top:20px;">
+          <h1>Submit Your Rating</h1>
+        </div>
+
+      </div>
+
+
+    </div>
+  </div>
 
   <script src="https://cdn.jsdelivr.net/npm/vega@5.6.0"></script>
   <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.0.0-beta.8"></script>
@@ -68,10 +101,20 @@
   <script type="text/javascript" src="js/stateAbbreviations.js"></script>
   <script type="text/javascript" src="js/graphs.js"></script>
 
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
   <script src="js/raphael.js"></script>
   <script type="text/javascript" src="js/usmap.js"></script>
   <script src="js/usmap.js"></script>
 
 </body>
+
 
 </html>
