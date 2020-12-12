@@ -1,12 +1,16 @@
 class StateAbbreviationConversions {
-  private state: string;
+  private stateAbb: string;
+  private stateFull: string;
 
   constructor(state: string) {
-    this.state = state;
+    this.stateAbb = state;
+    this.stateFull = state;
 
     if (state.length !== 2) {
-      this.state = this.getAbbreviation(state);
+      this.stateAbb = this.getAbbreviation(state);
     }
+
+    this.stateFull = this.getFullStateName(this.stateAbb);
   }
 
   getAbbreviation(state: string) {
@@ -70,8 +74,8 @@ class StateAbbreviationConversions {
     return abbreviationConverted;
   }
 
-  getState(state: string) {
-    const abbreviationsToState = {
+  getFullStateName(abbreviation: string) {
+    const abbreviationsToState: any = {
       AL: "Alabama",
       AK: "Alaska",
       AS: "American Samoa",
@@ -132,5 +136,7 @@ class StateAbbreviationConversions {
       WI: "Wisconsin",
       WY: "Wyoming",
     };
+    var abbreviationConverted = abbreviationsToState[abbreviation];
+    return abbreviationConverted;
   }
 }

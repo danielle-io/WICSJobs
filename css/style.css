@@ -32,6 +32,10 @@ body {
 	font-size: 3.8em;
 }
 
+.section-headers {
+	text-align: center;
+}
+
 html, body {
 	scroll-behavior: smooth;
 }
@@ -61,20 +65,60 @@ html, body {
 	/* zoom: 1.2; */
 }
 
-.card-button.aria-expanded {
-	content: '+';
-	display: block;
-	width: 15px;
-}
-
-.card-button:before {
-	/* content:'-' ;
-    display:block;
-    width:15px; */
-}
-
 /* Styling active collapse buttons */
 
 .active-card-button {
 	box-shadow: 0 0 1em rgb(145, 140, 140) !important;
+}
+
+/* The side navigation menu */
+
+.sidenav {
+	height: 100%;
+	/* Set the width of the sidebar */
+	width: 160px;
+	/* Fixed Sidebar (stay in place on scroll) */
+	position: fixed;
+	/* background-color: rgb(100 173 196); */
+	overflow-x: hidden;
+	padding-top: 106px;
+}
+
+/* The navigation menu links */
+
+.sidenav a {
+	font-size: 18px;
+	font-family: "Poppins";
+	cursor: pointer;
+}
+
+.nav-item a:hover {
+	color: #96fdff;
+}
+
+/* Remove the bullet points from lists */
+
+.nav-list {
+	padding: 0;
+	list-style-type: none;
+}
+
+.inactive-link {
+	color: #df87c1;
+}
+
+.active-link {
+	color: #df87c1 !important;
+}
+
+/* Margin for body alongside side nav */
+
+.data-section-body {
+	margin-left: 160px;
+}
+
+.state-name{
+	color: #b088f9;
+	font-size: 2em;
+	font-family: "Poppins";
 }

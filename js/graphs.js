@@ -73,7 +73,10 @@ $(document).ready(function () {
     mouseoverState: {},
 
     click: function (event, data) {
-      var textString = data.name;
+      var stateConversion = new StateAbbreviationConversions(data.name);
+      var textString =
+        "<div class='state-name'>" + stateConversion.stateFull + "</div>";
+
       if (data.name in stateJobs) {
         for (i in stateJobs[data.name]) {
           textString += "<br>" + i + "\t" + stateJobs[data.name][i];

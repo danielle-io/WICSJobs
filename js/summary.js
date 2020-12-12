@@ -27,8 +27,13 @@ function parseData(raw_data) {
 
 function getCounts(data_array) {
   for (var i in data_array) {
+    var stateObject = data_array[i].stateAbbreviation;
+
+    var state = stateObject.stateAbb;
+
+    var stateFullName = stateObject.stateFull;
+
     var companyName = data_array[i].standardizedCompanyName;
-    var state = data_array[i].stateAbbreviation.state;
     var overallRating = data_array[i].overallRating;
     var recRating = data_array[i].recRating;
     var learnRating = data_array[i].learningGrowthRating;
@@ -79,10 +84,14 @@ function getCounts(data_array) {
   }
   // Create an array of job data so it can be sorted and displayed
   var jobArray = createJobArray(jobData);
+  console.log(jobArray);
 
-  // jobArray.sort((a, b) => (jobData[a].employeeCount < jobData[b].employeeCount ? -1 : 1));
+    jobArray.sort((a, b) => {
+      (jobArray[a] < jobArray[b] ? -1 : 1);
+    });
+  
 
-  console.log(jobData);
+  // console.log(jobData);
 
   for (var i in jobArray) {
     // Calculate average ratings
@@ -90,7 +99,6 @@ function getCounts(data_array) {
     var row = table.insertRow(-1);
     var cell1 = row.insertCell(0);
     var cell2 = row.insertCell(1);
-    console.log(jobArray[i]);
 
     cell1.innerHTML = jobArray[i].companyName;
     cell2.innerHTML = jobArray[i].employeeCount;
@@ -139,19 +147,10 @@ function insertOverallSummary() {
   $("#participants").text(totalSummary.participants);
   $("#companyCount").text(totalSummary.companyCount);
   $("#averageOverallRating").text(totalSummary.averageOverallRating.toFixed(2));
-  $("#averageLearnGrowRating").text(totalSummary.averageLearnGrowRating.toFixed(2));
+  $("#averageLearnGrowRating").text(
+    totalSummary.averageLearnGrowRating.toFixed(2)
+  );
   $("#averageRecRating").text(totalSummary.averageRecRating.toFixed(2));
-}
-
-function displayJobs() {
-  // Clear old rows first
-  $("#jobsTable").empty();
-
-  for (var rowNum in data_array_copy) {
-    var htmlRow = data_array_copy[rowNum].getHTMLTableRow(parseInt(rowNum) + 1);
-
-    $("#jobsTable").append(htmlRow);
-  }
 }
 
 // Clicking a card opens up the relevant container
@@ -178,6 +177,37 @@ function collapseAndExpandContainers(itemId) {
 
   // Make current item active
   $("#" + itemId).addClass("active-card-button");
+  $("#" + itemId + "Container").addClass("show");
+}
+
+// Clicking a card opens up the relevant container
+$(".nav-link").on("click", function (event) {
+  console.log("clicked");
+  collapseAndExpandInnerContainers(this.id);
+});
+
+function collapseAndExpandInnerContainers(itemId) {
+  // Apply the active and inactive styling
+  var containerId = "#" + itemId + "Containter";
+  var items = document.getElementsByClassName("nav-link");
+
+  // If everything is closed do not close the section
+  if ($("#" + itemId).hasClass("active-link")) {
+    return;
+  }
+
+  for (var item in items) {
+    if (items[item].id !== itemId) {
+      $("#" + items[item].id).removeClass("active-link");
+      $("#" + items[item].id).removeClass("inactive-link");
+      $("#" + items[item].id + "Container").removeClass("show");
+    }
+  }
+  console.log("here");
+
+  // Make current item active
+  $("#" + itemId).removeClass("inactive-link");
+  $("#" + itemId).addClass("active-link");
   $("#" + itemId + "Container").addClass("show");
 }
 

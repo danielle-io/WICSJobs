@@ -48,6 +48,9 @@
     <div class="container">
 
       <div id="aboutViewContainer" class="panel-collapse collapse">
+
+
+        <!-- Side navigation bar -->
         <div style="margin-top:20px;">
 
           <div id="summaryResults">
@@ -107,25 +110,46 @@
 
       <div id="sortAndContactViewContainer" class="panel-collapse collapse">
         <div style="margin-top:20px;">
-          <h1>The Data</h1>
-          <table id="companyCountTable" style="width:100%">
-          </table>
+
+          <div class="sidenav">
+            <ul class="nav-list">
+              <li class="nav-item"><a id="mapView" class="nav-link active-link">Map View</a></li>
+              <li class="nav-item"><a id="summaryView" class="nav-link inactive-link">Summary View</a></li>
+              <li class="nav-item"><a id="contactView" class="nav-link inactive-link">Contact</a></li>
+            </ul>
+          </div>
 
 
+          <div class="data-section-body">
 
-          <div id="mapViewContainer" class="panel-collapse collapse" data-parent="#views">
+            <div id="mapViewContainer" class="panel-collapse collapse show">
 
-            <div style="margin-top:20px;">
-              <h1>WICS Map</h1>
+              <h1 class="section-headers">Us Map</h1>
 
               <div id="mapVis"></div>
 
               <div id="map" style="margin-top: 10px; width: 350px; height: 250px; margin: auto;"></div>
-              <div id="clicked-state"></div>
-              <div id="stateInfo"></div>
+              <div id="stateInfo">Click a state to see the summary data.</div>
+
+
               <div id="map2" style="width: 300px; height: 300px;"></div>
             </div>
+
+
+            <div id="summaryViewContainer" class="panel-collapse collapse">
+              <table id="companyCountTable" style="width:100%">
+              </table>
+            </div>
+
+
+            <div id="contactViewContainer" class="panel-collapse collapse">
+              <table id="" style="width:100%">
+              </table>
+            </div>
+
           </div>
+
+
         </div>
       </div>
 
