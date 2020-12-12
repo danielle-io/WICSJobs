@@ -21,7 +21,7 @@
     integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="//cdn.datatables.net/1.10.22/css/jquery.dataTables.min.css">
-
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 
 
   <title>WICS Jobs</title>
@@ -31,156 +31,173 @@
 
   <header class="page-header">WICS Jobs</header>
 
-  <div class="container" id="containers">
+  <div class="container">
     <div class="row">
       <div class="col-sm">
         <div id="aboutView" class="card card-button" href="#aboutViewContainer">
           About & Summary
+          <span class="material-icons">
+            looks
+          </span>
+
         </div>
       </div>
       <div class="col-sm">
         <div id="sortAndContactView" class="card card-button" href="#sortAndContactViewContainer">
           Browse Data
+          <span class="material-icons">
+            compare_arrows
+          </span>
         </div>
       </div>
       <div class="col-sm">
         <div id="submitRatingView" class="card card-button" href="#submitRatingViewContainer">
           Submit Your Rating
+          <span class="material-icons">
+            done_outline
+          </span>
         </div>
       </div>
     </div>
+  </div>
 
 
-    <div class="container">
+  <div class="container">
 
-      <div id="aboutViewContainer" class="panel-collapse collapse">
+    <div id="aboutViewContainer" class="panel-collapse collapse">
 
+      <div style="margin-top:20px;">
 
-        <!-- Side navigation bar -->
-        <div style="margin-top:20px;">
+        <div id="summaryResults">
+          <h1>The Data</h1>
 
-          <div id="summaryResults">
-            <h1>The Data</h1>
-
-            <div class="row">
-              <div class="col-sm">
-                Total Participants:
+          <div class="card">
+            <div>
+              <div class="row">
+                <div class="col-sm">
+                  Total Participants:
+                </div>
+                <div class="col-sm" id="participants">
+                </div>
               </div>
-              <div class="col-sm" id="participants">
-              </div>
-            </div>
 
-            <div class="row">
-              <div class="col-sm">
-                Total Number of Companies:
+              <div class="row">
+                <div class="col-sm">
+                  Total Number of Companies:
+                </div>
+                <div class="col-sm" id="companyCount">
+                </div>
               </div>
-              <div class="col-sm" id="companyCount">
-              </div>
-            </div>
 
-            <div class="row">
+              <div class="row">
 
-              <div class="col-sm">
-                Average Overall Job Rating:
+                <div class="col-sm">
+                  Average Overall Job Rating:
+                </div>
+                <div class="col-sm" id="averageOverallRating">
+                </div>
               </div>
-              <div class="col-sm" id="averageOverallRating">
-              </div>
-            </div>
 
 
-            <div class="row">
+              <div class="row">
 
-              <div class="col-sm">
-                Average Learn & Grow Rating:
+                <div class="col-sm">
+                  Average Learn & Grow Rating:
+                </div>
+                <div class="col-sm" id="averageLearnGrowRating">
+                </div>
               </div>
-              <div class="col-sm" id="averageLearnGrowRating">
-              </div>
-            </div>
-            <div class="row">
+              <div class="row">
 
-              <div class="col-sm">
-                Average Rating for Recommendation to Others:
-              </div>
-              <div class="col-sm" id="averageRecRating">
+                <div class="col-sm">
+                  Average Rating for Recommendation to Others:
+                </div>
+                <div class="col-sm" id="averageRecRating">
+                </div>
               </div>
             </div>
           </div>
-
-          </h4>
-          <h1>The Creators</h1>
-          <h1>The Mission</h1>
-
         </div>
+
+        </h4>
+        <h1>The Creators</h1>
+        <h1>The Mission</h1>
 
       </div>
 
-      <div id="sortAndContactViewContainer" class="panel-collapse collapse">
-        <div style="margin-top:20px;">
+    </div>
 
-          <div class="sidenav">
-            <ul class="nav-list">
-              <li class="nav-item"><a id="mapView" class="nav-link active-link">Map View</a></li>
-              <li class="nav-item"><a id="summaryView" class="nav-link inactive-link">Summary View</a></li>
-              <li class="nav-item"><a id="contactView" class="nav-link inactive-link">Contact</a></li>
-            </ul>
-          </div>
+    <div id="sortAndContactViewContainer" class="panel-collapse collapse">
+      <div style="margin-top:20px;">
+
+        <div class="sidenav">
+          <ul class="nav-list">
+            <li class="nav-item"><a id="mapView" class="nav-link active-link">
+                <span class="material-icons">place</span>Map View</a></li>
+            <li class="nav-item"><a id="summaryView" class="nav-link inactive-link">
+                <span class="material-icons">table_rows</span>Table View</a></li>
+            <li class="nav-item"><a id="contactView" class="nav-link inactive-link">
+                <span class="material-icons">contact_page</span>Contact</a></li>
+          </ul>
+        </div>
 
 
-          <div class="data-section-body">
+        <div class="data-section-body">
 
-            <div id="mapViewContainer" class="panel-collapse collapse show">
+          <div id="mapViewContainer" class="panel-collapse collapse show">
 
-              <h1 class="section-headers">Us Map</h1>
+            <h1 class="section-headers">Us Map</h1>
 
-              <div id="mapVis"></div>
+            <div id="mapVis"></div>
 
-              <div id="map" style="margin-top: 10px; width: 350px; height: 250px; margin: auto;"></div>
+            <div id="map" style="margin-top: 10px; width: 350px; height: 250px; margin: auto;"></div>
+            <div style="text-align: center;">
               <div id="stateInfo">Click a state to see the summary data.</div>
-
-
-              <div id="map2" style="width: 300px; height: 300px;"></div>
             </div>
 
-
-            <div id="summaryViewContainer" class="panel-collapse collapse">
-              <table class="display" id="companyCountTable" style="width:100%">
-                <thead>
-                  <tr>
-                    <th>Company</th>
-                    <th>Review Count</th>
-                    <th>Overall Rating (Mean)</th>
-                    <th>Learning & Growth (Mean)</th>
-                    <th>Recomendation Rating (Mean)</th>
-                  </tr>
-                </thead>
-                <tbody id="companyCountBody">
-
-                </tbody>
-              </table>
-            </div>
-
-
-            <div id="contactViewContainer" class="panel-collapse collapse">
-              <table id="" style="width:100%">
-              </table>
-            </div>
-
+            <div id="map2" style="width: 300px; height: 300px;"></div>
           </div>
 
 
+          <div id="summaryViewContainer" class="panel-collapse collapse">
+            <table class="display" id="companyCountTable" style="width:100%">
+              <thead>
+                <tr>
+                  <th>Company</th>
+                  <th>Review Count</th>
+                  <th>Overall Rating (Mean)</th>
+                  <th>Learning & Growth (Mean)</th>
+                  <th>Recomendation Rating (Mean)</th>
+                </tr>
+              </thead>
+              <tbody id="companyCountBody">
+
+              </tbody>
+            </table>
+          </div>
+
+
+          <div id="contactViewContainer" class="panel-collapse collapse">
+            <table id="" style="width:100%">
+            </table>
+          </div>
+
         </div>
-      </div>
 
-
-      <div id="submitRatingViewContainer" class="panel-collapse collapse" data-parent="#containers">
-        <div style="margin-top:20px;">
-          <h1>Submit Your Rating</h1>
-        </div>
 
       </div>
+    </div>
 
+
+    <div id="submitRatingViewContainer" class="panel-collapse collapse" data-parent="#containers">
+      <div style="margin-top:20px;">
+        <h1>Submit Your Rating</h1>
+      </div>
 
     </div>
+
+
+  </div>
   </div>
 
   <script src="https://cdn.jsdelivr.net/npm/vega@5.6.0"></script>

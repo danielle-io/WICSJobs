@@ -57,10 +57,15 @@ html, body {
 	transition: 0.7s;
 	-moz-transition: 0.7s;
 	-webkit-transition: 0.7s;
-	cursor: pointer;
 }
 
-.card:hover {
+.card-button {
+	cursor: pointer;
+	text-align: center;
+	font-weight: 600;
+}
+
+.card-button:hover {
 	box-shadow: 0 0 1em rgb(145, 140, 140) !important;
 	/* zoom: 1.2; */
 }
@@ -72,7 +77,6 @@ html, body {
 	border: solid 1em #fdcfdf;
 	background-color: #fdcfdf;
 	/* color: #85e2e2; */
-	/* font-weight: 600; */
 }
 
 /* The side navigation menu */
@@ -80,7 +84,7 @@ html, body {
 .sidenav {
 	height: 100%;
 	/* Set the width of the sidebar */
-	width: 160px;
+	width: 170px;
 	/* Fixed Sidebar (stay in place on scroll) */
 	position: fixed;
 	/* background-color: rgb(100 173 196); */
@@ -118,10 +122,10 @@ html, body {
 /* Margin for body alongside side nav */
 
 .data-section-body {
-	margin-left: 160px;
+	margin-left: 170px;
 }
 
-.state-name{
+.state-name {
 	color: #b088f9;
 	font-size: 2em;
 	font-family: "Poppins";

@@ -58,7 +58,7 @@
   var defaults = {
     // The styles for the state
     stateStyles: {
-      fill: "#333",
+      fill: "#a685e2",
       stroke: "#666",
       "stroke-width": 1,
       "stroke-linejoin": "round",
