@@ -69,6 +69,10 @@ html, body {
 
 .active-card-button {
 	box-shadow: 0 0 1em rgb(145, 140, 140) !important;
+	border: solid 1em #fdcfdf;
+	background-color: #fdcfdf;
+	/* color: #85e2e2; */
+	/* font-weight: 600; */
 }
 
 /* The side navigation menu */

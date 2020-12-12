@@ -32,7 +32,6 @@ function getCounts(data_array) {
     var state = stateObject.stateAbb;
 
     var stateFullName = stateObject.stateFull;
-
     var companyName = data_array[i].standardizedCompanyName;
     var overallRating = data_array[i].overallRating;
     var recRating = data_array[i].recRating;
@@ -86,23 +85,29 @@ function getCounts(data_array) {
   var jobArray = createJobArray(jobData);
   console.log(jobArray);
 
-    jobArray.sort((a, b) => {
-      (jobArray[a] < jobArray[b] ? -1 : 1);
-    });
-  
+  jobArray.sort((a, b) => {
+    jobArray[a] < jobArray[b] ? -1 : 1;
+  });
 
-  // console.log(jobData);
-
+  // Populate table
   for (var i in jobArray) {
-    // Calculate average ratings
-    var table = document.getElementById("companyCountTable");
+    var table = document.getElementById("companyCountBody");
     var row = table.insertRow(-1);
     var cell1 = row.insertCell(0);
     var cell2 = row.insertCell(1);
+    var cell3 = row.insertCell(2);
+    var cell4 = row.insertCell(3);
+    var cell5 = row.insertCell(4);
 
     cell1.innerHTML = jobArray[i].companyName;
     cell2.innerHTML = jobArray[i].employeeCount;
+    cell3.innerHTML = jobArray[i].averageOverallRating;
+    cell4.innerHTML = jobArray[i].averageLearnGrowRating;
+    cell5.innerHTML = jobArray[i].averageRecRating;
   }
+  $("#companyCountTable").DataTable({
+    order: [[1, "desc"]],
+  });
 }
 
 function createJobArray(jobData) {
@@ -114,7 +119,7 @@ function createJobArray(jobData) {
     jobData[i]["averageRecRating"] =
       jobData[i]["sumOfRecRatings"] / jobData[i]["employeeCount"];
     jobData[i]["averageLearnGrowRating"] =
-      jobData[i]["sumOfLearnGrowRating"] / totalSummary["employeeCount"];
+      jobData[i]["sumOfLearnGrowRating"] / jobData[i]["employeeCount"];
 
     // Add overall summary data
     totalSummary["averageOverallRating"] =
