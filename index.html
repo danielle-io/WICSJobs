@@ -118,10 +118,12 @@
           </div>
         </div>
 
-
-        <h1>The Creators</h1>
         <h1>The Mission</h1>
-
+        <div class="card">
+        </div>
+        <h1>The Creators</h1>
+        <div class="card">
+        </div>
       </div>
     </div>
 
@@ -149,12 +151,18 @@
             <div id="mapVis"></div>
 
             <div id="map" style="margin-top: 10px; width: 350px; height: 250px; margin: auto;"></div>
-            <div style="text-align: center;">
-              <div id="stateInfo">Click a state to see the summary data.</div>
+            <div class="card">
+              <div style="text-align: center;">
+
+                <div id="stateName" class='state-name'></div>
+              </div>
+              <div id="stateInfo">Click a state to see the summary data.<br> <small>States containing job data are pink
+                  in color, with level of contrast reflecting data amount.</small></div>
             </div>
 
-            <div id="map2" style="width: 300px; height: 300px;"></div>
           </div>
+
+          <div id="map2" style="width: 300px; height: 300px;"></div>
 
 
           <div id="summaryViewContainer" class="panel-collapse collapse">
@@ -178,29 +186,21 @@
             <table id="" style="width:100%">
             </table>
           </div>
-
         </div>
-
-
       </div>
     </div>
-
 
     <div id="submitRatingViewContainer" class="panel-collapse collapse" data-parent="#containers">
       <div style="margin-top:20px;">
         <h1>Submit Your Rating</h1>
       </div>
-
     </div>
-
-
   </div>
   </div>
 
   <script src="https://cdn.jsdelivr.net/npm/vega@5.6.0"></script>
   <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.0.0-beta.8"></script>
   <script src="https://cdn.jsdelivr.net/npm/vega-embed@5.1.3"></script>
-
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/5.1.2/math.min.js"></script>
 
@@ -222,12 +222,23 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
     integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
     crossorigin="anonymous"></script>
-  <script src="js/raphael.js"></script>
-  <script type="text/javascript" src="js/usmap.js"></script>
-  <script src="js/usmap.js"></script>
   <script src="//cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js"></script>
 
-</body>
+  <script src="js/libraries/raphael.js"></script>
+  <script src="js/libraries/usmap.js"></script>
 
+
+  <script type="text/javascript" src="js/data/get_data.js"></script>
+  <script type="text/javascript" src="js/job.js"></script>
+  <script type="text/javascript" src="js/summary.js"></script>
+  <script type="text/javascript" src="js/data/stateAbbreviations.js"></script>
+  <script type="text/javascript" src="js/data/stateFacts.js"></script>
+
+
+  <script type="text/javascript" src="js/graphs.js"></script>
+
+
+
+</body>
 
 </html>
