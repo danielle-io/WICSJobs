@@ -102,8 +102,6 @@ html, body {
 	padding-top: 106px;
 }
 
-/* The navigation menu links */
-
 .sidenav a {
 	font-size: 18px;
 	font-family: "Poppins";
@@ -121,10 +119,6 @@ html, body {
 	list-style-type: none;
 }
 
-.inactive-link {
-	color: #df87c1;
-}
-
 .active-link {
 	color: #df87c1 !important;
 }
@@ -139,4 +133,9 @@ html, body {
 	color: #b088f9;
 	font-size: 2em;
 	font-family: "Poppins";
+}
+
+.state-facts{
+	color: #98acf8;
+
 }
