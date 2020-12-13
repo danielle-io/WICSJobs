@@ -151,13 +151,28 @@
             <div id="mapVis"></div>
 
             <div id="map" style="margin-top: 10px; width: 350px; height: 250px; margin: auto;"></div>
+
             <div class="card">
               <div style="text-align: center;">
 
                 <div id="stateName" class='state-name'></div>
               </div>
+
               <div id="stateInfo">Click a state to see the summary data.<br> <small>States containing job data are pink
                   in color, with level of contrast reflecting data amount.</small></div>
+              <table class="display" id="stateCompanyData" style="width:100%;">
+                <thead>
+                  <tr>
+                    <th>Company</th>
+                    <th>Review Count</th>
+                    <!-- <th>Overall Rating (Mean)</th>
+                  <th>Learning & Growth (Mean)</th>
+                  <th>Recomendation Rating (Mean)</th> -->
+                  </tr>
+                </thead>
+                <tbody id="stateInfoBody">
+                </tbody>
+              </table>
             </div>
 
           </div>
@@ -198,11 +213,7 @@
   </div>
   </div>
 
-  <script src="https://cdn.jsdelivr.net/npm/vega@5.6.0"></script>
-  <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.0.0-beta.8"></script>
-  <script src="https://cdn.jsdelivr.net/npm/vega-embed@5.1.3"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/5.1.2/math.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
     integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
     crossorigin="anonymous"></script>
@@ -218,14 +229,14 @@
   <script src="js/libraries/usmap.js"></script>
 
 
-  <script type="text/javascript" src="js/data/get_data.js"></script>
+  <script type="text/javascript" src="js/data/getReviewData.js"></script>
   <script type="text/javascript" src="js/job.js"></script>
-  <script type="text/javascript" src="js/summary.js"></script>
+  <script type="text/javascript" src="js/parseAndCalcData.js"></script>
   <script type="text/javascript" src="js/data/stateAbbreviations.js"></script>
   <script type="text/javascript" src="js/data/stateFacts.js"></script>
 
-
-  <script type="text/javascript" src="js/graphs.js"></script>
+  <script type="text/javascript" src="js/view.js"></script>
+  <script type="text/javascript" src="js/mapsAndTables.js"></script>
 
 
 

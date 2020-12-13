@@ -132,7 +132,13 @@
     },
 
     // The styles for the hover
-    labelTextHoverStyles: {},
+    labelTextHoverStyles: {
+      fill: "#fff",
+      stroke: "none",
+      "font-weight": 300,
+      "stroke-width": 0,
+      "font-size": "10px",
+    },
 
     stateSpecificLabelTextStyles: {},
 
