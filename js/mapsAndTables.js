@@ -16,9 +16,9 @@ $(document).ready(function () {
   function getStateTableData(state) {
     // $("#stateInfoBody").empty();
 
-    var dataTable = $("#stateCompanyData").DataTable();
+    // var dataTable = $("#stateCompanyData").DataTable();
 
-    dataTable.clear();
+    // dataTable.clear();
 
     // Show the table
     document.getElementById("stateCompanyData").style.display = "contents";
