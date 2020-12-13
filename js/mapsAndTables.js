@@ -14,46 +14,22 @@ $(document).ready(function () {
   }
 
   function getStateTableData(state) {
-    // $("#stateInfoBody").empty();
-
-    // var dataTable = $("#stateCompanyData").DataTable();
-
-    // dataTable.clear();
+    $("#stateInfoBody").empty();
+    document.getElementById("stateCompanyData").style.display = "block";
 
     // Show the table
-    document.getElementById("stateCompanyData").style.display = "contents";
+    var table = document.getElementById("stateInfoBody");
+    for (i in stateJobs[state]) {
+      console.log(jobData[i]["averageOverallRating"]);
+      var row = table.insertRow(-1);
+      var cell1 = row.insertCell(0);
+      var cell2 = row.insertCell(1);
+      var cell3 = row.insertCell(2);
 
-    // var table = document.getElementById("stateInfoBody");
-    // for (i in stateJobs[state]) {
-      console.log(stateJobs[state]);
-
-    //   $('#stateCompanyData').DataTable( {
-    //     data: stateJobs[state]
-    // } );
-      // textString += "<br>" + i + "\t" + stateJobs[data.name][i];
-      // console.log(stateJobs[state][i]);
-
-      // dataTable.row
-      //   .add({
-      //     "Company": i,
-      //     "Review Count": stateJobs[state][i],
-      //   })
-      //   .draw();
-
-      // var row = table.insertRow(-1);
-      // var cell1 = row.insertCell(0);
-      // var cell2 = row.insertCell(1);
-      // var cell3 = row.insertCell(2);
-      // var cell4 = row.insertCell(3);
-      // var cell5 = row.insertCell(4);
-
-      // cell1.innerHTML = i;
-      // cell2.innerHTML = stateJobs[state][i];
-      // cell3.innerHTML = jobArray[i].averageOverallRating;
-      // cell4.innerHTML = jobArray[i].averageLearnGrowRating;
-      // cell5.innerHTML = jobArray[i].averageRecRating;
-    // }
-
+      cell1.innerHTML = i;
+      cell2.innerHTML = stateJobs[state][i];
+      cell3.innerHTML = jobData[i]["averageOverallRating"];
+    }
   }
 
   $("#map").usmap({

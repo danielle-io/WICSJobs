@@ -159,24 +159,21 @@
 
               <div id="stateInfo">Click a state to see the summary data.<br> <small>States containing job data are pink
                   in color, with level of contrast reflecting data amount.</small></div>
-              <table class="display" id="stateCompanyData" style="width:100%;">
+
+              <table id="stateCompanyData" class="table-responsive align-middle"
+                style="white-space: normal; border-collapse: separate; width:100%;  border-spacing: 12px 15px; padding: 20px; margin: auto; overflow: auto; word-wrap: break-word;">
                 <thead>
                   <tr>
                     <th>Company</th>
                     <th>Review Count</th>
-                    <!-- <th>Overall Rating (Mean)</th>
-                  <th>Learning & Growth (Mean)</th>
-                  <th>Recomendation Rating (Mean)</th> -->
+                    <th>Overall Rating (Mean)</th>
                   </tr>
                 </thead>
                 <tbody id="stateInfoBody">
                 </tbody>
               </table>
             </div>
-
           </div>
-
-
 
           <div id="summaryViewContainer" class="panel-collapse collapse">
             <table class="display" id="companyCountTable" style="width:100%">
@@ -214,15 +211,6 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/5.1.2/math.min.js"></script>
 
-
-
-  <script type="text/javascript" src="js/get_review_data.js"></script>
-  <script type="text/javascript" src="js/get_contact_data.js"></script>
-  <script type="text/javascript" src="js/job.js"></script>
-  <script type="text/javascript" src="js/summary.js"></script>
-  <script type="text/javascript" src="js/stateAbbreviations.js"></script>
-  <script type="text/javascript" src="js/graphs.js"></script>
-
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
     integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
     crossorigin="anonymous"></script>
@@ -237,12 +225,13 @@
   <script src="js/libraries/raphael.js"></script>
   <script src="js/libraries/usmap.js"></script>
 
-
+  <script type="text/javascript" src="js/data/getContactData.js"></script>
+  <script type="text/javascript" src="js/data/stateAbbreviations.js"></script>
   <script type="text/javascript" src="js/data/getReviewData.js"></script>
+  <script type="text/javascript" src="js/data/stateFacts.js"></script>
+
   <script type="text/javascript" src="js/job.js"></script>
   <script type="text/javascript" src="js/parseAndCalcData.js"></script>
-  <script type="text/javascript" src="js/data/stateAbbreviations.js"></script>
-  <script type="text/javascript" src="js/data/stateFacts.js"></script>
 
   <script type="text/javascript" src="js/view.js"></script>
   <script type="text/javascript" src="js/mapsAndTables.js"></script>

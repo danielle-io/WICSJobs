@@ -10,7 +10,6 @@ class Job {
   private duration: string;
   private learningGrowthRating: string;
   private recRating: string;
-  private contactInfo: string;
 
   constructor(jobData: Job) {
     this.timestamp = new Date(jobData.timestamp);
@@ -24,7 +23,6 @@ class Job {
     this.duration = jobData.duration;
     this.learningGrowthRating = jobData.learningGrowthRating;
     this.recRating = jobData.recRating;
-    this.contactInfo = jobData.contactInfo;
   }
 
   get standardizedCompanyName() {

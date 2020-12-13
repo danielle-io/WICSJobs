@@ -2,6 +2,7 @@
 var jobData = {};
 var stateJobs = {};
 var companyRatings = {};
+var stateTable;
 var totalSummary = {
   participants: 0,
   companyCount: 0,
@@ -90,6 +91,7 @@ function getCounts(data_array) {
 
   // Fill in the front page table since data is all parsed out now
   populateSummaryTable(jobArray);
+  console.log(stateJobs);
 }
 
 function createJobArray(jobData) {
@@ -145,11 +147,6 @@ $(document).ready(function () {
   loadData().then(parseData);
   // Start with about expanded
   $("#aboutView").trigger("click");
-
-  $("#stateCompanyData").DataTable({
-    order: [[1, "desc"]],
-  });
-
   // Hide state map tables by default
   document.getElementById("stateCompanyData").style.display = "none";
 });
