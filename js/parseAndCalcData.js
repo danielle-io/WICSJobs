@@ -119,17 +119,13 @@ function createJobArray(jobData) {
     jobArr.push({
       companyName: i,
       employeeCount: jobData[i]["employeeCount"],
-      averageOverallRating: jobData[i]["averageOverallRating"],
-      averageRecRating: jobData[i]["averageRecRating"],
-      averageLearnGrowRating: jobData[i]["averageLearnGrowRating"],
+      averageOverallRating: jobData[i]["averageOverallRating"].toFixed(2),
+      averageRecRating: jobData[i]["averageRecRating"].toFixed(2),
+      averageLearnGrowRating: jobData[i]["averageLearnGrowRating"].toFixed(2),
     });
   }
   console.log(jobArr);
   return jobArr;
-}
-
-function getPercent(sourceCount) {
-  return ((sourceCount / data_array.length) * 100).toFixed(2);
 }
 
 // Update the HTML summary text

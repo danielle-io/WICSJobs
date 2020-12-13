@@ -16,7 +16,6 @@ function loadData() {
         duration: "2 - 3 months",
         learningGrowthRating: 5,
         recRating: 5,
-        contactInfo: "https://www.linkedin.com/in/danielle-amanda/",
       },
       {
         timestamp: "11/29/2020 20:16:29",
@@ -31,7 +30,6 @@ function loadData() {
         duration: "2 - 3 months",
         learningGrowthRating: 5,
         recRating: 5,
-        contactInfo: "",
       },
       {
         timestamp: "11/29/2020 20:17:46",
@@ -46,7 +44,6 @@ function loadData() {
         duration: "2 - 3 months",
         learningGrowthRating: 5,
         recRating: 5,
-        contactInfo: "",
       },
       {
         timestamp: "11/29/2020 20:55:36",
@@ -61,7 +58,6 @@ function loadData() {
         duration: "2 - 3 months",
         learningGrowthRating: 4,
         recRating: 4,
-        contactInfo: "https://www.linkedin.com/in/mohraa/",
       },
       {
         timestamp: "11/30/2020 14:15:17",
@@ -76,13 +72,12 @@ function loadData() {
         duration: "2 - 3 months",
         learningGrowthRating: 5,
         recRating: 5,
-        contactInfo: "https://www.linkedin.com/in/tanyasreenagesh/",
       },
       {
         timestamp: "11/30/2020 14:21:35",
         companyName: "Microsoft",
         jobType: "Internship",
-        positionName: "Software Engineering Intern ;))",
+        positionName: "Software Engineering Intern",
         location: "Redmond, WA",
         remote: "Yes",
         overallRating: 5,
@@ -90,7 +85,6 @@ function loadData() {
         duration: "4 - 6 months",
         learningGrowthRating: 5,
         recRating: 5,
-        contactInfo: "www.linkedin.com/in/aishwarya-bhandari-3aa763160",
       },
       {
         timestamp: "11/30/2020 15:15:28",
@@ -105,7 +99,6 @@ function loadData() {
         duration: "4 - 6 months",
         learningGrowthRating: 5,
         recRating: 5,
-        contactInfo: "",
       },
       {
         timestamp: "11/30/2020 15:57:47",
@@ -120,7 +113,6 @@ function loadData() {
         duration: "2 - 3 months",
         learningGrowthRating: 3,
         recRating: 4,
-        contactInfo: "cheyenmc@uci.edu - Cheyenne Chavez",
       },
       {
         timestamp: "11/30/2020 16:00:32",
@@ -135,7 +127,6 @@ function loadData() {
         duration: "4 - 6 months",
         learningGrowthRating: 5,
         recRating: 3,
-        contactInfo: "gayatrs@uci.edu",
       },
       {
         timestamp: "11/30/2020 19:52:00",
@@ -150,7 +141,6 @@ function loadData() {
         duration: "2 - 3 months",
         learningGrowthRating: 5,
         recRating: 5,
-        contactInfo: "",
       },
       {
         timestamp: "11/30/2020 22:22:31",
@@ -165,7 +155,6 @@ function loadData() {
         duration: "4 - 6 months",
         learningGrowthRating: 4,
         recRating: 5,
-        contactInfo: "https://www.linkedin.com/in/choegrace/",
       },
       {
         timestamp: "12/1/2020 1:18:15",
@@ -180,7 +169,6 @@ function loadData() {
         duration: "2 - 3 months",
         learningGrowthRating: 5,
         recRating: 4,
-        contactInfo: "https://www.linkedin.com/in/sharonhsu0102/",
       },
       {
         timestamp: "12/1/2020 10:42:12",
@@ -195,7 +183,6 @@ function loadData() {
         duration: "4 - 6 months",
         learningGrowthRating: 5,
         recRating: 5,
-        contactInfo: "",
       },
       {
         timestamp: "12/1/2020 10:48:40",
@@ -210,14 +197,13 @@ function loadData() {
         duration: "2 - 3 months",
         learningGrowthRating: 5,
         recRating: 5,
-        contactInfo: "https://www.linkedin.com/in/anasathish/",
       },
       {
         timestamp: "12/1/2020 10:53:03",
         companyName: "Zillow Group",
         jobType: "Internship",
         positionName: "Software Development Engineering Intern",
-        location: "San Francisco, CA",
+        location: "San Francisco, CA - Remote",
         remote: "Yes",
         overallRating: 4,
         detailsText:
@@ -225,7 +211,6 @@ function loadData() {
         duration: "2 - 3 months",
         learningGrowthRating: 5,
         recRating: 5,
-        contactInfo: "https://www.linkedin.com/in/leungrebecca",
       },
       {
         timestamp: "12/1/2020 10:53:50",
@@ -239,7 +224,6 @@ function loadData() {
         duration: "2 - 3 months",
         learningGrowthRating: 5,
         recRating: 5,
-        contactInfo: "https://www.linkedin.com/in/leungrebecca",
       },
       {
         timestamp: "12/1/2020 10:54:32",
@@ -253,7 +237,6 @@ function loadData() {
         duration: "2 - 3 months",
         learningGrowthRating: 5,
         recRating: 5,
-        contactInfo: "https://www.linkedin.com/in/leungrebecca",
       },
       {
         timestamp: "12/1/2020 11:01:59",
@@ -268,14 +251,13 @@ function loadData() {
         duration: "2 - 3 months",
         learningGrowthRating: 5,
         recRating: 4,
-        contactInfo: "https://www.linkedin.com/in/leungrebecca",
       },
       {
         timestamp: "12/1/2020 11:44:08",
         companyName: "Microsoft",
         jobType: "Internship",
         positionName: "Software Engineering Intern",
-        location: "Redmond, WA",
+        location: "Redmond",
         remote: "Yes",
         overallRating: 5,
         detailsText:
@@ -283,7 +265,6 @@ function loadData() {
         duration: "2 - 3 months",
         learningGrowthRating: 5,
         recRating: 5,
-        contactInfo: "",
       },
       {
         timestamp: "12/1/2020 12:35:41",
@@ -297,7 +278,6 @@ function loadData() {
         duration: "2 - 3 months",
         learningGrowthRating: 5,
         recRating: 5,
-        contactInfo: "https://www.linkedin.com/in/emma6pv/",
       },
       {
         timestamp: "12/1/2020 14:10:04",
@@ -312,8 +292,6 @@ function loadData() {
         duration: "4 - 6 months",
         learningGrowthRating: 5,
         recRating: 4,
-        contactInfo:
-          "achala.shenoy@myspeckle.com or https://www.linkedin.com/company/myspeckle",
       },
       {
         timestamp: "12/1/2020 16:57:21",
@@ -327,7 +305,6 @@ function loadData() {
         duration: "2 - 3 months",
         learningGrowthRating: 3,
         recRating: 5,
-        contactInfo: "",
       },
       {
         timestamp: "12/1/2020 16:58:09",
@@ -341,7 +318,6 @@ function loadData() {
         duration: "2 - 3 months",
         learningGrowthRating: 4,
         recRating: 4,
-        contactInfo: "",
       },
       {
         timestamp: "12/1/2020 17:19:19",
@@ -356,7 +332,6 @@ function loadData() {
         duration: "2 - 3 months",
         learningGrowthRating: 3,
         recRating: 4,
-        contactInfo: "princesspancubit@gmail.com",
       },
       {
         timestamp: "12/1/2020 17:32:18",
@@ -371,7 +346,6 @@ function loadData() {
         duration: "Over 1 year, less than 2 years",
         learningGrowthRating: 5,
         recRating: 5,
-        contactInfo: "princesspancubit@gmail.com",
       },
       {
         timestamp: "12/1/2020 18:27:59",
@@ -386,7 +360,6 @@ function loadData() {
         duration: "2 - 3 months",
         learningGrowthRating: 5,
         recRating: 5,
-        contactInfo: "https://www.linkedin.com/in/anjali-krishnan1",
       },
       {
         timestamp: "12/1/2020 21:30:26",
@@ -401,7 +374,6 @@ function loadData() {
         duration: "2 - 3 months",
         learningGrowthRating: 5,
         recRating: 5,
-        contactInfo: "linkedin.com/in/archita-ganesh",
       },
       {
         timestamp: "12/1/2020 23:32:02",
@@ -416,7 +388,6 @@ function loadData() {
         duration: "2 - 3 months",
         learningGrowthRating: 5,
         recRating: 5,
-        contactInfo: "https://www.linkedin.com/in/alyssa-darjuan",
       },
       {
         timestamp: "12/1/2020 23:46:53",
@@ -431,7 +402,48 @@ function loadData() {
         duration: "4 - 6 months",
         learningGrowthRating: 4,
         recRating: 5,
-        contactInfo: "Katakams@uci.edu",
+      },
+      {
+        timestamp: "12/3/2020 20:10:31",
+        companyName: "Workday",
+        jobType: "Internship",
+        positionName: "Software Development Engineer Intern",
+        location: "Pleasanton, CA",
+        remote: "No",
+        overallRating: 4,
+        detailsText:
+          "Very solid program with structured project and intern activities. My project gave me a good introduction to the industry. You get paired with a tech mentor who works with you day to day with your project and an intern buddy for any other questions you may have. Lots of intern related events like baseball game, alcatraz, scavenger hunt to develop great connections with fellow interns.",
+        duration: "2 - 3 months",
+        learningGrowthRating: 5,
+        recRating: 5,
+        contactInfo: "",
+      },
+      {
+        timestamp: "12/5/2020 20:56:29",
+        companyName: "UC Irvine Office of Information Technology",
+        jobType: "Part-time",
+        positionName: "Quality Assurance Student Assistant",
+        location: "Irvine, CA",
+        remote: "Partially remote",
+        overallRating: 5,
+        detailsText:
+          "Since it was an on campus part time job, they had super flexible hours. If you have a project, midterm or final coming up, they understand that you need to take time off. The team was also incredibly supportive - if you wanted to learn something that's not within your usual job duties - they would still provide you with the means to do so!",
+        duration: "Over 1 year, less than 2 years",
+        learningGrowthRating: 5,
+        recRating: 5,
+      },
+      {
+        timestamp: "12/10/2020 23:56:26",
+        companyName: "Microsoft",
+        jobType: "Internship",
+        positionName: "Explore Intern, Software Engineering Intern",
+        location: "Seattle, WA",
+        remote: "No",
+        overallRating: 5,
+        detailsText: "",
+        duration: "4 - 6 months",
+        learningGrowthRating: 5,
+        recRating: 5,
       },
     ];
     resolve(RAW_DATA);
