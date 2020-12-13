@@ -39,7 +39,7 @@ function getCounts(data_array) {
     var recRating = data_array[i].recRating;
     var learnRating = data_array[i].learningGrowthRating;
 
-    // Company exists in disctionary
+    // Company exists in dictionary
     if (companyName in jobData) {
       jobData[companyName]["employeeCount"] += 1;
       jobData[companyName]["sumOfOverallRatings"] += overallRating;

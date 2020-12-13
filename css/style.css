@@ -150,3 +150,8 @@ html, body {
 	border-color: #ffffff;
 	opacity: 1;
 }
+
+.section-margins-padding{
+	margin-top:20px; 
+	padding-bottom: 30px;
+}
