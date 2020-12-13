@@ -83,7 +83,6 @@ function getCounts(data_array) {
   }
   // Create an array of job data so it can be sorted and displayed
   var jobArray = createJobArray(jobData);
-  console.log(jobArray);
 
   jobArray.sort((a, b) => {
     jobArray[a] < jobArray[b] ? -1 : 1;

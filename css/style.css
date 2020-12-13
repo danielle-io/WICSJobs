@@ -21,6 +21,16 @@ a:active {
 body {
 	background-color: #bce6eb;
 	font-family: 'Roboto', sans-serif;
+	font-weight: 300;
+}
+
+.summary-columns {
+	word-wrap: break-word;
+	font-weight: 500;
+	font-size: 1em;
+	width: 30%;
+	overflow: wrap;
+	word-wrap: break-word;
 }
 
 .page-header {

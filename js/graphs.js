@@ -1,60 +1,6 @@
-function addEventHandler() {
-  // Show or hide graphs + change button text on click
-  // $(".btn").click(function () {
-  //   if ($("#aggregate").text() === "Show ___") {
-  //     setGraph({
-  //       field: "distance",
-  //       aggregate: "mean",
-  //       type: "quantitative",
-  //     });
-  //     $("#aggregate").text("Show all activities");
-  //   } else {
-  //     $("#aggregate").text("Show means");
-  //     setGraph({ field: "distance", type: "quantitative" });
-  //   }
-  // });
-}
+function addEventHandler() {}
 
-// function setGraph(graphValues) {
-//   // One graph changes dynamically based on the first load of the page and the click of the graph options
-//   distance_vis_spec = {
-//     $schema: "https://vega.github.io/schema/vega-lite/v4.0.0-beta.8.json",
-//     description:
-//       "A graph of the top three activities in relation to the distance of each completion.",
-//     data: {
-//       values: topThreeGraph,
-//     },
-//     mark: "point",
-//     width: 400,
-//     height: 300,
-//     encoding: {
-//       y: graphValues,
-//       x: {
-//         type: "nominal",
-//         field: "day",
-//         // sort: ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"],
-//       },
-//       color: { field: "activityType", type: "nominal" },
-//       shape: { field: "activityType", type: "nominal" },
-//     },
-//   };
-//   vegaEmbed("#distanceVis", distance_vis_spec, { actions: false });
-// }
-
-// Set dynamic graph for first load
-// setGraph({ field: "distance", type: "quantitative" });
-
-function storeActivityAndDistance(data_array) {}
-
-function setText(activitiesAndDistance) {}
-
-//Wait for the DOM to load
 $(document).ready(function () {
-  console.log(stateJobs);
-  // $("#jobVisAgg").hide();
-  // loadData().then(parseData);
-  // addEventHandler();
-
   var stateColors = {};
   for (var i in stateJobs) {
     var totalSum = Object.values(stateJobs[i]).reduce((a, b) => a + b, 0);
