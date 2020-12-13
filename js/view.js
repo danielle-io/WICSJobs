@@ -27,26 +27,25 @@ $(".card").on("click", function (event) {
   collapseAndExpandContainers(this.id);
 });
 
-function populateSummaryTable(jobArray) {
-  // Populate table
-  for (var i in jobArray) {
-    var table = document.getElementById("companyCountBody");
-    var row = table.insertRow(-1);
-    var cell1 = row.insertCell(0);
-    var cell2 = row.insertCell(1);
-    var cell3 = row.insertCell(2);
-    var cell4 = row.insertCell(3);
-    var cell5 = row.insertCell(4);
 
-    cell1.innerHTML = jobArray[i].companyName;
-    cell2.innerHTML = jobArray[i].employeeCount;
-    cell3.innerHTML = jobArray[i].averageOverallRating;
-    cell4.innerHTML = jobArray[i].averageLearnGrowRating;
-    cell5.innerHTML = jobArray[i].averageRecRating;
+function changeTableView(itemId) {
+  // If everything is closed do not close the section
+  if ($("#" + itemId).hasClass("active")) {
+    return;
   }
-  $("#companyCountTable").DataTable({
-    order: [[1, "desc"]],
-  });
+
+  if (itemId === "overallView") {
+    $("#overallView").addClass("active");
+    $("#individualView").removeClass("active");
+    $("#overallViewContainer").addClass("show");
+    $("#individualViewContainer").addClass("hide");
+  } else {
+    $("#overallView").removeClass("active");
+    $("#individualView").addClass("active");
+    $("#overallViewContainer").removeClass("show");
+    $("#individualViewContainer").addClass("show");
+
+  }
 }
 
 function collapseAndExpandContainers(itemId) {
@@ -73,4 +72,9 @@ function collapseAndExpandContainers(itemId) {
 // Clicking a card opens up the relevant container
 $(".nav-link").on("click", function (event) {
   collapseAndExpandInnerContainers(this.id);
+});
+
+$(".view-switch-button").on("click", function (event) {
+  console.log(this.id);
+  changeTableView(this.id);
 });

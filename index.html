@@ -7,7 +7,6 @@
   <meta name="description" content="WICS Jobs Experience Webpage">
 
 
-
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -143,6 +142,7 @@
 
         <div class="data-section-body">
 
+          <!-- The map container -->
           <div id="mapViewContainer" class="panel-collapse collapse show">
 
             <h1 class="section-headers">Us Map</h1>
@@ -175,37 +175,76 @@
             </div>
           </div>
 
+          <!-- The tables container -->
           <div id="summaryViewContainer" class="panel-collapse collapse">
-            <table class="display" id="companyCountTable" style="width:100%">
-              <thead>
-                <tr>
-                  <th>Company</th>
-                  <th>Review Count</th>
-                  <th>Overall Rating (Mean)</th>
-                  <th>Learning & Growth (Mean)</th>
-                  <th>Recomendation Rating (Mean)</th>
-                </tr>
-              </thead>
-              <tbody id="companyCountBody">
-              </tbody>
-            </table>
-          </div>
+
+            <!-- Buttons to switch between summaries and individual reviews -->
+            <div style="text-align: center;">
+              <!-- <div class="btn-group" role="group"> -->
+              <button id="overallView" type="button" class="view-switch-button btn btn-primary active">Summary
+                View</button>
+              <button id="individualView" type="button" class="view-switch-button btn btn-primary">Individual
+                Reviews</button>
+            </div>
+            <!-- </div> -->
+
+            <!-- The summary View container -->
+            <div id="summaryViewContainer" class="collapse show">
+
+              <div id="overallViewContainer" class="collapse show">
+                <table class="display" id="companyCountTable" style="width:100%">
+                  <thead>
+                    <tr>
+                      <th>Company</th>
+                      <th>Review Count</th>
+                      <th>Overall Rating (Mean)</th>
+                      <th>Learning & Growth (Mean)</th>
+                      <th>Recomendation Rating (Mean)</th>
+                    </tr>
+                  </thead>
+                  <tbody id="companyCountBody">
+                  </tbody>
+                </table>
+              </div>
+
+              <!-- The individual review container -->
+              <div id="individualViewContainer" class="panel-collapse collapse">
+                <table class="display" id="individualReviewTable" style="width:100%">
+                  <thead>
+                    <tr>
+                      <th>Company</th>
+                      <th>Position</th>
+                      <th>Job Type</th>
+                      <th>Duration</th>
+                      <th>Overall Rating</th>
+                      <th>Learning & Growth Rating</th>
+                      <th>Recomendation Rating</th>
+                      <th>Additional Details</th>
+                    </tr>
+                  </thead>
+                  <tbody id="individualReviewBody">
+                  </tbody>
+                </table>
+              </div>
 
 
-          <div id="contactViewContainer" class="panel-collapse collapse">
-            <table id="" style="width:100%">
-            </table>
+
+            </div>
+
+            <div id="contactViewContainer" class="panel-collapse collapse">
+              <table id="" style="width:100%">
+              </table>
+            </div>
           </div>
         </div>
       </div>
-    </div>
 
-    <div id="submitRatingViewContainer" class="panel-collapse collapse" data-parent="#containers">
-      <div style="margin-top:20px;">
-        <h1>Submit Your Rating</h1>
+      <div id="submitRatingViewContainer" class="panel-collapse collapse" data-parent="#containers">
+        <div style="margin-top:20px;">
+          <h1>Submit Your Rating</h1>
+        </div>
       </div>
     </div>
-  </div>
   </div>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -231,10 +270,10 @@
   <script type="text/javascript" src="js/data/stateFacts.js"></script>
 
   <script type="text/javascript" src="js/job.js"></script>
-  <script type="text/javascript" src="js/parseAndCalcData.js"></script>
-
   <script type="text/javascript" src="js/view.js"></script>
+  <script type="text/javascript" src="js/parseAndCalcData.js"></script>
   <script type="text/javascript" src="js/mapsAndTables.js"></script>
+
 
 
 
