@@ -1,6 +1,6 @@
 function loadData() {
     return new Promise(function (resolve, reject) {
-      var RAW_DATA = [
+      var RAW_CONTACT_DATA = [
         [
             {
               "companyName": "Asurion",
@@ -88,7 +88,7 @@ function loadData() {
             },
           ]
         ];
-      resolve(RAW_DATA);
+      resolve(RAW_CONTACT_DATA);
     });
   }
   
