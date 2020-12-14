@@ -12,6 +12,7 @@ $(document).ready(function () {
     stateColors[i]["opacity"] = opacity;
   }
 
+  // Populate state table data
   function getStateTableData(state) {
     $("#stateInfoBody").empty();
     document.getElementById("stateCompanyData").style.display = "block";
@@ -27,7 +28,7 @@ $(document).ready(function () {
 
       cell1.innerHTML = i;
       cell2.innerHTML = stateJobs[state][i];
-      cell3.innerHTML = jobData[i]["averageOverallRating"];
+      cell3.innerHTML = "\t\t" + jobData[i]["averageOverallRating"];
     }
   }
 

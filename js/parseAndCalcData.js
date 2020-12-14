@@ -86,17 +86,9 @@ function getCounts(data_array) {
 
   // Get the averages
   getAverages(jobData);
-
-  // Create an array of job data so it can be sorted and displayed
-  // var jobArray =
-
-  // jobArray.sort((a, b) => {
-  //   jobArray[a] < jobArray[b] ? -1 : 1;
-  // });
 }
 
 function getAverages(jobData) {
-  // var jobArr = [];
   for (i in jobData) {
     // Calculate Averages
     jobData[i]["averageOverallRating"] =
@@ -123,29 +115,9 @@ function getAverages(jobData) {
     totalSummary["averageLearnGrowRating"] =
       totalSummary["sumOfLearnGrowRating"] / totalSummary["participants"];
 
-    // Round values
-    // totalSummary["averageOverallRating"] = totalSummary["averageOverallRating"].toFixed(2);
-
-    // totalSummary["averageRecRating"] = totalSummary["averageRecRating"].toFixed(
-    //   2
-    // );
-    // totalSummary["averageLearnGrowRating"] = totalSummary[
-    //   "averageLearnGrowRating"
-    // ].toFixed(2);
-
     insertOverallSummary();
 
-    // Add to an array since it can be easily organized
-    // jobArr.push({
-    //   companyName: i,
-    //   employeeCount: jobData[i]["employeeCount"],
-    //   averageOverallRating: jobData[i]["averageOverallRating"].toFixed(2),
-    //   averageRecRating: jobData[i]["averageRecRating"].toFixed(2),
-    //   averageLearnGrowRating: jobData[i]["averageLearnGrowRating"].toFixed(2),
-    // });
   }
-  // console.log(jobArr);
-  // return jobArr;
 }
 
 // Update the HTML summary text
@@ -162,8 +134,7 @@ function insertOverallSummary() {
 $(document).ready(function () {
   loadData().then(parseData);
   // Start with about expanded
-  $("#aboutView").trigger("click");
   // Hide state map tables by default
   document.getElementById("stateCompanyData").style.display = "none";
-  // Fill in the front page table since data is all parsed out now
+  $("#aboutView").trigger("click");
 });

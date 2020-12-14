@@ -40,6 +40,35 @@ body {
 	color: #98acf8;
 	font-weight: 800;
 	font-size: 3.8em;
+	position: fixed;
+	left: 0;
+	right: 0;
+	margin-top: 20px;
+	background-color: #bce6eb;
+
+}
+
+.nav-container {
+	z-index: 999;
+	position: fixed;
+	margin: auto;
+	margin-bottom: 100px;
+	margin-top: 20px;
+	background-color: #bce6eb;
+}
+
+.page-body {
+	padding-top: 190px;
+}
+
+.state-card {
+	min-height: 100px;
+	max-height: 500px;
+	overflow-y: auto;
+}
+
+.fixed-top {
+	background-color: #bce6eb;
 }
 
 .section-headers {
@@ -131,7 +160,7 @@ html, body {
 
 .state-name {
 	color: #b088f9;
-	font-size: 2em;
+	font-size: 2.4em;
 	font-family: "Poppins";
 }
 
@@ -151,7 +180,35 @@ html, body {
 	opacity: 1;
 }
 
-.section-margins-padding{
-	margin-top:20px; 
+.section-margins-padding {
+	margin-top: 20px;
 	padding-bottom: 30px;
+}
+
+.state-table {
+	white-space: normal;
+	border-collapse: separate;
+	width: 100%;
+	border-spacing: 12px 15px;
+	padding: 20px;
+	margin: auto;
+	overflow: auto;
+	word-wrap: break-word;
+	overflow-wrap: break-word;
+}
+
+.summary-table {
+	white-space: normal;
+	border-collapse: separate;
+	border-spacing: 12px 15px;
+	padding: 20px;
+	margin: auto;
+	overflow: auto;
+	word-wrap: break-word;
+}
+
+.wrapped-th {
+	word-wrap: break-word;
+	overflow-wrap: break-word;
+	width: 20%;
 }
