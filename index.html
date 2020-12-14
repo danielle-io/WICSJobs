@@ -26,37 +26,53 @@
 
 <body>
   <div class="fixed-top">
+    <div class="row">
+      <div class="col-sm-1"></div>
 
-    <header class="page-header">WICS Jobs</header>
+      <div class="col-sm-10">
 
-    <div class="container" style="z-index: 1; padding-top: 80px;">
-      <div class="container nav-container">
-        <div class="row">
-          <div class="col-sm">
-            <div id="aboutView" class="card card-button" href="#aboutViewContainer">
-              About & Summary
-              <span class="material-icons">
-                looks
-              </span>
+        <header class="page-header">WICS Jobs</header>
 
+        <div style="padding-top: 80px;" class="nav-padding">
+          <!-- <div class="container nav-container"> -->
+
+          <nav class="nav navbar navbar-expand-md navbar-light">
+            <div class="regular-nav-width">
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsingNavbar">
+                <span class="navbar-toggler-icon"></span>
+              </button>
             </div>
-          </div>
-          <div class="col-sm">
-            <div id="sortAndContactView" class="card card-button" href="#sortAndContactViewContainer">
-              Browse Data
-              <span class="material-icons">
-                compare_arrows
-              </span>
+
+            <div class="navbar-collapse collapse justify-content-center" id="collapsingNavbar">
+              <ul class="nav justify-content-center">
+                <li class="nav-item">
+                  <div id="aboutView" class="card card-button" href="#aboutViewContainer">
+                    About & Summary
+                    <span class="nav-icons material-icons">
+                      looks
+                    </span>
+
+                  </div>
+                </li>
+                <li class="nav-item">
+                  <div id="sortAndContactView" class="card card-button" href="#sortAndContactViewContainer">
+                    Browse Data
+                    <span class="nav-icons material-icons">
+                      compare_arrows
+                    </span>
+                  </div>
+                </li>
+                <li class="nav-item">
+                  <div id="submitRatingView" class="card card-button" href="#submitRatingViewContainer">
+                    Submit Rating
+                    <span class="nav-icons material-icons">
+                      done_outline
+                    </span>
+                  </div>
+                </li>
+              </ul>
             </div>
-          </div>
-          <div class="col-sm">
-            <div id="submitRatingView" class="card card-button" href="#submitRatingViewContainer">
-              Submit Your Rating
-              <span class="material-icons">
-                done_outline
-              </span>
-            </div>
-          </div>
+          </nav>
         </div>
       </div>
     </div>
@@ -64,6 +80,7 @@
 
   <!-- Container for full page body-->
   <div class="page-body">
+
     <div class="container">
 
       <div id="aboutViewContainer" class="panel-collapse collapse show">
@@ -73,190 +90,218 @@
           <h1>The Data</h1>
 
           <div class="card">
-            <div style="margin: auto; width: 100%;">
-              <table class="table-primary table-responsive align-middle summary-table" id="summaryResults">
-                <tbody>
-                  <tr>
-                    <td colspan="2" class="summary-columns">
-                      Total Participants:
-                    </td>
-                    <td id="participants">
-                    </td>
-                  </tr>
+            <div style="background-color: #b8daff;">
+              <div class="row">
+                <div class="col">
+                  <div style="width: 100%;">
 
-                  <tr>
-                    <td colspan="2" class="summary-columns">
-                      Total Number of Companies:
-                    </td>
-                    <td id="companyCount">
-                    </td>
-                  </tr>
+                    <table class="table-responsive align-middle summary-table" id="summaryResults">
+                      <tbody>
+                        <tr>
+                          <td colspan="2" class="summary-columns">
+                            Total Participants:
+                          </td>
+                          <td id="participants">
+                          </td>
+                        </tr>
 
-                  <tr>
-                    <td colspan="2" class="summary-columns">
-                      Average Overall Job Rating:
-                    </td>
-                    <td id="averageOverallRating">
-                    </td>
-                  </tr>
+                        <tr>
+                          <td colspan="2" class="summary-columns">
+                            Total Number of Companies:
+                          </td>
+                          <td id="companyCount">
+                          </td>
+                        </tr>
 
-                  <tr>
-                    <td colspan="2" class="summary-columns">
-                      Average Learn & Grow Rating:
-                    </td>
-                    <td id="averageLearnGrowRating">
-                    </td>
-                  </tr>
+                        <tr>
+                          <td colspan="2" class="summary-columns">
+                            Average Overall Job Rating:
+                          </td>
+                          <td id="averageOverallRating">
+                          </td>
+                        </tr>
 
-                  <tr>
-                    <td colspan="2" class="summary-columns">
-                      Average Recomendation to Others Rating:
-                    </td>
-                    <td id="averageRecRating">
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
+                        <tr>
+                          <td colspan="2" class="summary-columns">
+                            Average Learn & Grow Rating:
+                          </td>
+                          <td id="averageLearnGrowRating">
+                          </td>
+                        </tr>
+
+                        <tr>
+                          <td colspan="2" class="summary-columns">
+                            Average Recomendation to Others Rating:
+                          </td>
+                          <td id="averageRecRating">
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+
+                <div class="col" style="margin: auto; margin-right: 40px;">
+                  <img src="/assets/images/anteatr.png" alt="WICS Anteater"
+                    style="float:right;width:250px;height:250px;">
+                </div>
+              </div>
             </div>
           </div>
+        </div>
 
-          <h1>The Mission</h1>
-          <div class="card">
-            <p>The goal of this project was to create a tech job review system that's more curated than what we see on
-              Glassdoor and similar websites. As members of Women in Information and Computer Sciences (<a
-                href="https://wics.ics.uci.edu/" target="_blank">WICS</a>) at UCI, we have had the wonderful opportunity
-              to be part of a hard-working, supportive community, that we often lean on for insight and advice when it
-              comes to our career
-              decisions. We decided to create this webpage as a way to give back to the organization that has done so
-              much
-              for us, by creating a single space to gather peer-reviewed information about the experiences of people
-              like
-              us. The experience of womxn at tech companies is going to be unique in comparison to the general public,
-              therefore highlighting the importance of providing access to reviews submitted primarily by womxn, and any
-              committee members that identify as our allies. An additional perk of this platform is the ability to reach
-              out to members that have worked in a company or position of interest, with our provided contact section.
-              We
-              hope that this collection of honest, anonymous reviews, paired with the possibility of networking with a
-              curent or former employee of listed companies, will empower our fellow WICS members to make informed
-              career
-              decisions.
-            </p>
-          </div>
-          <h1>The Creators</h1>
-          <div class="card">
-            <p>Hi, we're Danielle and Archita, former WICS board and committee members. We created this project just
-              before graduating as a way to do something for WICS that will allow us to continue contributing and
-              staying
-              involved, no matter where life takes us. Thanks for taking the time to check out what we've made!
-            </p>
-          </div>
+        <h1>The Mission</h1>
+        <div class="card">
+          <p>The goal of this project was to create a tech job review system that's more curated than what we see on
+            Glassdoor and similar websites. As members of Women in Information and Computer Sciences (<a
+              href="https://wics.ics.uci.edu/" target="_blank">WICS</a>) at UCI, we have had the wonderful opportunity
+            to be part of a hard-working, supportive community, that we often lean on for insight and advice when it
+            comes to our career
+            decisions. We decided to create this webpage as a way to give back to the organization that has done so
+            much
+            for us, by creating a single space to gather peer-reviewed information about the experiences of people
+            like
+            us. The experience of womxn at tech companies is going to be unique in comparison to the general public,
+            therefore highlighting the importance of providing access to reviews submitted primarily by womxn, and any
+            committee members that identify as our allies. An additional perk of this platform is the ability to reach
+            out to members that have worked in a company or position of interest, with our provided contact section.
+            We
+            hope that this collection of honest, anonymous reviews, paired with the possibility of networking with a
+            curent or former employee of listed companies, will empower our fellow WICS members to make informed
+            career
+            decisions.
+          </p>
+        </div>
+        <h1>The Creators</h1>
+        <div class="card">
+          <p>Hi, we're Danielle and Archita, former WICS board and committee members. We created this project just
+            before graduating as a way to do something for WICS that will allow us to continue contributing and
+            staying
+            involved, no matter where life takes us. Thanks for taking the time to check out what we've made!
+          </p>
         </div>
       </div>
 
-      <div id="sortAndContactViewContainer" class="panel-collapse collapse">
-        <div class="section-margins-padding">
+    </div>
 
-          <div class="sidenav">
-            <ul class="nav-list">
-              <li class="nav-item"><a id="mapView" class="nav-link active-link">
-                  <span class="material-icons">place</span>Map View</a></li>
-              <li class="nav-item"><a id="summaryView" class="nav-link inactive-link">
-                  <span class="material-icons">table_rows</span>Table View</a></li>
-              <li class="nav-item"><a id="contactView" class="nav-link inactive-link">
-                  <span class="material-icons">contact_page</span>Contact</a></li>
-            </ul>
+
+    <div id="sortAndContactViewContainer" class="panel-collapse collapse">
+      <div class="section-margins-padding">
+        <div class="row">
+          <div class="col-sm-2">
+
+            <div class="sidenav">
+              
+              <a id="mapView" class="side-nav-item nav-link active-link">
+                <span class="material-icons">place</span>Map View</a>
+              <a id="summaryView" class="side-nav-item nav-link inactive-link">
+                <span class="material-icons">table_rows</span>Table View</a>
+              <a id="contactView" class="side-nav-item nav-link inactive-link">
+                <span class="material-icons">contact_page</span>Contact</a>
+              </ul>
+            </div>
           </div>
 
-          <div class="data-section-body">
+          <div class="col-sm-10">
 
-            <!-- The map container -->
-            <div id="mapViewContainer" class="panel-collapse collapse show">
+            <!-- <div class="container"> -->
 
-              <h1 class="section-headers">Us Map</h1>
+            <div class="data-section-body" style="margin-right: 19%">
 
-              <!-- Map image -->
-              <div id="map" style="margin-top: 10px; width: 350px; height: 250px; margin: auto;"></div>
+              <!-- The map container -->
+              <div id="mapViewContainer" class="collapse show">
+                <h1 class="section-headers">Us Map</h1>
 
-              <div class="card state-card">
-                <div style="text-align: center;">
+                <!-- Map image -->
+                <div id="map" style="margin-top: 10px; width: 350px; height: 250px; margin: auto; margin-bottom: -10px;"></div>
 
-                  <div id="stateName" class='state-name'></div>
+                <div class="card state-card">
+                  <div style="text-align: center;">
+
+                    <div id="stateName" class='state-name'></div>
+                  </div>
+
+                  <div id="stateInfo">Click a state to see the summary data.<br> <small>States containing job data
+                      are
+                      pink
+                      in color, with level of contrast reflecting data amount.</small></div>
+
+                  <table id="stateCompanyData" class="table-responsive align-middle state-table">
+                    <thead>
+                      <tr>
+                        <th class="wrapped-th">Company</th>
+                        <th class="wrapped-th">Review Count</th>
+                        <th class="wrapped-th">Overall Rating (Mean)</th>
+                      </tr>
+                    </thead>
+                    <tbody id="stateInfoBody">
+                    </tbody>
+                  </table>
                 </div>
-
-                <div id="stateInfo">Click a state to see the summary data.<br> <small>States containing job data are
-                    pink
-                    in color, with level of contrast reflecting data amount.</small></div>
-
-                <table id="stateCompanyData" class="table-responsive align-middle state-table">
-                  <thead>
-                    <tr>
-                      <th class="wrapped-th">Company</th>
-                      <th class="wrapped-th">Review Count</th>
-                      <th class="wrapped-th">Overall Rating (Mean)</th>
-                    </tr>
-                  </thead>
-                  <tbody id="stateInfoBody">
-                  </tbody>
-                </table>
               </div>
             </div>
 
             <!-- The tables container -->
             <div id="summaryViewContainer" class="panel-collapse collapse">
+              <div class="container" style="text-align: center; margin-right: 19%;">
 
-              <!-- Buttons to switch between summaries and individual reviews -->
-              <div style="text-align: center; padding-top: 20px; margin-left: -130px;">
-                <!-- <div class="btn-group" role="group"> -->
-                <button id="overallView" type="button" class="view-switch-button btn btn-primary active">Summary
-                  View</button>
-                <button id="individualView" type="button" class="view-switch-button btn btn-primary">Individual
-                  Reviews</button>
-              </div>
-              <!-- </div> -->
-
-              <!-- The summary View container -->
-              <div id="summaryViewContainer" class="collapse show">
-
-                <div id="overallViewContainer" class="collapse show">
-                  <table class="display" id="companyCountTable" style="width:100%">
-                    <thead>
-                      <tr>
-                        <th>Company</th>
-                        <th>Review Count</th>
-                        <th>Overall Rating (Mean)</th>
-                        <th>Learning & Growth (Mean)</th>
-                        <th>Recomendation Rating (Mean)</th>
-                      </tr>
-                    </thead>
-                    <tbody id="companyCountBody">
-                    </tbody>
-                  </table>
+                <!-- Buttons to switch between summaries and individual reviews -->
+                <div style="padding-top: 20px; text-align: center; margin-right:16%;">
+                  <button id="overallView" type="button" class="view-switch-button btn btn-primary active">Summary
+                    View</button>
+                  <button id="individualView" type="button" class="view-switch-button btn btn-primary">Individual
+                    Reviews</button>
                 </div>
 
-                <!-- The individual review container -->
-                <div id="individualViewContainer" class="collapse">
-                  <table class="display" id="individualReviewTable" style="width:100%">
-                    <thead>
-                      <tr>
-                        <th>Company</th>
-                        <th>Position</th>
-                        <th>Job Type</th>
-                        <th>Duration</th>
-                        <th>Overall Rating</th>
-                        <th>Learning & Growth</th>
-                        <th>Recomendation Rating</th>
-                        <th>Additional Details</th>
-                      </tr>
-                    </thead>
-                    <tbody id="individualReviewBody">
-                    </tbody>
+                <!-- The summary View container -->
+                <div id="summaryViewContainer" class="collapse show">
+
+                  <div id="overallViewContainer" class="collapse show">
+                    <div class="table-container">
+                      <table class="display" id="companyCountTable" style="width:100%">
+                        <thead>
+                          <tr>
+                            <th>Company</th>
+                            <th>Review Count</th>
+                            <th>Overall Rating (Mean)</th>
+                            <th>Learning & Growth (Mean)</th>
+                            <th>Recomendation Rating (Mean)</th>
+                          </tr>
+                        </thead>
+                        <tbody id="companyCountBody">
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+
+                  <!-- The individual review container -->
+                  <div id="individualViewContainer" class="collapse">
+                    <div class="table-container">
+
+                      <table class="display" id="individualReviewTable" style="width:100%">
+                        <thead>
+                          <tr>
+                            <th>Company</th>
+                            <th>Position</th>
+                            <th>Job Type</th>
+                            <th>Duration</th>
+                            <th>Overall Rating</th>
+                            <th>Learning & Growth</th>
+                            <th>Recomendation Rating</th>
+                            <th>Additional Details</th>
+                          </tr>
+                        </thead>
+                        <tbody id="individualReviewBody">
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+
+                <div id="contactViewContainer" class="panel-collapse collapse">
+                  <table id="contactViewTable" style="width:100%">
                   </table>
                 </div>
-              </div>
-
-              <div id="contactViewContainer" class="panel-collapse collapse">
-                <table id="contactViewTable" style="width:100%">
-                </table>
               </div>
             </div>
           </div>
@@ -271,6 +316,9 @@
         </div>
       </div>
     </div>
+  </div>
+
+
   </div>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>

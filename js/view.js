@@ -1,7 +1,7 @@
 function collapseAndExpandInnerContainers(itemId) {
   // Apply the active and inactive styling
   var containerId = "#" + itemId + "Containter";
-  var items = document.getElementsByClassName("nav-link");
+  var items = document.getElementsByClassName("side-nav-item");
 
   // If everything is closed do not close the section
   if ($("#" + itemId).hasClass("active-link")) {
@@ -67,7 +67,8 @@ function collapseAndExpandContainers(itemId) {
 }
 
 // Clicking a card opens up the relevant container
-$(".nav-link").on("click", function (event) {
+$(".side-nav-item").on("click", function (event) {
+  console.log(this.id);
   collapseAndExpandInnerContainers(this.id);
 });
 
