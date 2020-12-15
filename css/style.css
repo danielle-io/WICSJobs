@@ -1,125 +1,126 @@
 body {
-	/* background-color: #bce6eb; */
-	/* background-color: white; */
-	font-family: 'Roboto', sans-serif;
-	font-weight: 300;
-	background-color: pink;
+  /* background-color: #bce6eb; */
+  /* background-color: white; */
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  background-color: pink;
 }
 
-html, body {
-	scroll-behavior: smooth;
+html,
+body {
+  scroll-behavior: smooth;
 }
 
 .summary-columns {
-	word-wrap: break-word;
-	font-weight: 500;
-	font-size: 1em;
-	width: 70%;
-	word-wrap: break-word;
+  word-wrap: break-word;
+  font-weight: 500;
+  font-size: 1em;
+  width: 70%;
+  word-wrap: break-word;
 }
 
 .page-header {
-	text-align: center;
-	font-size: 4em;
-	font-family: 'Poppins', sans-serif;
-	color: #98acf8;
-	font-weight: 800;
-	font-size: 3.8em;
-	position: fixed;
-	left: 0;
-	right: 0;
-	margin-top: 20px;
-	/* background-color: #bce6eb; */
+  text-align: center;
+  font-size: 4em;
+  font-family: "Poppins", sans-serif;
+  color: #98acf8;
+  font-weight: 800;
+  font-size: 3.8em;
+  position: fixed;
+  left: 0;
+  right: 0;
+  margin-top: 20px;
+  /* background-color: #bce6eb; */
 }
 
 .nav-container {
-	z-index: 999;
-	position: fixed;
-	margin: auto;
-	margin-bottom: 100px;
-	margin-top: 20px;
-	/* background-color: #bce6eb; */
+  z-index: 999;
+  position: fixed;
+  margin: auto;
+  margin-bottom: 100px;
+  margin-top: 20px;
+  /* background-color: #bce6eb; */
 }
 
 .state-card {
-	min-height: 100px;
-	max-height: 500px;
-	overflow-y: auto;
-	padding-left: 20px;
-	padding-right: 20px;
-	padding-bottom: 20px;
+  min-height: 100px;
+  max-height: 500px;
+  overflow-y: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 20px;
 }
 
 .fixed-top {
-	/* background-color: #bce6eb; */
-	background-color: pink;
-	/* background-color: white; */
+  /* background-color: #bce6eb; */
+  background-color: pink;
+  /* background-color: white; */
 }
 
 .section-headers {
-	text-align: center;
+  text-align: center;
 }
 
 .material-icons {
-	vertical-align: middle;
-	margin-left: 6px;
-	margin-right: 6px;
+  vertical-align: middle;
+  margin-left: 6px;
+  margin-right: 6px;
 }
 
 .card {
-	/* display: none; */
-	z-index: 1;
-	margin: 1em auto;
-	width: 80%;
-	border: solid 1em #bce6eb;
-	border-radius: 0.5em;
-	transform-style: preserve-3d;
-	-moz-transform-style: preserve-3d;
-	-webkit-transform-style: preserve-3d;
-	transition: 0.7s;
-	-moz-transition: 0.7s;
-	-webkit-transition: 0.7s;
-	/* background-color: #bce6eb; */
-	background-color: white;
+  /* display: none; */
+  z-index: 1;
+  margin: 1em auto;
+  width: 80%;
+  border: solid 1em #bce6eb;
+  border-radius: 0.5em;
+  transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
+  transition: 0.7s;
+  -moz-transition: 0.7s;
+  -webkit-transition: 0.7s;
+  /* background-color: #bce6eb; */
+  background-color: white;
 }
 
 .body-cards {
-	padding-left: 20px;
-	padding-right: 20px;
-	padding-bottom: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 20px;
 }
 
 .move-shapes {
-	margin-top: 10%;
-	margin-left: -10px;
+  margin-top: 10%;
+  margin-left: -10px;
 }
 
 .card-button {
-	cursor: pointer;
-	text-align: center;
-	font-weight: 600;
-	height: 100px;
+  cursor: pointer;
+  text-align: center;
+  font-weight: 600;
+  height: 100px;
 }
 
 .card-button:hover {
-	box-shadow: 0 0 1em rgb(145, 140, 140) !important;
+  box-shadow: 0 0 1em rgb(145, 140, 140) !important;
 }
 
 /* Styling active collapse buttons */
 
 .active-card-button {
-	box-shadow: 0 0 1em rgb(145, 140, 140) !important;
-	border: solid 1em #fdcfdf;
-	background-color: #fdcfdf;
-	/* color: #85e2e2; */
+  box-shadow: 0 0 1em rgb(145, 140, 140) !important;
+  border: solid 1em #fdcfdf;
+  background-color: #fdcfdf;
+  /* color: #85e2e2; */
 }
 
 /* The side navigation menu */
 
 .sidenav {
-	/* height: 100%; */
-	/* width: 200px; */
-	/* overflow-x: hidden;
+  /* height: 100%; */
+  /* width: 200px; */
+  /* overflow-x: hidden;
 	padding-top: 60px;
 	margin-left: 70px; */
 }
@@ -127,261 +128,272 @@ html, body {
 /* The full expanded nav */
 
 @media (min-width: 768px) {
-	.page-body {
-		padding-top: 190px;
-	}
-	.collapsed-nav {
-		display: -ms-flexbox!important;
-		display: flex!important;
-		-ms-flex-preferred-size: auto;
-		flex-basis: auto;
-	}
-	.navbar-expand-md .navbar-toggler {
-		display: none
-	}
-	.drawer-link {
-		display: none !important;
-	}
-	.nav {
-		display: contents;
-	}
-	.nav-padding {
-		margin-left: 200px;
-		margin-right: 200px;
-		margin-top: 20px;
-	}
-	.sidenav {
-		position: fixed;
-	}
-	.card-button {
-		cursor: pointer;
-		font-weight: 600;
-		height: 70px;
-		border: 0px;
-		font-size: .8em;
-		text-align: center;
-		justify-content: center;
-	}
+  .page-body {
+    padding-top: 190px;
+  }
+  .collapsed-nav {
+    display: -ms-flexbox !important;
+    display: flex !important;
+    -ms-flex-preferred-size: auto;
+    flex-basis: auto;
+  }
+  .navbar-expand-md .navbar-toggler {
+    display: none;
+  }
+  .drawer-link {
+    display: none !important;
+  }
+  .nav {
+    display: contents;
+  }
+  .nav-padding {
+    margin-left: 200px;
+    margin-right: 200px;
+    margin-top: 20px;
+  }
+  .sidenav {
+    position: fixed;
+  }
+  .card-button {
+    cursor: pointer;
+    font-weight: 600;
+    height: 70px;
+    border: 0px;
+    font-size: 0.8em;
+    text-align: center;
+    justify-content: center;
+  }
 }
 
 a {
-	cursor: pointer;
+  cursor: pointer;
 }
 
 /* Drawer is showing */
 
 @media (max-width: 768px) {
-	.page-body {
-		padding-top: 100px;
-	}
+  .page-body {
+    padding-top: 100px;
+  }
 }
 
 @media (max-width: 780px) {
-	.collapsed-nav {
-		/* display: none !important; */
-	}
+  .collapsed-nav {
+    /* display: none !important; */
+  }
 }
 
 @media (max-width: 1092px) {
-	.nav-icons {
-		display: none !important;
-	}
+  .nav-icons {
+    display: none !important;
+  }
 }
 
 .sidenav a {
-	font-size: 18px;
-	font-family: "Poppins";
-	cursor: pointer;
+  font-size: 18px;
+  font-family: "Poppins";
+  cursor: pointer;
 }
 
 .nav-item {
-	width: 70%;
+  width: 70%;
 }
 
 .table-container {
-	margin: 20px;
-	display: block;
+  margin: 20px;
+  display: block;
 }
 
 .active-link {
-	color: #df87c1 !important;
+  color: #df87c1 !important;
 }
 
 /* Margin for body alongside side nav */
 
 .data-section-body {
-	/* margin-left: -110px; */
+  /* margin-left: -110px; */
 }
 
 .state-name {
-	color: #b088f9;
-	font-size: 2.4em;
-	font-family: "Poppins";
+  color: #b088f9;
+  font-size: 2.4em;
+  font-family: "Poppins";
 }
 
 .state-facts {
-	color: #98acf8;
+  color: #98acf8;
 }
 
 .btn-primary {
-	background-color: #b5b8e2;
-	opacity: .4;
-	border-color: #b5b8e2;
+  background-color: #b5b8e2;
+  opacity: 0.4;
+  border-color: #b5b8e2;
 }
 
 .btn-primary .active {
-	background-color: #b5b8e2;
-	border-color: #ffffff;
-	opacity: 1;
+  background-color: #b5b8e2;
+  border-color: #ffffff;
+  opacity: 1;
 }
 
 .section-margins-padding {
-	margin-top: 20px;
-	padding-bottom: 30px;
+  margin-top: 20px;
+  padding-bottom: 30px;
 }
 
 .state-table {
-	white-space: normal;
-	border-collapse: separate;
-	width: 100%;
-	border-spacing: 12px 15px;
-	padding: 20px;
-	margin: auto;
-	overflow: auto;
-	word-wrap: break-word;
-	overflow-wrap: break-word;
+  white-space: normal;
+  border-collapse: separate;
+  width: 100%;
+  border-spacing: 12px 15px;
+  padding: 20px;
+  margin: auto;
+  overflow: auto;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 .summary-table {
-	white-space: normal;
-	border-collapse: separate;
-	border-spacing: 12px 15px;
-	padding: 20px;
-	margin: auto;
-	overflow: auto;
-	word-wrap: break-word;
+  white-space: normal;
+  border-collapse: separate;
+  border-spacing: 12px 15px;
+  padding: 20px;
+  margin: auto;
+  overflow: auto;
+  word-wrap: break-word;
 }
 
 .wrapped-th {
-	word-wrap: break-word;
-	overflow-wrap: break-word;
-	width: 20%;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  width: 20%;
 }
 
 /* Source: https://www.w3schools.com/howto/howto_css_flip_card.asp */
 /* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
 .flip-card {
-	background-color: transparent;
-	width: 300px;
-	height: 200px;
-	border: 1px solid #f1f1f1;
-	perspective: 1000px; /* Remove this if you don't want the 3D effect */
-  }
-  
-  /* This container is needed to position the front and back side */
-  .flip-card-inner {
-	position: relative;
-	width: 100%;
-	height: 100%;
-	text-align: center;
-	transition: transform 0.8s;
-	transform-style: preserve-3d;
-  }
-  
-  /* Do an horizontal flip when you move the mouse over the flip box container */
-  .flip-card:hover .flip-card-inner {
-	transform: rotateY(180deg);
-  }
-  
-  /* Position the front and back side */
-  .flip-card-front, .flip-card-back {
-	position: absolute;
-	width: 100%;
-	height: 100%;
-	-webkit-backface-visibility: hidden; /* Safari */
-	backface-visibility: hidden;
-  }
-  
-  /* Style the front side (fallback if image is missing) */
-  .flip-card-front {
-	background-color: #b088f9;
-	color: black;
-  }
-  
-  /* Style the back side */
-  .flip-card-back {
-	background-color: #98acf8;
-	color: white;
-	transform: rotateY(180deg);
-  }
+  /* background-color: transparent; */
+  /* width: 300px; */
+  height: 255px;
+  border: 1px solid #bce6eb;
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
 
-  .card-center{
-	margin-top: 70px;
-  }
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card-front {
+  background-color: #b088f9;
+  color: black;
+}
+
+/* Style the back side */
+.flip-card-back {
+  background-color: #98acf8;
+  color: white;
+  transform: rotateY(180deg);
+}
+
+.flip-card-logo {
+  color: white;
+  margin-top: 5px;
+  font-family: "Poppins";
+  text-align: center;
+}
+
+.card-center {
+  margin-top: 70px;
+}
+
 .circle {
-	height: 200px;
-	margin-left: 70%;
-	/* top: 0px; */
+  height: 200px;
+  margin-left: 70%;
+  /* top: 0px; */
 }
 
 .background-image {
-	/* width:600px;
+  /* width:600px;
   height:120px; */
-	background-size: cover;
-	/* background-color: pink; */
-	z-index: 1;
+  background-size: cover;
+  /* background-color: pink; */
+  z-index: 1;
 }
 
 svg {
-	scale: 300%;
-	display: inline-block;
-	position: absolute;
-	/* top: 0;
+  scale: 300%;
+  display: inline-block;
+  position: absolute;
+  /* top: 0;
 	left: 0; */
 }
 
 :root {
-	--sig-anim-dur: 1s;
-	--sig-bg-anim-dur: 750ms;
+  --sig-anim-dur: 1s;
+  --sig-bg-anim-dur: 750ms;
 }
 
-html, body {
-	margin: 0;
-	height: 100%;
+html,
+body {
+  margin: 0;
+  height: 100%;
 }
 
 svg {
-	transform: scale(0.75);
+  transform: scale(0.75);
 }
 
 .center {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
 }
 
-#stroke-1, #stroke-2 {
-	stroke-dasharray: 350;
-	stroke-dashoffset: 350;
-	animation: anim-stroke calc(var(--sig-anim-dur)/2) cubic-bezier(0.65, 0, 0.35, 1) forwards;
+#stroke-1,
+#stroke-2 {
+  stroke-dasharray: 350;
+  stroke-dashoffset: 350;
+  animation: anim-stroke calc(var(--sig-anim-dur) / 2)
+    cubic-bezier(0.65, 0, 0.35, 1) forwards;
 }
 
 #stroke-2 {
-	animation-delay: calc(var(--sig-anim-dur)/2);
+  animation-delay: calc(var(--sig-anim-dur) / 2);
 }
 
 @keyframes anim-stroke {
-	to {
-		stroke-dashoffset: 0;
-	}
+  to {
+    stroke-dashoffset: 0;
+  }
 }
 
 /* squigs animation */
 
 #squigs {
-	stroke-dasharray: 100;
-	/* animation: anim-squigs 2s linear infinite; */
+  stroke-dasharray: 100;
+  /* animation: anim-squigs 2s linear infinite; */
 }
 
 /* @keyframes anim-squigs {
@@ -391,69 +403,75 @@ svg {
 } */
 
 #triangle {
-	transform-origin: 25% 10%;
-	animation-iteration-count: 2;
-	animation: anim-triangle 2s ease-in-out alternate;
+  transform-origin: 25% 10%;
+  animation-iteration-count: 2;
+  animation: anim-triangle 2s ease-in-out alternate;
 }
 
 @keyframes anim-triangle {
-	from {
-		transform: rotate(0);
-	}
-	to {
-		transform: rotate(360deg);
-	}
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
-#bg-1, #bg-2 {
-	transform-origin: center;
-	transform: scale(0) rotate(1turn);
-	animation: anim-bg var(--sig-bg-anim-dur) var(--sig-anim-dur) cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+#bg-1,
+#bg-2 {
+  transform-origin: center;
+  transform: scale(0) rotate(1turn);
+  animation: anim-bg var(--sig-bg-anim-dur) var(--sig-anim-dur)
+    cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
 }
 
 #bg-2 {
-	animation-delay: calc(var(--sig-anim-dur) + var(--sig-bg-anim-dur)/2);
+  animation-delay: calc(var(--sig-anim-dur) + var(--sig-bg-anim-dur) / 2);
 }
 
 @keyframes anim-bg {
-	to {
-		transform: unset;
-	}
+  to {
+    transform: unset;
+  }
 }
 
 .eighties {
-	font-family: "Russo One";
-	font-size: 1.4em;
+  font-family: "Russo One";
+  font-size: 1.4em;
 }
 
 .purple-square {
-	display: inline-block;
-	position: absolute;
-	height: 317px;
-	width: 247px;
-	left: 12%;
-	top: 10%;
-	padding: 23px;
-	background-color: #b7a6cb;
-	border-radius: 3px;
-	top: 43%;
-	transform: rotate(290deg) skew(0deg);
-	-webkit-transform: rotate(324deg) skew(0deg);
-	border-top: 0px transparent;
+  display: inline-block;
+  position: absolute;
+  height: 317px;
+  width: 247px;
+  left: 12%;
+  top: 10%;
+  padding: 23px;
+  background-color: #b7a6cb;
+  border-radius: 3px;
+  top: 43%;
+  transform: rotate(290deg) skew(0deg);
+  -webkit-transform: rotate(324deg) skew(0deg);
+  border-top: 0px transparent;
 }
 
 .blue-square {
-	display: inline-block;
-	position: absolute;
-	height: 128px;
-	width: 240px;
-	left: 13%;
-	top: 60%;
-	padding: 23px;
-	background-color: #C9FC8D;
-	border-radius: 3px;
-	top: 43%;
-	transform: rotate(290deg) skew(0deg);
-	-webkit-transform: rotate(324deg) skew(0deg);
-	border-top: 0px transparent;
+  display: inline-block;
+  position: absolute;
+  height: 128px;
+  width: 240px;
+  left: 13%;
+  top: 60%;
+  padding: 23px;
+  background-color: #c9fc8d;
+  border-radius: 3px;
+  top: 43%;
+  transform: rotate(290deg) skew(0deg);
+  -webkit-transform: rotate(324deg) skew(0deg);
+  border-top: 0px transparent;
+}
+
+.fa-linkedin-in{
+
 }

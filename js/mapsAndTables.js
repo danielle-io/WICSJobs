@@ -125,20 +125,35 @@ function populateSummaryTable() {
   });
 }
 
-// function populateContactTable() {
-//   // Populate table
-//   for (var i in contact_array) {
-//     var table = document.getElementById("contactViewBody");
-//     var row = table.insertRow(-1);
-//     var cell1 = row.insertCell(0);
-//     var cell2 = row.insertCell(1);
+function generateCards() {
+  var textString = "<div class='row'>";
+
+  var counter = 3;
+
+  for (var i in sorted_contact_array) {
+
+    var contactArray = sorted_contact_array[i].toString().replaceAll(',','\n');
     
+    textString += "<div class='col-sm-3'>";
+    textString +=
+      "<div class='flip-card'>" +
+      "<div class='flip-card-inner'>" +
+      "<div class='flip-card-front'>";
+    textString += "<h3 class='flip-card-logo'>" + i + "</h3>";
+    textString += "</div>";
+    // Back of the card
+    textString += "<div class='flip-card-back'>";
+    textString += contactArray;
 
-//     cell1.innerHTML = contact_array[i].companyName;
-//     cell2.innerHTML = contact_array[i].contactInfo;
-//   }
+    textString += "</div></div></div></div>";
+    counter--;
 
-//   $("#contactViewTable").DataTable({
-//     order: [[1, "desc"]],
-//   });
-// }
+    if (counter === 0) {
+      counter = 3;
+      textString += "</div><div class='row'>";
+    }
+  }
+  document.getElementById("card-container").innerHTML = textString;
+}
+
+
