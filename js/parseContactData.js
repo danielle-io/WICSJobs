@@ -1,6 +1,6 @@
 // A dictionary of companies and people's email or linkedin 
 var sorted_array = {};
-
+var currentContact;
 
 function parseContactData(raw_contact_data) {
   if (raw_contact_data === undefined) {
@@ -24,17 +24,71 @@ function parseContactData(raw_contact_data) {
   })
 
   console.log(sorted_array);
+
+  insertCard();
 }
 
+// for (var i in sorted_array){    
+//     if(sorted_array[i].contactInfo.length > 1){
+//         for (var c in sorted_array[i].contactInfo){
+//             currentContact = sorted_array.contactInfo[c];
+//         }
+//     }
+//     else{
+//         currentContact = sorted_array.contactInfo[i][0];
+//     }
+// }
+
 // Update the HTML summary text
-function insertOverallSummary() {
-  $("#participants").text(totalSummary.participants);
-  $("#companyCount").text(totalSummary.companyCount);
-  $("#averageOverallRating").text(totalSummary.averageOverallRating.toFixed(2));
-  $("#averageLearnGrowRating").text(
-    totalSummary.averageLearnGrowRating.toFixed(2)
-  );
-  $("#averageRecRating").text(totalSummary.averageRecRating.toFixed(2));
+
+
+
+const cardArea = document.getElementById("contactViewContainer");
+
+function insertCard() {
+    for (var i in sorted_array){   
+        $("#company-name").text(i);
+        // console.log("hii" + i + sorted_array[i]);
+        if(sorted_array[i].length > 1){
+            for (var c in sorted_array[i]){
+                console.log("c" + sorted_array[i]);
+                console.log("ccccccc" + sorted_array[i][c]);
+                currentContact = sorted_array[i][c];
+                sortContact(currentContact);
+            }
+        }
+        else{
+            currentContact = sorted_array[i];
+            // console.log("single" + currentContact);
+            sortContact(currentContact);
+        }
+    }
+
+//     $("#company-name").text()
+// var cardContainer = document.getElementById("contact-card");
+// var cardContent = "";
+// sorted_array.forEach(function(elem){
+//     if(i == 0){
+//         content += 'div class = "row">'
+//     }
+//     if(elem.contactInfo.length > 0){
+//         if(i == 0){
+//             content += 'div class = "row">'
+//         }
+
+
+//     }
+// });
+
+}
+
+function sortContact(currentContact){
+    if(currentContact.includes("linkedin")){
+        $("#linkedin-info").text(currentContact);
+    }
+    else{
+        $('#email-info').text(currentContact);
+    }
 }
 
 $(document).ready(function () {
