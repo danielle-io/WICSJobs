@@ -2,9 +2,9 @@ class Contact {
     private companyName: string;
     private contactInfo: string;
   
-    constructor(contactData: Contact) {
-      this.companyName = contactData.companyName;
-      this.contactInfo = contactData.contactInfo;
+    constructor(company_name: string, contact_info: string) {
+      this.companyName = company_name;
+      this.contactInfo = contact_info;
     }
   
     get standardizedCompanyName() {
@@ -15,14 +15,14 @@ class Contact {
     get contactType():string {    
         //linkedin
         if(this.contactInfo.includes("linkedin")){
-            return this.contactInfo;
+            return "linkedin";
         }
         //email   
         else{
-            return "mailto:" + this.contactInfo;
+            return "email";
         }    
    
     }
-    
+
   }
   

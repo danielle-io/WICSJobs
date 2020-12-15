@@ -1,92 +1,91 @@
-function loadData() {
+function loadContactData() {
     return new Promise(function (resolve, reject) {
       var RAW_CONTACT_DATA = [
-        [
+        
             {
-              "companyName": "Asurion",
-              "contactInfo": "https://www.linkedin.com/in/leungrebecca"
+              "company_name": "Asurion",
+              "contact_info": "https://www.linkedin.com/in/leungrebecca"
             },
             {
-              "companyName": "Bridge Diagnostics",
-              "contactInfo": "gayatrs@uci.edu"
+              "company_name": "Bridge Diagnostics",
+              "contact_info": "gayatrs@uci.edu"
             },
             {
-              "companyName": "Codazen",
-              "contactInfo": "cheyenmc@uci.edu"
+              "company_name": "Codazen",
+              "contact_info": "cheyenmc@uci.edu"
             },
             {
-              "companyName": "Cisco",
-              "contactInfo": "https://www.linkedin.com/in/anjali-krishnan1"
+              "company_name": "Cisco",
+              "contact_info": "https://www.linkedin.com/in/anjali-krishnan1"
             },
             {
-              "companyName": "Etsy, Inc.",
-              "contactInfo": "princesspancubit@gmail.com"
+              "company_name": "Etsy, Inc.",
+              "contact_info": "princesspancubit@gmail.com"
             },
             {
-              "companyName": "Facebook",
-              "contactInfo": "https://www.linkedin.com/in/leungrebecca"
+              "company_name": "Facebook",
+              "contact_info": "https://www.linkedin.com/in/leungrebecca"
             },
             {
-              "companyName": "Intuit",
-              "contactInfo": "https://www.linkedin.com/in/emma6pv/"
+              "company_name": "Intuit",
+              "contact_info": "https://www.linkedin.com/in/emma6pv/"
             },
             {
-              "companyName": "Intuit",
-              "contactInfo": "https://www.linkedin.com/in/mohraa/"
+              "company_name": "Intuit",
+              "contact_info": "https://www.linkedin.com/in/mohraa/"
             },
             {
-              "companyName": "Microsoft",
-              "contactInfo": "https://www.linkedin.com/in/aishwarya-bhandari-3aa763160"
+              "company_name": "Microsoft",
+              "contact_info": "https://www.linkedin.com/in/aishwarya-bhandari-3aa763160"
             },
             {
-              "companyName": "Microsoft",
-              "contactInfo": "https://www.linkedin.com/in/anasathish/"
+              "company_name": "Microsoft",
+              "contact_info": "https://www.linkedin.com/in/anasathish/"
             },
             {
-              "companyName": "Microsoft",
-              "contactInfo": "https://www.linkedin.com/in/archita-ganesh"
+              "company_name": "Microsoft",
+              "contact_info": "https://www.linkedin.com/in/archita-ganesh"
             },
             {
-              "companyName": "Microsoft",
-              "contactInfo": "https://www.linkedin.com/in/choegrace/"
+              "company_name": "Microsoft",
+              "contact_info": "https://www.linkedin.com/in/choegrace/"
             },
             {
-              "companyName": "Microsoft",
-              "contactInfo": "https://www.linkedin.com/in/danielle-amanda/"
+              "company_name": "Microsoft",
+              "contact_info": "https://www.linkedin.com/in/danielle-amanda/"
             },
             {
-              "companyName": "Microsoft",
-              "contactInfo": "Katakams@uci.edu"
+              "company_name": "Microsoft",
+              "contact_info": "Katakams@uci.edu"
             },
             {
-              "companyName": "Microsoft",
-              "contactInfo": "Linkedin.com/tiffanyar"
+              "company_name": "Microsoft",
+              "contact_info": "https://www.linkedin.com/in/tiffanyar/"
             },
             {
-              "companyName": "Speckle",
-              "contactInfo": "achala.shenoy@myspeckle.com"
+              "company_name": "Speckle",
+              "contact_info": "achala.shenoy@myspeckle.com"
             },
             {
-              "companyName": "Sysdig",
-              "contactInfo": "https://www.linkedin.com/in/tanyasreenagesh/"
+              "company_name": "Sysdig",
+              "contact_info": "https://www.linkedin.com/in/tanyasreenagesh/"
             },
             {
-              "companyName": "Visa, Inc",
-              "contactInfo": "princesspancubit@gmail.com"
+              "company_name": "Visa, Inc",
+              "contact_info": "princesspancubit@gmail.com"
             },
             {
-              "companyName": "Workday",
-              "contactInfo": "https://www.linkedin.com/in/sharonhsu0102/"
+              "company_name": "Workday",
+              "contact_info": "https://www.linkedin.com/in/sharonhsu0102/"
             },
             {
-              "companyName": "Zillow Group",
-              "contactInfo": "https://www.linkedin.com/in/alyssa-darjuan"
+              "company_name": "Zillow Group",
+              "contact_info": "https://www.linkedin.com/in/alyssa-darjuan"
             },
             {
-              "companyName": "Zillow Group",
-              "contactInfo": "https://www.linkedin.com/in/leungrebecca"
+              "company_name": "Zillow Group",
+              "contact_info": "https://www.linkedin.com/in/leungrebecca"
             },
-          ]
         ];
       resolve(RAW_CONTACT_DATA);
     });
