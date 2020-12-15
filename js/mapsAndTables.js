@@ -131,31 +131,27 @@ function generateCards() {
   var counter = 3;
 
   for (var i in sorted_contact_array) {
-
-    var contactArray = sorted_contact_array[i].toString().replaceAll(',','<br>');
-    
-
-    // Source: https://www.w3schools.com/howto/howto_css_flip_card.asp
-    textString += "<div class='col-sm-3'>";
+    var contactArray = sorted_contact_array[i]
+      .toString()
+      .replaceAll(",", "<br>");
+    textString += "<div class='col-sm-3' style='margin-bottom: 30px;'>";
     textString +=
       "<div class='flip-card'>" +
       "<div class='flip-card-inner'>" +
-      "<div class='flip-card-front'>";
-    textString += "<h3 class='flip-card-logo card-center'>" + i + "</h3>";
+      "<div class='card-front'>";
+    textString += "<div class='flip-card-logo card-center'>" + i + "</div>";
     textString += "</div>";
     // Back of the card
-    textString += "<div class='flip-card-back'>";
-    textString += contactArray;
+    textString += "<div class='card-back'>";
+    textString += "<span style='margin-left: 20px;'>" + contactArray + "</span>";
 
     textString += "</div></div></div></div>";
     counter--;
 
     if (counter === 0) {
       counter = 3;
-      textString += "</div><div class='row'>";
+      textString += "</div><div class='row''>";
     }
   }
   document.getElementById("card-container").innerHTML = textString;
 }
-
-

@@ -19,12 +19,12 @@ class Contact {
       console.log(splitText);
       var linkAddress = splitText[1];
       this.contactInfo =
-        "<span class='iconify' data-icon='fa-linkedin' data-inline='false'></span>" +
-        "<a target='_blank' style='margin-left: 20px' href=" + 
+        "<span><span class='iconify' data-icon='fa-linkedin'></span>" +
+        "<a target='_blank' style='margin-left: 26px;' href=" + 
         this.contactInfo + 
         ">" +
         linkAddress +
-        "</a>";
+        "</a></span>";
     }
     else{
       this.contactInfo = "<span class='iconify' data-icon='mdi-email' data-inline='false'></span>" + "<h7 style='margin-left:20px;word-wrap:break-word'>" + this.contactInfo + "</h7>"
