@@ -28,57 +28,26 @@ function parseContactData(raw_contact_data) {
   insertCard();
 }
 
-// for (var i in sorted_array){    
-//     if(sorted_array[i].contactInfo.length > 1){
-//         for (var c in sorted_array[i].contactInfo){
-//             currentContact = sorted_array.contactInfo[c];
-//         }
-//     }
-//     else{
-//         currentContact = sorted_array.contactInfo[i][0];
-//     }
-// }
-
-// Update the HTML summary text
-
-
-
-const cardArea = document.getElementById("contactViewContainer");
+// const cardArea = document.getElementById("contactViewContainer");
 
 function insertCard() {
     for (var i in sorted_array){   
         $("#company-name").text(i);
-        // console.log("hii" + i + sorted_array[i]);
+
         if(sorted_array[i].length > 1){
             for (var c in sorted_array[i]){
                 console.log("c" + sorted_array[i]);
-                console.log("ccccccc" + sorted_array[i][c]);
+                console.log("ccccccc" +  sorted_array[i][c]);
                 currentContact = sorted_array[i][c];
                 sortContact(currentContact);
             }
         }
-        else{
+        else{      
             currentContact = sorted_array[i];
             // console.log("single" + currentContact);
             sortContact(currentContact);
         }
     }
-
-//     $("#company-name").text()
-// var cardContainer = document.getElementById("contact-card");
-// var cardContent = "";
-// sorted_array.forEach(function(elem){
-//     if(i == 0){
-//         content += 'div class = "row">'
-//     }
-//     if(elem.contactInfo.length > 0){
-//         if(i == 0){
-//             content += 'div class = "row">'
-//         }
-
-
-//     }
-// });
 
 }
 
@@ -93,8 +62,4 @@ function sortContact(currentContact){
 
 $(document).ready(function () {
   loadContactData().then(parseContactData);
-  // Start with about expanded
-  // Hide state map tables by default
-//   document.getElementById("stateCompanyData").style.display = "none";
-//   $("#aboutView").trigger("click");
 });

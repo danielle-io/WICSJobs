@@ -124,3 +124,21 @@ function populateSummaryTable() {
     order: [[1, "desc"]],
   });
 }
+
+// function populateContactTable() {
+//   // Populate table
+//   for (var i in contact_array) {
+//     var table = document.getElementById("contactViewBody");
+//     var row = table.insertRow(-1);
+//     var cell1 = row.insertCell(0);
+//     var cell2 = row.insertCell(1);
+    
+
+//     cell1.innerHTML = contact_array[i].companyName;
+//     cell2.innerHTML = contact_array[i].contactInfo;
+//   }
+
+//   $("#contactViewTable").DataTable({
+//     order: [[1, "desc"]],
+//   });
+// }
