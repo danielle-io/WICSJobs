@@ -56,9 +56,7 @@ body {
 }
 
 .fixed-top {
-  /* background-color: #bce6eb; */
   background-color: pink;
-  /* background-color: white; */
 }
 
 .section-headers {
@@ -261,6 +259,7 @@ a {
 .flip-card {
   height: 255px;
   perspective: 1000px; 
+  cursor: pointer;
 }
 
 .flip-card-inner {
@@ -320,7 +319,7 @@ a {
 
 .circle {
   height: 200px;
-  margin-left: 70%;
+  margin-left: 62%;
   /* top: 0px; */
 }
 
