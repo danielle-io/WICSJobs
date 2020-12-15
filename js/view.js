@@ -10,6 +10,8 @@ function collapseAndExpandInnerContainers(itemId) {
     return;
   }
 
+  window.scrollTo(0, 0);
+
   for (var item in items) {
     if (items[item].id !== itemId) {
       $("#" + items[item].id).removeClass("active-link");
@@ -23,7 +25,6 @@ function collapseAndExpandInnerContainers(itemId) {
   $("#" + itemId).addClass("active-link");
   $("#" + itemId + "Container").addClass("show");
 }
-
 
 function changeTableView(itemId) {
   // If everything is closed do not close the section
@@ -58,6 +59,9 @@ function collapseAndExpandContainers(itemId, collapsedDrawer) {
   if ($("#" + itemId).hasClass("active-card-button")) {
     return;
   }
+
+  window.scrollTo(0, 0);
+
   for (var i in items) {
     // Prevents code breaking if invalid items in loop
     var getIdName = items[i].split("View");
