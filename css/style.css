@@ -4,12 +4,15 @@ body {
 	font-weight: 300;
 }
 
+html, body {
+	scroll-behavior: smooth;
+}
+
 .summary-columns {
 	word-wrap: break-word;
 	font-weight: 500;
 	font-size: 1em;
 	width: 70%;
-	overflow: wrap;
 	word-wrap: break-word;
 }
 
@@ -36,10 +39,6 @@ body {
 	background-color: #bce6eb;
 }
 
-.page-body {
-	padding-top: 190px;
-}
-
 .state-card {
 	min-height: 100px;
 	max-height: 500px;
@@ -52,10 +51,6 @@ body {
 
 .section-headers {
 	text-align: center;
-}
-
-html, body {
-	scroll-behavior: smooth;
 }
 
 .material-icons {
@@ -86,7 +81,6 @@ html, body {
 
 .card-button:hover {
 	box-shadow: 0 0 1em rgb(145, 140, 140) !important;
-	/* zoom: 1.2; */
 }
 
 /* Styling active collapse buttons */
@@ -101,29 +95,30 @@ html, body {
 /* The side navigation menu */
 
 .sidenav {
-	height: 100%;
+	/* height: 100%; */
 	/* width: 200px; */
-	overflow-x: hidden;
+	/* overflow-x: hidden;
 	padding-top: 60px;
-	margin-left: 70px;
+	margin-left: 70px; */
 }
 
 /* The full expanded nav */
 
-@media (min-width: 680px) {
-	.navbar-expand-md .navbar-collapse {
+@media (min-width: 768px) {
+	.page-body {
+		padding-top: 190px;
+	}
+	.collapsed-nav {
 		display: -ms-flexbox!important;
 		display: flex!important;
 		-ms-flex-preferred-size: auto;
 		flex-basis: auto;
 	}
 	.navbar-expand-md .navbar-toggler {
-		display: none;
+		display: none
 	}
-	.regular-nav-width {
-		width: 0%;
-		padding-left: 20px;
-		padding-right: 20px;
+	.drawer-link {
+		display: none !important;
 	}
 	.nav {
 		display: contents;
@@ -133,7 +128,7 @@ html, body {
 		margin-right: 200px;
 		margin-top: 20px;
 	}
-	.sidenav{
+	.sidenav {
 		position: fixed;
 	}
 	.card-button {
@@ -147,14 +142,26 @@ html, body {
 	}
 }
 
-@media (max-width: 681px) {
-	.nav-icons{
-		display: none !important;
+a {
+	cursor: pointer;
+}
+
+/* Drawer is showing */
+
+@media (max-width: 768px) {
+	.page-body {
+		padding-top: 100px;
+	}
+}
+
+@media (max-width: 780px) {
+	.collapsed-nav {
+		/* display: none !important; */
 	}
 }
 
 @media (max-width: 1092px) {
-	.nav-icons{
+	.nav-icons {
 		display: none !important;
 	}
 }
@@ -169,11 +176,10 @@ html, body {
 	width: 70%;
 }
 
-.table-container{
+.table-container {
 	margin: 20px;
-	position: block;
+	display: block;
 }
-
 
 .active-link {
 	color: #df87c1 !important;
