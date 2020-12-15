@@ -3,7 +3,7 @@ function collapseAndExpandInnerContainers(itemId) {
   var containerId = "#" + itemId + "Containter";
   var items = document.getElementsByClassName("side-nav-item");
 
-  window.parent.scrollTo(0, 0);
+  // window.parent.scrollTo(0, 0);
 
   // If everything is closed do not close the section
   if ($("#" + itemId).hasClass("active-link")) {
@@ -24,15 +24,6 @@ function collapseAndExpandInnerContainers(itemId) {
   $("#" + itemId + "Container").addClass("show");
 }
 
-// Clicking a card opens up the relevant container
-$(".card-button").on("click", function (event) {
-  collapseAndExpandContainers(this.id, false);
-});
-
-// Clicking link from drawer opens up the relevant container
-$(".drawer-link").on("click", function (event) {
-  collapseAndExpandContainers(this.id, true);
-});
 
 function changeTableView(itemId) {
   // If everything is closed do not close the section
@@ -93,4 +84,14 @@ $(".side-nav-item").on("click", function (event) {
 
 $(".view-switch-button").on("click", function (event) {
   changeTableView(this.id);
+});
+
+// Clicking a card opens up the relevant container
+$(".card-button").on("click", function (event) {
+  collapseAndExpandContainers(this.id, false);
+});
+
+// Clicking link from drawer opens up the relevant container
+$(".drawer-link").on("click", function (event) {
+  collapseAndExpandContainers(this.id, true);
 });
