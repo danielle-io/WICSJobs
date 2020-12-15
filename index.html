@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
@@ -122,6 +122,7 @@
         </div>
       </div>
     </div>
+  </div>
 
     <!-- Container for full page body-->
     <div class="page-body">
@@ -147,37 +148,13 @@
                             <td id="participants"></td>
                           </tr>
 
-                          <tr>
-                            <td colspan="2" class="summary-columns">
-                              Total Number of Companies:
-                            </td>
-                            <td id="companyCount"></td>
-                          </tr>
+    <div class="container">
 
-                          <tr>
-                            <td colspan="2" class="summary-columns">
-                              Average Overall Job Rating:
-                            </td>
-                            <td id="averageOverallRating"></td>
-                          </tr>
+      <div id="aboutViewContainer" class="panel-collapse collapse show">
 
-                          <tr>
-                            <td colspan="2" class="summary-columns">
-                              Average Learn & Grow Rating:
-                            </td>
-                            <td id="averageLearnGrowRating"></td>
-                          </tr>
+        <div class="section-margins-padding">
 
-                          <tr>
-                            <td colspan="2" class="summary-columns">
-                              Average Recomendation to Others Rating:
-                            </td>
-                            <td id="averageRecRating"></td>
-                          </tr>
-                        </tbody>
-                      </table>
-                    </div>
-                  </div>
+          <h1>The Data</h1>
 
                   <div class="col" style="margin: auto; margin-right: 40px">
                     <img
@@ -187,46 +164,45 @@
                     />
                   </div>
                 </div>
+
+                <div class="col" style="margin: auto; margin-right: 40px;">
+                  <img src="/assets/images/anteatr.png" alt="WICS Anteater"
+                    style="float:right;width:250px;height:250px;">
+                </div>
               </div>
             </div>
           </div>
+        </div>
 
-          <h1>The Mission</h1>
-          <div class="card">
-            <p>
-              The goal of this project was to create a tech job review system
-              that's more curated than what we see on Glassdoor and similar
-              websites. As members of Women in Information and Computer Sciences
-              (<a href="https://wics.ics.uci.edu/" target="_blank">WICS</a>) at
-              UCI, we have had the wonderful opportunity to be part of a
-              hard-working, supportive community, that we often lean on for
-              insight and advice when it comes to our career decisions. We
-              decided to create this webpage as a way to give back to the
-              organization that has done so much for us, by creating a single
-              space to gather peer-reviewed information about the experiences of
-              people like us. The experience of womxn at tech companies is going
-              to be unique in comparison to the general public, therefore
-              highlighting the importance of providing access to reviews
-              submitted primarily by womxn, and any committee members that
-              identify as our allies. An additional perk of this platform is the
-              ability to reach out to members that have worked in a company or
-              position of interest, with our provided contact section. We hope
-              that this collection of honest, anonymous reviews, paired with the
-              possibility of networking with a curent or former employee of
-              listed companies, will empower our fellow WICS members to make
-              informed career decisions.
-            </p>
-          </div>
-          <h1>The Creators</h1>
-          <div class="card">
-            <p>
-              Hi, we're Danielle and Archita, former WICS board and committee
-              members. We created this project just before graduating as a way
-              to do something for WICS that will allow us to continue
-              contributing and staying involved, no matter where life takes us.
-              Thanks for taking the time to check out what we've made!
-            </p>
-          </div>
+        <h1>The Mission</h1>
+        <div class="card">
+          <p>The goal of this project was to create a tech job review system that's more curated than what we see on
+            Glassdoor and similar websites. As members of Women in Information and Computer Sciences (<a
+              href="https://wics.ics.uci.edu/" target="_blank">WICS</a>) at UCI, we have had the wonderful opportunity
+            to be part of a hard-working, supportive community, that we often lean on for insight and advice when it
+            comes to our career
+            decisions. We decided to create this webpage as a way to give back to the organization that has done so
+            much
+            for us, by creating a single space to gather peer-reviewed information about the experiences of people
+            like
+            us. The experience of womxn at tech companies is going to be unique in comparison to the general public,
+            therefore highlighting the importance of providing access to reviews submitted primarily by womxn, and any
+            committee members that identify as our allies. An additional perk of this platform is the ability to reach
+            out to members that have worked in a company or position of interest, with our provided contact section.
+            We
+            hope that this collection of honest, anonymous reviews, paired with the possibility of networking with a
+            curent or former employee of listed companies, will empower our fellow WICS members to make informed
+            career
+            decisions.
+          </p>
+        </div>
+        <h1>The Creators</h1>
+        <div class="card">
+          <p>Hi, we're Danielle and Archita, former WICS board and committee members. We created this project just
+            before graduating as a way to do something for WICS that will allow us to continue contributing and
+            staying
+            involved, no matter where life takes us. Thanks for taking the time to check out what we've made!
+          </p>
         </div>
       </div>
 
@@ -252,6 +228,7 @@
                 >
               </div>
             </div>
+          </div>
 
             <div class="col-sm-10">
               <div class="data-section-body" style="margin-right: 19%">
@@ -276,30 +253,42 @@
                       <div id="stateName" class="state-name"></div>
                     </div>
 
-                    <div id="stateInfo">
-                      Click a state to see the summary data.<br />
-                      <small
-                        >States containing job data are pink in color, with
-                        level of contrast reflecting data amount.</small
-                      >
-                    </div>
+            <!-- <div class="container"> -->
 
-                    <table
-                      id="stateCompanyData"
-                      class="table-responsive align-middle state-table"
-                    >
-                      <thead>
-                        <tr>
-                          <th class="wrapped-th">Company</th>
-                          <th class="wrapped-th">Review Count</th>
-                          <th class="wrapped-th">Overall Rating (Mean)</th>
-                        </tr>
-                      </thead>
-                      <tbody id="stateInfoBody"></tbody>
-                    </table>
+            <div class="data-section-body" style="margin-right: 19%">
+
+              <!-- The map container -->
+              <div id="mapViewContainer" class="collapse show">
+                <h1 class="section-headers">Us Map</h1>
+
+                <!-- Map image -->
+                <div id="map" style="margin-top: 10px; width: 350px; height: 250px; margin: auto; margin-bottom: -10px;"></div>
+
+                <div class="card state-card">
+                  <div style="text-align: center;">
+
+                    <div id="stateName" class='state-name'></div>
                   </div>
+
+                  <div id="stateInfo">Click a state to see the summary data.<br> <small>States containing job data
+                      are
+                      pink
+                      in color, with level of contrast reflecting data amount.</small></div>
+
+                  <table id="stateCompanyData" class="table-responsive align-middle state-table">
+                    <thead>
+                      <tr>
+                        <th class="wrapped-th">Company</th>
+                        <th class="wrapped-th">Review Count</th>
+                        <th class="wrapped-th">Overall Rating (Mean)</th>
+                      </tr>
+                    </thead>
+                    <tbody id="stateInfoBody">
+                    </tbody>
+                  </table>
                 </div>
               </div>
+            </div>
 
               <!-- The tables container -->
               <div id="summaryViewContainer" class="collapse">
@@ -333,11 +322,7 @@
 
                   <div id="overallViewContainer" class="collapse show">
                     <div class="table-container">
-                      <table
-                        class="display"
-                        id="companyCountTable"
-                        style="width: 100%"
-                      >
+                      <table class="display" id="companyCountTable" style="width:100%">
                         <thead>
                           <tr>
                             <th>Company</th>
@@ -347,7 +332,8 @@
                             <th>Recomendation Rating (Mean)</th>
                           </tr>
                         </thead>
-                        <tbody id="companyCountBody"></tbody>
+                        <tbody id="companyCountBody">
+                        </tbody>
                       </table>
                     </div>
                   </div>
@@ -355,11 +341,8 @@
                   <!-- The individual review container -->
                   <div id="individualViewContainer" class="collapse">
                     <div class="table-container">
-                      <table
-                        class="display"
-                        id="individualReviewTable"
-                        style="width: 100%"
-                      >
+
+                      <table class="display" id="individualReviewTable" style="width:100%">
                         <thead>
                           <tr>
                             <th>Company</th>
@@ -372,7 +355,8 @@
                             <th>Additional Details</th>
                           </tr>
                         </thead>
-                        <tbody id="individualReviewBody"></tbody>
+                        <tbody id="individualReviewBody">
+                        </tbody>
                       </table>
                     </div>
                   </div>
@@ -382,6 +366,11 @@
                   <table id="contactViewTable" style="width: 100%"></table>
                 </div>
               </div>
+            </div>
+
+            <div id="contactViewContainer" class="panel-collapse collapse">
+              <table id="contactViewTable" style="width:100%">
+              </table>
             </div>
           </div>
         </div>
@@ -411,38 +400,44 @@
         </div>
       </div>
     </div>
+  </div>
+</div>
+</div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/5.1.2/math.min.js"></script>
 
-    <script
-      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-      crossorigin="anonymous"
-    ></script>
-    <script src="//cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js"></script>
 
-    <script src="js/libraries/raphael.js"></script>
-    <script src="js/libraries/usmap.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/5.1.2/math.min.js"></script>
 
-    <script src="js/data/getContactData.js"></script>
-    <script src="js/data/stateAbbreviations.js"></script>
-    <script src="js/data/getReviewData.js"></script>
-    <script src="js/data/stateFacts.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+  <script src="//cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js"></script>
 
-    <script src="js/job.js"></script>
-    <script src="js/view.js"></script>
-    <script src="js/parseAndCalcData.js"></script>
-    <script src="js/mapsAndTables.js"></script>
-  </body>
+  <script src="js/libraries/raphael.js"></script>
+  <script src="js/libraries/usmap.js"></script>
+
+  <script type="text/javascript" src="js/data/getContactData.js"></script>
+  <script type="text/javascript" src="js/data/stateAbbreviations.js"></script>
+  <script type="text/javascript" src="js/data/getReviewData.js"></script>
+  <script type="text/javascript" src="js/data/stateFacts.js"></script>
+
+  <script type="text/javascript" src="js/job.js"></script>
+  <script type="text/javascript" src="js/contact.js"></script>
+  <script type="text/javascript" src="js/view.js"></script>
+  <script type="text/javascript" src="js/parseAndCalcData.js"></script>
+  <script type="text/javascript" src="js/parseContactData.js"></script>
+  <script type="text/javascript" src="js/mapsAndTables.js"></script>
+
+
+
+
+</body>
+
 </html>
