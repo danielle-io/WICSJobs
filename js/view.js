@@ -3,6 +3,8 @@ function collapseAndExpandInnerContainers(itemId) {
   var containerId = "#" + itemId + "Containter";
   var items = document.getElementsByClassName("side-nav-item");
 
+  window.parent.scrollTo(0, 0);
+
   // If everything is closed do not close the section
   if ($("#" + itemId).hasClass("active-link")) {
     return;
@@ -24,7 +26,12 @@ function collapseAndExpandInnerContainers(itemId) {
 
 // Clicking a card opens up the relevant container
 $(".card-button").on("click", function (event) {
-  collapseAndExpandContainers(this.id);
+  collapseAndExpandContainers(this.id, false);
+});
+
+// Clicking link from drawer opens up the relevant container
+$(".drawer-link").on("click", function (event) {
+  collapseAndExpandContainers(this.id, true);
 });
 
 function changeTableView(itemId) {
@@ -46,33 +53,44 @@ function changeTableView(itemId) {
   }
 }
 
-function collapseAndExpandContainers(itemId) {
+function collapseAndExpandContainers(itemId, collapsedDrawer) {
+  // console.log(itemId);
   // Apply the active and inactive styling
-  var items = document.getElementsByClassName("card-button");
-  console.log(items);
+  var items = ["aboutView", "sortAndContactView", "submitRatingView"];
+
+  // Collapsed drawer Ids are slightly different, so extended name
+  // needs to match the container name
+  if (collapsedDrawer) {
+    itemId = itemId + "View";
+  }
   // If everything is closed do not close the section
   if ($("#" + itemId).hasClass("active-card-button")) {
     return;
   }
-  for (var item in items) {
-    if (items[item].id !== itemId) {
-      $("#" + items[item].id).removeClass("active-card-button");
-      $("#" + items[item].id + "Container").removeClass("show");
+  for (var i in items) {
+    // Prevents code breaking if invalid items in loop
+    var getIdName = items[i].split("View");
+    // console.log("#" + getIdName[0]);
+    if (items[i] !== itemId) {
+      // Remove active class from drawer link - get name by splitting
+      $("#" + getIdName[0]).removeClass("active-link");
+      // Remove active class from expanded nav link
+      $("#" + items[i]).removeClass("active-card-button");
+      $("#" + items[i] + "Container").removeClass("show");
+    } else {
+      // Make current item active
+      $("#" + itemId.split("View")[0]).addClass("active-link");
+      $("#" + itemId).addClass("active-card-button");
     }
   }
-
-  // Make current item active
-  $("#" + itemId).addClass("active-card-button");
   $("#" + itemId + "Container").addClass("show");
 }
 
 // Clicking a card opens up the relevant container
 $(".side-nav-item").on("click", function (event) {
-  console.log(this.id);
   collapseAndExpandInnerContainers(this.id);
 });
 
 $(".view-switch-button").on("click", function (event) {
-  console.log(this.id);
   changeTableView(this.id);
 });

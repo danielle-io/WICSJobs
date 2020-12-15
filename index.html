@@ -19,7 +19,6 @@
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap"
       rel="stylesheet"
     />
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap"
       rel="stylesheet"
@@ -55,25 +54,44 @@
         <div class="col-sm-10">
           <header class="page-header">WICS Jobs</header>
 
-          <div style="padding-top: 80px" class="nav-padding">
-            <!-- <div class="container nav-container"> -->
-
             <nav class="nav navbar navbar-expand-md navbar-light">
-              <div class="regular-nav-width">
-                <button
-                  class="navbar-toggler"
-                  type="button"
-                  data-toggle="collapse"
-                  data-target="#collapsingNavbar"
-                >
-                  <span class="navbar-toggler-icon"></span>
-                </button>
-              </div>
 
+              <!-- Drawer view button -->
+              <button
+                class="navbar-toggler"
+                type="button"
+                data-toggle="collapse"
+                data-target="#collapsingNavbar"
+              >
+                <span class="navbar-toggler-icon"></span>
+              </button>
+
+              <!-- Nav list for the drawer view -->
               <div
-                class="navbar-collapse collapse justify-content-center"
+                class="collapse navbar-collapse""
                 id="collapsingNavbar"
               >
+                <ul class="nav">
+                  <li id="about" class="nav-item drawer-link active-link">
+                    <a>About & Summary</a>
+                  </li>
+                  <li id="sortAndContact" class="nav-item drawer-link">
+                    <a>
+                      Browse Data
+                    </a>
+                  </li>
+                  <li id="submitRating" class="nav-item drawer-link">
+                    <a>
+                      Submit Rating
+                    </a>
+                  </li>
+                </ul>
+              </div>
+
+              <!-- Navbar for expanded window -->
+              <div style="padding-top: 80px" class="nav-padding">
+
+              <div class="navbar-collapse collapse justify-content-center">
                 <ul class="nav justify-content-center">
                   <li class="nav-item">
                     <div id="aboutView" class="card card-button">
@@ -108,7 +126,7 @@
     <!-- Container for full page body-->
     <div class="page-body">
       <div class="container">
-        <div id="aboutViewContainer" class="panel-collapse collapse show">
+        <div id="aboutViewContainer" class="collapse show">
           <div class="section-margins-padding">
             <h1>The Data</h1>
 
@@ -212,7 +230,7 @@
         </div>
       </div>
 
-      <div id="sortAndContactViewContainer" class="panel-collapse collapse">
+      <div id="sortAndContactViewContainer" class="collapse">
         <div class="section-margins-padding">
           <div class="row">
             <div class="col-sm-2">
@@ -239,19 +257,19 @@
               <div class="data-section-body" style="margin-right: 19%">
                 <!-- The map container -->
                 <div id="mapViewContainer" class="collapse show">
-                  <h1 class="section-headers">Us Map</h1>
-
-                  <!-- Map image -->
-                  <div
-                    id="map"
-                    style="
-                      margin-top: 10px;
-                      width: 350px;
-                      height: 250px;
-                      margin: auto;
-                      margin-bottom: -10px;
-                    "
-                  ></div>
+                  <div class="card">
+                    <!-- Map image -->
+                    <div
+                      id="map"
+                      style="
+                        margin-top: 10px;
+                        width: 350px;
+                        height: 250px;
+                        margin: auto;
+                        margin-bottom: -10px;
+                      "
+                    ></div>
+                  </div>
 
                   <div class="card state-card">
                     <div style="text-align: center">
@@ -284,7 +302,7 @@
               </div>
 
               <!-- The tables container -->
-              <div id="summaryViewContainer" class="panel-collapse collapse">
+              <div id="summaryViewContainer" class="collapse">
                 <div
                   class="container"
                   style="text-align: center; margin-right: 19%"
@@ -360,7 +378,7 @@
                   </div>
                 </div>
 
-                <div id="contactViewContainer" class="panel-collapse collapse">
+                <div id="contactViewContainer" class="collapse">
                   <table id="contactViewTable" style="width: 100%"></table>
                 </div>
               </div>
@@ -371,9 +389,7 @@
     </div>
     <div
       id="submitRatingViewContainer"
-      class="panel-collapse collapse"
-      data-parent="#containers"
-    >
+      class="collapse">
       <div class="container">
         <div style="margin-top: 20px">
           <h1 class="section-headers">Submit Your Rating</h1>
