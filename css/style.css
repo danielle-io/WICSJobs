@@ -117,18 +117,8 @@ body {
   box-shadow: 0 0 1em rgb(145, 140, 140) !important;
   border: solid 1em #fdcfdf;
   background-color: #fdcfdf;
-  /* color: #85e2e2; */
 }
 
-/* The side navigation menu */
-
-.sidenav {
-  /* height: 100%; */
-  /* width: 200px; */
-  /* overflow-x: hidden;
-	padding-top: 60px;
-	margin-left: 70px; */
-}
 
 /* The full expanded nav */
 
@@ -213,11 +203,6 @@ a {
   color: #df87c1 !important;
 }
 
-/* Margin for body alongside side nav */
-
-.data-section-body {
-  /* margin-left: -110px; */
-}
 
 .state-name {
   color: #b088f9;
@@ -312,10 +297,16 @@ a {
 }
 
 .flip-card-logo {
+  padding: 10px;
   color: white;
   margin-top: 5px;
   font-family: "Poppins";
   text-align: center;
+  overflow: auto;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  white-space: normal;
+
 }
 
 .card-center {
