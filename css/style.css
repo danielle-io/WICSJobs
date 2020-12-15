@@ -21,7 +21,6 @@ body {
 
 .iconify{
   margin-left: 5px;
-  
 }
 
 .page-header {
@@ -294,6 +293,9 @@ a {
   color: white;
   transform: rotateY(180deg);
   padding-top: 20px;
+  font-size: .8em;
+  padding-left: 5px;
+  word-break: break-all;
 }
 
 .flip-card-logo {
@@ -306,7 +308,6 @@ a {
   word-wrap: break-word;
   overflow-wrap: break-word;
   white-space: normal;
-
 }
 
 .card-center {

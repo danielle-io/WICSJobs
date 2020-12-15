@@ -143,7 +143,7 @@ function generateCards() {
     textString += "</div>";
     // Back of the card
     textString += "<div class='card-back'>";
-    textString += "<span style='margin-left: 20px;'>" + contactArray + "</span>";
+    textString += "<span>" + contactArray + "</span>";
 
     textString += "</div></div></div></div>";
     counter--;

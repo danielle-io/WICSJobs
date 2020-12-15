@@ -15,7 +15,7 @@ class Contact {
             console.log(splitText);
             var linkAddress = splitText[1];
             this.contactInfo =
-                "<span><span class='iconify' data-icon='fa-linkedin'></span>" +
+                "<span><span class='iconify' data-icon='fa-linkedin' data-inline='true'></span>" +
                     "<a target='_blank' style='margin-left: 26px;' href=" +
                     this.contactInfo +
                     ">" +
@@ -23,7 +23,11 @@ class Contact {
                     "</a></span>";
         }
         else {
-            this.contactInfo = "<span class='iconify' data-icon='mdi-email' data-inline='false'></span>" + "<h7 style='margin-left:20px;word-wrap:break-word'>" + this.contactInfo + "</h7>";
+            this.contactInfo =
+                "<span class='iconify' data-icon='mdi-email' data-inline='true' style='margin-top: 2px; margin-right: 2px;'></span>" +
+                    "<span style='margin-left: 20px;'>" +
+                    this.contactInfo +
+                    "</span>";
         }
         return this.contactInfo;
     }
