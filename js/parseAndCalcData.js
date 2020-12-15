@@ -137,9 +137,4 @@ $(document).ready(function () {
   // Hide state map tables by default
   document.getElementById("stateCompanyData").style.display = "none";
   $("#aboutView").trigger("click");
-
-  $("#individualView").trigger("click");
-  $("#overallView").trigger("click");
-  $("iframe").height(900);
-
 });
