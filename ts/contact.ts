@@ -16,9 +16,9 @@ class Contact {
       console.log("hi");
       if(this.contactInfo.includes("linkedin")){
         var splitText = this.contactInfo.split("/in/");
-        // var linkAddress = splitText[1];
-        //  this.contactInfo = "<a target='_blank' href=" + this.contactInfo + "><i class='fab fa-linkedin-in'></i>" +
-        //  linkAddress + "</a>";
+        var linkAddress = splitText[1];
+         this.contactInfo = "<a target='_blank' href=" + "/in/" + this.contactInfo + ">" +
+         linkAddress + "</a>";
       }
       return this.contactInfo;
     }
