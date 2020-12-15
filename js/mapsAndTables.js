@@ -141,7 +141,7 @@ function generateCards() {
       "<div class='flip-card'>" +
       "<div class='flip-card-inner'>" +
       "<div class='flip-card-front'>";
-    textString += "<h3 class='flip-card-logo'>" + i + "</h3>";
+    textString += "<h3 class='flip-card-logo card-center'>" + i + "</h3>";
     textString += "</div>";
     // Back of the card
     textString += "<div class='flip-card-back'>";

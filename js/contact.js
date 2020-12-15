@@ -22,6 +22,9 @@ class Contact {
                     linkAddress +
                     "</a>";
         }
+        else {
+            this.contactInfo = "<span class='iconify' data-icon='mdi-email' data-inline='false'></span>" + "<h7 style='margin-left:20px;word-wrap:break-word'>" + this.contactInfo + "</h7>";
+        }
         return this.contactInfo;
     }
 }

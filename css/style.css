@@ -324,7 +324,11 @@ a {
 }
 
 .card-center {
-  margin-top: 70px;
+  margin-top: 40%;
+}
+
+.card-right {
+  margin-right: 20px;
 }
 
 .circle {
@@ -472,6 +476,5 @@ svg {
   border-top: 0px transparent;
 }
 
-.fa-linkedin-in{
-
+.fa-linkedin-in {
 }
