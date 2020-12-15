@@ -18,14 +18,11 @@ class Contact {
       var splitText = this.contactInfo.split("/in/");
       console.log(splitText);
       var linkAddress = splitText[1];
-      // "<span class='iconify' data-icon='fa-linkedin' data-inline='false'></span>"
-      // <i class="fab fa-linkedin"></i>
       this.contactInfo =
         "<span class='iconify' data-icon='fa-linkedin' data-inline='false'></span>" +
         "<a target='_blank' style='margin-left: 20px' href=" +
         this.contactInfo +
         ">" +
-        // "/in/" +
         linkAddress +
         "</a>";
     }
