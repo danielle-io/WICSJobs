@@ -134,6 +134,8 @@ function generateCards() {
 
     var contactArray = sorted_contact_array[i].toString().replaceAll(',','\n');
     
+
+    // Source: https://www.w3schools.com/howto/howto_css_flip_card.asp
     textString += "<div class='col-sm-3'>";
     textString +=
       "<div class='flip-card'>" +

@@ -1,4 +1,4 @@
-This project parses data imported from Google Forms survey responses containing information about WICS member's job experiences.
+This project parses data imported from Google Forms survey responses containing information about UCI WICS(Women In Information and Computer Sciences) member's job experiences.
 
 Sources: 
 - State abbreviation conversions via https://gist.github.com/mshafrir/2646763
