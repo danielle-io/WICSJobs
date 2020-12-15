@@ -1,144 +1,139 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="author" content="Danielle Scott, Archita Ganesh" />
-    <meta name="description" content="WICS Jobs Experience Webpage" />
 
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-      crossorigin="anonymous"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
-      integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
-      crossorigin="anonymous"
-    />
-    <link rel="stylesheet" href="css/style.css" />
-    <link
-      rel="stylesheet"
-      href="//cdn.datatables.net/1.10.22/css/jquery.dataTables.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/icon?family=Material+Icons"
-    />
+<head>
+  <meta charset="utf-8" />
+  <meta name="author" content="Danielle Scott, Archita Ganesh" />
+  <meta name="description" content="WICS Jobs Experience Webpage" />
 
-    <title>WICS Jobs</title>
-  </head>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="//cdn.datatables.net/1.10.22/css/jquery.dataTables.min.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+  <link href='https://fonts.googleapis.com/css?family=Russo+One' rel='stylesheet' type='text/css'>
 
-  <body>
-    <div class="fixed-top">
-      <div class="row">
-        <div class="col-sm-1"></div>
+  <title>WICS Jobs</title>
+</head>
 
-        <div class="col-sm-10">
-          <header class="page-header">WICS Jobs</header>
+<body>
+  <!-- <div class="circle"> -->
 
-            <nav class="nav navbar navbar-expand-md navbar-light">
+  <!-- </div> -->
+  <div class="fixed-top">
+    <!-- <svg width="600" height="600" fill="none" class="circle">
+      <circle id="yellowCircle" cx="300.5" cy="130.5" r="57.5" fill="#F9D276" />
+      <path id="triangle" d="M175.717 56.362l9.101 44.731-43.288-14.484 34.187-30.247z" fill="#BA6EA2" />
+    </svg> -->
 
-              <!-- Drawer view button -->
-              <button
-                class="navbar-toggler"
-                type="button"
-                data-toggle="collapse"
-                data-target="#collapsingNavbar"
-              >
-                <span class="navbar-toggler-icon"></span>
-              </button>
+    <div class="row">
+      <div class="col-sm-1"></div>
 
-              <!-- Nav list for the drawer view -->
-              <div
-                class="collapse navbar-collapse""
-                id="collapsingNavbar"
-              >
-                <ul class="nav">
-                  <li id="about" class="nav-item drawer-link active-link">
-                    <a>About & Summary</a>
-                  </li>
-                  <li id="sortAndContact" class="nav-item drawer-link">
-                    <a>
-                      Browse Data
-                    </a>
-                  </li>
-                  <li id="submitRating" class="nav-item drawer-link">
-                    <a>
-                      Submit Rating
-                    </a>
-                  </li>
-                </ul>
-              </div>
+      <div class="col-sm-10">
 
-              <!-- Navbar for expanded window -->
-              <div style="padding-top: 80px" class="nav-padding">
 
-              <div class="navbar-collapse collapse justify-content-center">
-                <ul class="nav justify-content-center">
-                  <li class="nav-item">
-                    <div id="aboutView" class="card card-button">
-                      About & Summary
-                      <span class="nav-icons material-icons"> looks </span>
-                    </div>
-                  </li>
-                  <li class="nav-item">
-                    <div id="sortAndContactView" class="card card-button">
-                      Browse Data
-                      <span class="nav-icons material-icons">
-                        compare_arrows
-                      </span>
-                    </div>
-                  </li>
-                  <li class="nav-item">
-                    <div id="submitRatingView" class="card card-button">
-                      Submit Rating
-                      <span class="nav-icons material-icons">
-                        done_outline
-                      </span>
-                    </div>
-                  </li>
-                </ul>
-              </div>
-            </nav>
+        <header class="page-header">
+          <h1 class="eighties"> WICS Jobs
+          </h1>
+
+        </header>
+        <nav class="nav navbar navbar-expand-md navbar-light">
+
+          <!-- Drawer view button -->
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsingNavbar">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <!-- Nav list for the drawer view -->
+          <div class="collapse navbar-collapse" id=" collapsingNavbar">
+            <ul class="nav">
+              <li id="about" class="nav-item drawer-link active-link">
+                <a>About & Summary</a>
+              </li>
+              <li id="sortAndContact" class="nav-item drawer-link">
+                <a>
+                  Browse Data
+                </a>
+              </li>
+              <li id="submitRating" class="nav-item drawer-link">
+                <a>
+                  Submit Rating
+                </a>
+              </li>
+            </ul>
           </div>
-        </div>
+
+          <!-- Navbar for expanded window -->
+          <div style="padding-top: 80px" class="nav-padding">
+
+            <div class="navbar-collapse collapse justify-content-center">
+              <ul class="nav justify-content-center">
+                <li class="nav-item">
+                  <div id="aboutView" class="card card-button">
+                    About & Summary
+                    <span class="nav-icons material-icons"> looks </span>
+                  </div>
+                </li>
+                <li class="nav-item">
+                  <div id="sortAndContactView" class="card card-button">
+                    Browse Data
+                    <span class="nav-icons material-icons">
+                      compare_arrows
+                    </span>
+                  </div>
+                </li>
+                <li class="nav-item">
+                  <div id="submitRatingView" class="card card-button">
+                    Submit Rating
+                    <span class="nav-icons material-icons">
+                      done_outline
+                    </span>
+                  </div>
+                </li>
+              </ul>
+            </div>
+        </nav>
       </div>
     </div>
+  </div>
+
+  <div class="background-image">
+    <div class="purple-square"></div>
+    <div class="blue-square"></div>
+
+    <!-- <svg width="600" height="600" fill="none" class="move-shapes">
+      <g>
+        <path id="bigCardBlue" d="M148 280l372-146-43 383-366-30 37-207z" fill="#C599F8" />
+        <path id="bg-1" d="M117 229L489 83l-43 383-366-30 37-207z" fill="#A8D9FB" />
+
+        <path id="squigs"
+          d="M390.063 509.377c23.095 10.804 13.171-20.638 39.569-8.055 26.398 12.583 18.283-22.913 43.197-7.285m-80.735 31.564c23.095 10.805 13.171-20.638 39.569-8.055 26.397 12.583 18.282-22.912 43.196-7.284m-78.672 32.158c23.095 10.805 13.171-20.638 39.569-8.055 26.398 12.583 18.283-22.913 43.197-7.285"
+          stroke="#C9FC8D" stroke-width="5" stroke-linecap="round" />
+      </g>
+    </svg> -->
 
     <!-- Container for full page body-->
     <div class="page-body">
+
       <div class="container">
         <div id="aboutViewContainer" class="collapse show">
           <div class="section-margins-padding">
-            <h1>The Data</h1>
 
-            <div class="card">
-              <div style="background-color: #b8daff">
+            <div class="card body-cards">
+
+              <div style="margin-top:15px; background-color: #b8daff; border-radius: 0.5em;">
+                <h1 style="margin-top: 10px; margin-left: 10px;">The Data</h1>
+
                 <div class="row">
                   <div class="col">
                     <div style="width: 100%">
-                      <table
-                        class="table-responsive align-middle summary-table"
-                        id="summaryResults"
-                      >
+                      <table class="table-responsive align-middle summary-table" id="summaryResults">
                         <tbody>
                           <tr>
                             <td colspan="2" class="summary-columns">
@@ -180,19 +175,16 @@
                   </div>
 
                   <div class="col" style="margin: auto; margin-right: 40px">
-                    <img
-                      src="./assets/images/anteatr.png"
-                      alt="WICS Anteater"
-                      style="float: right; width: 250px; height: 250px"
-                    />
+                    <img src="./assets/images/anteatr.png" alt="WICS Anteater"
+                      style="float: right; width: 250px; height: 250px" />
                   </div>
                 </div>
               </div>
             </div>
           </div>
 
-          <h1>The Mission</h1>
-          <div class="card">
+          <div class="card body-cards">
+            <h1 style="margin-top: 10px; margin-left: 10px;">The Mission</h1>
             <p>
               The goal of this project was to create a tech job review system
               that's more curated than what we see on Glassdoor and similar
@@ -217,8 +209,10 @@
               informed career decisions.
             </p>
           </div>
-          <h1>The Creators</h1>
-          <div class="card">
+
+          <div class="card body-cards">
+            <h1 style="margin-top: 10px; margin-left: 10px;">The Creators</h1>
+
             <p>
               Hi, we're Danielle and Archita, former WICS board and committee
               members. We created this project just before graduating as a way
@@ -236,20 +230,11 @@
             <div class="col-sm-2">
               <div class="sidenav">
                 <a id="mapView" class="side-nav-item nav-link active-link">
-                  <span class="material-icons">place</span>Map View</a
-                >
-                <a
-                  id="summaryView"
-                  class="side-nav-item nav-link inactive-link"
-                >
-                  <span class="material-icons">table_rows</span>Table View</a
-                >
-                <a
-                  id="contactView"
-                  class="side-nav-item nav-link inactive-link"
-                >
-                  <span class="material-icons">contact_page</span>Contact</a
-                >
+                  <span class="material-icons">place</span>Map View</a>
+                <a id="summaryView" class="side-nav-item nav-link inactive-link">
+                  <span class="material-icons">table_rows</span>Table View</a>
+                <a id="contactView" class="side-nav-item nav-link inactive-link">
+                  <span class="material-icons">contact_page</span>Contact</a>
               </div>
             </div>
 
@@ -259,35 +244,27 @@
                 <div id="mapViewContainer" class="collapse show">
                   <div class="card">
                     <!-- Map image -->
-                    <div
-                      id="map"
-                      style="
+                    <div id="map" style="
                         margin-top: 10px;
                         width: 350px;
                         height: 250px;
                         margin: auto;
                         margin-bottom: -10px;
-                      "
-                    ></div>
+                      "></div>
                   </div>
 
                   <div class="card state-card">
-                    <div style="text-align: center">
+                    <div style="text-align: center; padding-top: 10px;">
                       <div id="stateName" class="state-name"></div>
                     </div>
 
                     <div id="stateInfo">
                       Click a state to see the summary data.<br />
-                      <small
-                        >States containing job data are pink in color, with
-                        level of contrast reflecting data amount.</small
-                      >
+                      <small>States containing job data are pink in color, with
+                        level of contrast reflecting data amount.</small>
                     </div>
 
-                    <table
-                      id="stateCompanyData"
-                      class="table-responsive align-middle state-table"
-                    >
+                    <table id="stateCompanyData" class="table-responsive align-middle state-table">
                       <thead>
                         <tr>
                           <th class="wrapped-th">Company</th>
@@ -303,41 +280,24 @@
 
               <!-- The tables container -->
               <div id="summaryViewContainer" class="collapse">
-                <div
-                  class="container"
-                  style="text-align: center; margin-right: 19%"
-                >
+                <div class="container" style="text-align: center; margin-right: 19%">
                   <!-- Buttons to switch between summaries and individual reviews -->
-                  <div
-                    style="
+                  <div style="
                       padding-top: 20px;
                       text-align: center;
                       margin-right: 16%;
-                    "
-                  >
-                    <button
-                      id="overallView"
-                      type="button"
-                      class="view-switch-button btn btn-primary active"
-                    >
+                    ">
+                    <button id="overallView" type="button" class="view-switch-button btn btn-primary active">
                       Summary View
                     </button>
-                    <button
-                      id="individualView"
-                      type="button"
-                      class="view-switch-button btn btn-primary"
-                    >
+                    <button id="individualView" type="button" class="view-switch-button btn btn-primary">
                       Individual Reviews
                     </button>
                   </div>
 
                   <div id="overallViewContainer" class="collapse show">
                     <div class="table-container">
-                      <table
-                        class="display"
-                        id="companyCountTable"
-                        style="width: 100%"
-                      >
+                      <table class="display" id="companyCountTable" style="width: 100%">
                         <thead>
                           <tr>
                             <th>Company</th>
@@ -355,11 +315,7 @@
                   <!-- The individual review container -->
                   <div id="individualViewContainer" class="collapse">
                     <div class="table-container">
-                      <table
-                        class="display"
-                        id="individualReviewTable"
-                        style="width: 100%"
-                      >
+                      <table class="display" id="individualReviewTable" style="width: 100%">
                         <thead>
                           <tr>
                             <th>Company</th>
@@ -376,84 +332,99 @@
                       </table>
                     </div>
                   </div>
-                </div>               
+                </div>
               </div>
 
-              <!-- Contact Information container-->
               <div id="contactViewContainer" class="collapse">
-                <!-- <div class = "table-container">
-                  <table class= "display" id="contactViewTable" style="width:100%">
-                    <thead>
-                      <tr>
-                        <th>Company</th>
-                        <th>Contact Information</th>
-                      </tr>
-                    </thead>
-                    <tbody id="contactViewBody"></tbody>
-                  </table>
-                </div> -->
-                <div id = "contact-card" class="flip-card">
-                  <div class="flip-card-inner">
-                    <div class="flip-card-front">
-                      <h1 id = "company-name" class="card-center">Microsoft</h1>
+                <div class="container">
+
+                  <div class="row">
+                    <div class="col">
+                      <div class="card">
+
+                      </div>
                     </div>
-                    <div class="flip-card-back">
-                      <h1>Linkedin</h1>
-                      <a href = "#linkedin-info" target="_blank"></a>
-                      <h1>Email</h1>
-                      <span id= "email-info"></span>
+
+                    <div class="col">
+                      <div class="card">
+
+                      </div>
+                    </div>
+
+                    <div class="col">
+                      <div class="card">
+
+                      </div>
                     </div>
                   </div>
+
+                  <div class="row">
+                    <div class="col">
+                      <div class="card"></div>
+
+                    </div>
+                  </div>
+
                 </div>
+
+                <table id="contactViewTable" style="width: 100%">
+
+                </table>
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
+  </div>
+  </div>
 
-    <div id="submitRatingViewContainer" class="panel-collapse collapse" data-parent="#containers">
-      <div class="container">
-    
-        <div style="margin-top:20px;">
-          <h1 class="section-headers">Submit Your Rating</h1>
-          <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfNbVQoo6_imVDuyeV3ZIurws5-6GGl2liFOagCl2alDoVN7w/viewform?embedded=true" width="100%"; height= 1000px; margin:auto; frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
-        </div>
+  <div id="submitRatingViewContainer" class="collapse">
+    <div class="container">
+      <div style="margin-top: 20px">
+        <h1 class="section-headers">Submit Your Rating</h1>
+
+        <iframe id="contactForm" onload="window.parent.scrollTo(0,0)" style="
+              z-index: 1;
+              display: block;
+              margin: auto;
+              margin-top: 15px;
+              width: 100%;
+              border: 0;
+            "
+          src="https://docs.google.com/forms/d/e/1FAIpQLSfNbVQoo6_imVDuyeV3ZIurws5-6GGl2liFOagCl2alDoVN7w/viewform?embedded=true"
+          height="900">
+        </iframe>
       </div>
     </div>
-    </div>
+  </div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/5.1.2/math.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/5.1.2/math.min.js"></script>
 
-    <script
-      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-      crossorigin="anonymous"
-    ></script>
-    <script src="//cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+  <script src="//cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js"></script>
 
-    <script src="js/libraries/raphael.js"></script>
-    <script src="js/libraries/usmap.js"></script>
+  <script src="js/libraries/raphael.js"></script>
+  <script src="js/libraries/usmap.js"></script>
 
-    <script src="js/data/getContactData.js"></script>
-    <script src="js/data/stateAbbreviations.js"></script>
-    <script src="js/data/getReviewData.js"></script>
-    <script src="js/data/stateFacts.js"></script>
+  <script src="js/data/getContactData.js"></script>
+  <script src="js/data/stateAbbreviations.js"></script>
+  <script src="js/data/getReviewData.js"></script>
+  <script src="js/data/stateFacts.js"></script>
 
-    <script src="js/job.js"></script>
-    <script src="js/view.js"></script>
-    <script src="js/parseAndCalcData.js"></script>
-    <script src="js/mapsAndTables.js"></script>
-  </body>
+  <script src="js/job.js"></script>
+  <script src="js/view.js"></script>
+  <script src="js/parseAndCalcData.js"></script>
+  <script src="js/mapsAndTables.js"></script>
+</body>
+
 </html>
