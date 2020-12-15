@@ -378,19 +378,21 @@
                   </div>
                 </div>
 
-            <div id="contactViewContainer" class="panel-collapse collapse">
-              <!-- <table id="contactViewTable" style="width:100%">
-              </table> -->
-              <div id = "contact-card" class="flip-card">
-                <div class="flip-card-inner">
-                  <div class="flip-card-front">
-                    <h1 id = "company-name" class="card-center">Microsoft</h1>
-                  </div>
-                  <div class="flip-card-back">
-                    <h1>Linkedin</h1>
-                    <a href = "#linkedin-info" target="_blank"></a>
-                    <h1>Email</h1>
-                    <span id= "email-info"></span>
+                <div id="contactViewContainer" class="panel-collapse collapse">
+                  <!-- <table id="contactViewTable" style="width:100%">
+                  </table> -->
+                  <div id = "contact-card" class="flip-card">
+                    <div class="flip-card-inner">
+                      <div class="flip-card-front">
+                        <h1 id = "company-name" class="card-center">Microsoft</h1>
+                      </div>
+                      <div class="flip-card-back">
+                        <h1>Linkedin</h1>
+                        <a href = "#linkedin-info" target="_blank"></a>
+                        <h1>Email</h1>
+                        <span id= "email-info"></span>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -399,29 +401,15 @@
         </div>
       </div>
     </div>
-    <div
-      id="submitRatingViewContainer"
-      class="collapse">
+    <div id="submitRatingViewContainer" class="panel-collapse collapse" data-parent="#containers">
       <div class="container">
-        <div style="margin-top: 20px">
+    
+        <div style="margin-top:20px;">
           <h1 class="section-headers">Submit Your Rating</h1>
-
-          <iframe
-            id="contactForm"
-            onload="window.parent.scrollTo(0,0)"
-            style="
-              display: block;
-              margin: auto;
-              margin-top: 15px;
-              width: 100%;
-              border: 0;
-            "
-            src="https://docs.google.com/forms/d/e/1FAIpQLSfNbVQoo6_imVDuyeV3ZIurws5-6GGl2liFOagCl2alDoVN7w/viewform?embedded=true"
-            height="900"
-          >
-          </iframe>
+          <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfNbVQoo6_imVDuyeV3ZIurws5-6GGl2liFOagCl2alDoVN7w/viewform?embedded=true" width="100%"; height= 1000px; margin:auto; frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
         </div>
       </div>
+    </div>
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
