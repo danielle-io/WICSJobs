@@ -286,3 +286,7 @@ html, body {
 	color: white;
 	transform: rotateY(180deg);
   }
+
+  .card-center{
+	margin-top: 70px;
+  }
