@@ -132,7 +132,7 @@ function generateCards() {
 
   for (var i in sorted_contact_array) {
 
-    var contactArray = sorted_contact_array[i].toString().replaceAll(',','\n');
+    var contactArray = sorted_contact_array[i].toString().replaceAll(',','<br>');
     
 
     // Source: https://www.w3schools.com/howto/howto_css_flip_card.asp
