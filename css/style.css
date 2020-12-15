@@ -9,7 +9,6 @@ body {
 	font-weight: 500;
 	font-size: 1em;
 	width: 70%;
-	overflow: wrap;
 	word-wrap: break-word;
 }
 
@@ -171,7 +170,7 @@ html, body {
 
 .table-container{
 	margin: 20px;
-	position: block;
+	display: block;
 }
 
 
