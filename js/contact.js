@@ -8,7 +8,7 @@ class Contact {
         // lowercase with first letter capital
         return this.companyName.charAt(0).toUpperCase() + this.companyName.slice(1);
     }
-    // Displays clickable linkedin link with icon on back of contact card
+    // Displays clickable Linkedin link with icon on back of contact card
     get convertLinkedInLink() {
         if (this.contactInfo.includes("linkedin")) {
             var splitText = this.contactInfo.split("/in/");

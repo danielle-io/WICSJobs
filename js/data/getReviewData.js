@@ -1,7 +1,7 @@
 function loadData() {
   return new Promise(function (resolve, reject) {
-    // TODO: extract contactInfo from summaries and create new table so that
-    // data is anonymous and can be included on github
+    // Reviews of different companies from Google Form 
+    // Data is anonymous
     var RAW_DATA = [
       {
         timestamp: "11/29/2020 18:50:14",

@@ -1,5 +1,6 @@
 function loadContactData() {
     return new Promise(function (resolve, reject) {
+      // Data of the contacts
       var RAW_CONTACT_DATA = [
         
             {
