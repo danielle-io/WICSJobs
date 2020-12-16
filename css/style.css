@@ -92,7 +92,7 @@ html, body {
   padding-bottom: 20px;
 }
 
-.move-shapes {
+.wave {
   margin-top: 1%;
   margin-left: 42%;
 }
@@ -342,7 +342,7 @@ a {
 
 .circle {
   height: 200px;
-  margin-left: 62%;
+  margin-left: 52%;
   /* top: 0px; */
 }
 
