@@ -26,10 +26,9 @@ body {
 .page-header {
   text-align: center;
   font-size: 4em;
-  font-family: "Poppins", sans-serif;
+  font-family: "Russo One";
   color: #98acf8;
   font-weight: 800;
-  font-size: 3.8em;
   position: fixed;
   left: 0;
   right: 0;
@@ -194,6 +193,10 @@ a {
 .table-container {
   margin: 20px;
   display: block;
+}
+
+.drawer-link{
+  font-weight: 500;
 }
 
 .active-link {
@@ -425,9 +428,8 @@ svg {
   }
 }
 
-.eighties {
-  font-family: "Russo One";
-  font-size: 1.4em;
+.hide-title {
+  display: none;
 }
 
 .purple-square {

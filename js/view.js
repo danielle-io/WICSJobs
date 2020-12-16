@@ -46,7 +46,6 @@ function changeTableView(itemId) {
 }
 
 function collapseAndExpandContainers(itemId, collapsedDrawer) {
-  // console.log(itemId);
   // Apply the active and inactive styling
   var items = ["aboutView", "sortAndContactView", "submitRatingView"];
 
@@ -65,7 +64,6 @@ function collapseAndExpandContainers(itemId, collapsedDrawer) {
   for (var i in items) {
     // Prevents code breaking if invalid items in loop
     var getIdName = items[i].split("View");
-    // console.log("#" + getIdName[0]);
     if (items[i] !== itemId) {
       // Remove active class from drawer link - get name by splitting
       $("#" + getIdName[0]).removeClass("active-link");
@@ -80,6 +78,7 @@ function collapseAndExpandContainers(itemId, collapsedDrawer) {
   }
   $("#" + itemId + "Container").addClass("show");
   $("#collapsingNavbar").removeClass("show");
+  $("#headingFont").removeClass("hide-title");
 }
 
 // Clicking a card opens up the relevant container
@@ -99,4 +98,13 @@ $(".card-button").on("click", function (event) {
 // Clicking link from drawer opens up the relevant container
 $(".drawer-link").on("click", function (event) {
   collapseAndExpandContainers(this.id, true);
+});
+
+// Clicking link from drawer opens up the relevant container
+$(".navbar-toggler").on("click", function (event) {
+  if ($("#collapsingNavbar")[0].classList.value.search("show")) {
+    $("#headingFont").addClass("hide-title");
+  } else {
+    $("#headingFont").removeClass("hide-title");
+  }
 });

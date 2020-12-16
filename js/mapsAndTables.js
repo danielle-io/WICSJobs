@@ -20,7 +20,6 @@ $(document).ready(function () {
     // Show the table
     var table = document.getElementById("stateInfoBody");
     for (i in stateJobs[state]) {
-      console.log(jobData[i]["averageOverallRating"]);
       var row = table.insertRow(-1);
       var cell1 = row.insertCell(0);
       var cell2 = row.insertCell(1);

@@ -3,7 +3,6 @@ var sorted_contact_array = {};
 
 function parseContactData(raw_contact_data) {
   if (raw_contact_data === undefined) {
-    console.log("undefined");
     return;
   }
 
@@ -12,7 +11,6 @@ function parseContactData(raw_contact_data) {
   });
 
   contact_array.forEach((element) => {
-    // console.log(element.convertLinkedInLink);
     element.convertLinkedInLink;
     if (element.companyName in sorted_contact_array) {
       sorted_contact_array[element.companyName].push(element.contactInfo);

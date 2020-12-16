@@ -12,7 +12,6 @@ class Contact {
     get convertLinkedInLink() {
         if (this.contactInfo.includes("linkedin")) {
             var splitText = this.contactInfo.split("/in/");
-            console.log(splitText);
             var linkAddress = splitText[1];
             this.contactInfo =
                 "<span><span class='iconify' data-icon='fa-linkedin' data-inline='true'></span>" +
