@@ -79,6 +79,7 @@ function collapseAndExpandContainers(itemId, collapsedDrawer) {
     }
   }
   $("#" + itemId + "Container").addClass("show");
+  $("#collapsingNavbar").removeClass("show");
 }
 
 // Clicking a card opens up the relevant container
