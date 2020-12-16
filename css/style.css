@@ -19,7 +19,7 @@ body {
   word-wrap: break-word;
 }
 
-.iconify{
+.iconify {
   margin-left: 5px;
 }
 
@@ -115,7 +115,6 @@ body {
   background-color: #fdcfdf;
 }
 
-
 /* The full expanded nav */
 
 @media (min-width: 768px) {
@@ -195,14 +194,13 @@ a {
   display: block;
 }
 
-.drawer-link{
+.drawer-link {
   font-weight: 500;
 }
 
 .active-link {
   color: #df87c1 !important;
 }
-
 
 .state-name {
   color: #b088f9;
@@ -261,7 +259,7 @@ a {
 
 .flip-card {
   height: 255px;
-  perspective: 1000px; 
+  perspective: 1000px;
   cursor: pointer;
 }
 
@@ -281,7 +279,7 @@ a {
   position: absolute;
   width: 100%;
   height: 100%;
-  -webkit-backface-visibility: hidden; 
+  -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
 }
 
@@ -295,7 +293,7 @@ a {
   color: white;
   transform: rotateY(180deg);
   padding-top: 20px;
-  font-size: .8em;
+  font-size: 0.8em;
   padding-left: 5px;
   word-break: break-all;
 }
@@ -310,6 +308,19 @@ a {
   word-wrap: break-word;
   overflow-wrap: break-word;
   white-space: normal;
+}
+
+.card-page-header {
+  /* padding: 10px; */
+  color: black;
+  margin-top: 5px;
+  font-family: "Poppins";
+  text-align: center;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  white-space: normal;
+  font-size: 1.5em;
+  font-weight: 200;
 }
 
 .card-center {
