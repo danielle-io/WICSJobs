@@ -302,7 +302,7 @@ a {
   color: white;
   transform: rotateY(180deg);
   padding-top: 20px;
-  font-size: .8em;
+  font-size: 0.8em;
   padding-left: 5px;
   word-break: break-all;
 }
@@ -317,6 +317,19 @@ a {
   word-wrap: break-word;
   overflow-wrap: break-word;
   white-space: normal;
+}
+
+.card-page-header {
+  /* padding: 10px; */
+  color: black;
+  margin-top: 5px;
+  font-family: "Poppins";
+  text-align: center;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  white-space: normal;
+  font-size: 1.5em;
+  font-weight: 200;
 }
 
 .card-center {

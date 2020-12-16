@@ -27,7 +27,7 @@ class Contact {
     } else {
       this.contactInfo =
         "<span class='iconify' data-icon='mdi-email' data-inline='true' style='margin-top: 2px; margin-right: 2px;'></span>" +
-        "<span style='margin-left: 20px;'>" +
+        "<span style='margin-left: 26px;'>" +
         this.contactInfo +
         "</span>";
     }
