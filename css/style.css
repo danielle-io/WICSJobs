@@ -58,7 +58,10 @@ html, body {
 }
 
 .section-headers {
+  color: #ce81d8;
+  font-size: 2em;
   text-align: center;
+  font-family: "Poppins";
 }
 
 .material-icons {
@@ -68,7 +71,6 @@ html, body {
 }
 
 .card {
-  /* display: none; */
   z-index: 1;
   margin: 1em auto;
   width: 80%;
@@ -91,8 +93,8 @@ html, body {
 }
 
 .move-shapes {
-  margin-top: 10%;
-  margin-left: -10px;
+  margin-top: 1%;
+  margin-left: 42%;
 }
 
 .card-button {
@@ -257,10 +259,6 @@ a {
   word-wrap: break-word;
 }
 
-.contact-card-container {
-
-}
-
 .wrapped-th {
   word-wrap: break-word;
   overflow-wrap: break-word;
@@ -295,7 +293,7 @@ a {
 }
 
 .card-front {
-  background-color: #b088f9;
+  background-color: #9074c3;
   color: black;
 }
 
@@ -390,16 +388,17 @@ svg {
 
 /* squigs animation */
 
-#squigs {
+#waves {
+  animation-iteration-count: 2;
   stroke-dasharray: 100;
-  /* animation: anim-squigs 2s linear infinite; */
+  animation: anim-waves 2s linear alternate;
 }
 
-/* @keyframes anim-squigs {
+@keyframes anim-waves {
   to {
     stroke-dashoffset: 200;
   }
-} */
+}
 
 #triangle {
   transform-origin: 25% 10%;
