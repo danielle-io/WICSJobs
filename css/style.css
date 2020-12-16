@@ -322,6 +322,7 @@ a {
 .card-page-header {
   /* padding: 10px; */
   color: black;
+  /* #ac74b3 */
   margin-top: 5px;
   font-family: "Poppins";
   text-align: center;
@@ -330,6 +331,7 @@ a {
   white-space: normal;
   font-size: 1.5em;
   font-weight: 200;
+  margin-bottom: 20px;
 }
 
 .card-center {
