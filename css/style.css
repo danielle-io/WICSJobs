@@ -1,6 +1,4 @@
 body {
-  /* background-color: #bce6eb; */
-  /* background-color: white; */
   font-family: "Roboto", sans-serif;
   font-weight: 300;
   background-color: pink;
@@ -16,6 +14,12 @@ html, body {
   font-size: 1em;
   width: 70%;
   word-wrap: break-word;
+}
+
+.instruction-text{
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  width: 90%;
 }
 
 .iconify {
