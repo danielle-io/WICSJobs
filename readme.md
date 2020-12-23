@@ -18,18 +18,16 @@ Then simply open index.html to view webpage.
 
 <h2>App Images</h2>
 <h3>Home Page Details</h3>
-<img src="/assets/images/app-images/WICSJobsHome.png">
+<img src="/assets/images/app_images/WICSJobsHome.png">
 
 <h3>Map View of Company Data</h3>
-<img src="/assets/images/app-images/WICSJobsMap.png">
+<img src="/assets/images/app_images/WICSJobsMap.png">
 
 <h3>Sort and Search Review Averages by Company</h3>
-<img src="/assets/images/app-images/WICSJobsSumTable.png">
-
-<h3>Sort and Search Individual Reviews</h3>
-<img src="/assets/images/app-images/WICSJobsIndTable.png">
-
+<img src="/assets/images/app_images/WICSJobsSumTable.png">
 
 <h2>Sources:</h2>
-- State abbreviation conversions via https://gist.github.com/mshafrir/2646763
-- State facts converted to .csv then exported as JSON from https://www.infoplease.com/us/states/fifty-states-and-fifty-fun-facts
+<ul>
+    <li>State abbreviation conversions via https://gist.github.com/mshafrir/2646763</li>
+    <li>State facts converted to .csv then exported as JSON from https://www.infoplease.com/us/states/fifty-states-and-fifty-fun-facts</li>
+</ul>
