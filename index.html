@@ -1,130 +1,167 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="author" content="Danielle Scott, Archita Ganesh" />
+    <meta name="description" content="WICS Jobs Experience Webpage" />
 
-<head>
-  <meta charset="utf-8" />
-  <meta name="author" content="Danielle Scott, Archita Ganesh" />
-  <meta name="description" content="WICS Jobs Experience Webpage" />
+    <link
+      href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+      integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="//cdn.datatables.net/1.10.22/css/jquery.dataTables.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Russo+One"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+    <title>WICS Jobs</title>
+  </head>
 
-  <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
-    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous" />
-  <link rel="stylesheet" href="css/style.css" />
-  <link rel="stylesheet" href="//cdn.datatables.net/1.10.22/css/jquery.dataTables.min.css" />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
-  <link href='https://fonts.googleapis.com/css?family=Russo+One' rel='stylesheet' type='text/css'>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
-  <title>WICS Jobs</title>
-</head>
+  <body>
+    <div class="background-image">
+      <div class="purple-square"></div>
+      <div class="blue-square"></div>
 
-<body>
-
-  <div class="fixed-top">
-    <svg width="600" height="600" fill="none" class="circle">
-      <circle id="yellowCircle" cx="300.5" cy="130.5" r="57.5" fill="#F9D276" />
-      <path id="triangle" d="M175.717 56.362l9.101 44.731-43.288-14.484 34.187-30.247z" fill="#BA6EA2" />
-    </svg>
-
-    <div class="row" style="justify-content: center;">
-      <div class="col-sm-10">
-
-        <header id="headingFont" class="page-header">
-          WICS Jobs
-        </header>
-
-        <nav class="nav navbar navbar-expand-md navbar-light">
-
+      <svg width="200" height="200" fill="none" class="wave shapes">
+        <g>
+          <path
+            id="waves"
+            d="M288.063 509.377c23.095 10.804 13.171-20.638 39.569-8.055 26.398 12.583 18.283-22.913 43.197-7.285m-80.735 31.564c23.095 10.805 13.171-20.638 39.569-8.055 26.397 12.583 18.282-22.912 43.196-7.284m-78.672 32.158c23.095 10.805 13.171-20.638 39.569-8.055 26.398 12.583 18.283-22.913 43.197-7.285"
+            stroke-width="5"
+            stroke-linecap="round"
+          />
+        </g>
+      </svg>
+    </div>
+    <div id="fixed-page-header" class="fixed-page-header">
+      <!-- TRIANGLE -->
+      <svg fill="none" class="triangle">
+        <path
+          id="triangle"
+          d="M121.717 -1.638l9.101 44.731-43.288-14.484 34.187-30.247z"
+          fill="#BA6EA2"
+        ></path>
+      </svg>
+      <div class="nav-container">
+        <nav class="nav navbar-expand-md navbar-light">
           <!-- Drawer view button -->
-          <button class="navbar-toggler" id="navToggler" type="button" data-toggle="collapse"
-            data-target="#collapsingNavbar">
+          <button
+            class="navbar-toggler"
+            id="navToggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#collapsingNavbar"
+          >
             <span class="navbar-toggler-icon"></span>
           </button>
 
-          <!-- Nav list for the drawer view -->
+          <!-- DRAWER VIEW-->
           <div class="collapse navbar-collapse" id="collapsingNavbar">
-            <ul class="nav">
-              <li id="about" class="nav-item drawer-link active-link">
-                <a>About & Summary</a>
-              </li>
-              <li id="sortAndContact" class="nav-item drawer-link">
-                <a>
-                  Browse Data
-                </a>
-              </li>
-              <li id="submitRating" class="nav-item drawer-link">
-                <a>
-                  Submit Rating
-                </a>
-              </li>
-            </ul>
-          </div>
-
-          <!-- Navbar for expanded window -->
-          <div style="padding-top: 80px;" class="nav-padding">
-
-            <div class="navbar-collapse collapse justify-content-center">
-              <ul class="nav justify-content-center">
-                <li class="nav-item">
-                  <div id="aboutView" class="card card-button">
-                    About & Summary
-                    <span class="nav-icons material-icons"> looks </span>
-                  </div>
+            <div>
+              <ul class="nav">
+                <li id="about" class="nav-item drawer-link active-link">
+                  <a>About & Summary</a>
                 </li>
-                <li class="nav-item">
-                  <div id="sortAndContactView" class="card card-button">
-                    Browse Data
-                    <span class="nav-icons material-icons">
-                      compare_arrows
-                    </span>
-                  </div>
+                <li id="sortAndContact" class="nav-item drawer-link">
+                  <a> Browse Data </a>
                 </li>
-                <li class="nav-item">
-                  <div id="submitRatingView" class="card card-button">
-                    Submit Rating
-                    <span class="nav-icons material-icons">
-                      done_outline
-                    </span>
-                  </div>
+                <li id="submitRating" class="nav-item drawer-link">
+                  <a> Submit Rating </a>
                 </li>
               </ul>
             </div>
+          </div>
+        </nav>
+      </div>
+      <span>
+        <header id="headingFont" class="text-header">WICS Jobs</header>
+      </span>
+
+      <!-- Navbar for expanded window -->
+      <div class="nav-padding">
+        <nav class="nav navbar-expand-md navbar-light">
+          <div class="navbar-collapse collapse">
+            <li class="nav-item">
+              <div id="aboutView" class="card card-button">
+                About & Summary
+                <span class="nav-icons material-icons"> looks </span>
+              </div>
+            </li>
+            <li class="nav-item">
+              <div id="sortAndContactView" class="card card-button">
+                Browse Data
+                <span class="nav-icons material-icons"> compare_arrows </span>
+              </div>
+            </li>
+            <li class="nav-item">
+              <div id="submitRatingView" class="card card-button">
+                Submit Rating
+                <span class="nav-icons material-icons"> done_outline </span>
+              </div>
+            </li>
+          </div>
         </nav>
       </div>
     </div>
-  </div>
 
-  <div class="background-image">
-    <div class="purple-square"></div>
-    <div class="blue-square"></div>
-
-    <svg width="600" height="600" fill="none" class="wave">
-      <g>
-        <path id="waves"
-          d="M390.063 509.377c23.095 10.804 13.171-20.638 39.569-8.055 26.398 12.583 18.283-22.913 43.197-7.285m-80.735 31.564c23.095 10.805 13.171-20.638 39.569-8.055 26.397 12.583 18.282-22.912 43.196-7.284m-78.672 32.158c23.095 10.805 13.171-20.638 39.569-8.055 26.398 12.583 18.283-22.913 43.197-7.285"
-          stroke="cornsilk" stroke-width="5" stroke-linecap="round" />
-      </g>
-    </svg>
-
-    <!-- Container for full page body-->
-    <div class="page-body container">
-
-      <div id="aboutViewContainer" class="collapse show">
-        <div class="section-margins-padding">
-          <div style="margin-bottom: 30px;">
+    <div class="page-body">
+      <!-- Container for full page body-->
+      <div class="container">
+        <div id="aboutViewContainer" class="collapse show">
+          <div class="section-margins-padding">
             <div class="card body-cards">
-
-              <div style="margin-top:15px; background-color: #b8daff; border-radius: 0.5em;">
-                <h1 style="margin-top: 10px; margin-left: 10px;">The Data</h1>
+              <div
+                style="
+                  margin-top: 15px;
+                  background-color: #b8daff;
+                  border-radius: 0.5em;
+                "
+              >
+                <h1 style="margin-top: 10px; margin-left: 10px">The Data</h1>
 
                 <div class="row">
                   <div class="col">
                     <div style="width: 100%">
-                      <table class="table-responsive align-middle summary-table" id="summaryResults">
+                      <table
+                        class="table-responsive align-middle summary-table"
+                        id="summaryResults"
+                      >
                         <tbody>
                           <tr>
                             <td colspan="2" class="summary-columns">
@@ -166,172 +203,215 @@
                   </div>
 
                   <div class="col" style="margin: auto; margin-right: 40px">
-                    <img src="./assets/images/anteatr.png" alt="WICS Anteater"
-                      style="float: right; width: 250px; height: 250px" />
+                    <img
+                      src="./assets/images/anteatr.png"
+                      alt="WICS Anteater"
+                      style="float: right; width: 250px; height: 250px"
+                    />
                   </div>
                 </div>
               </div>
             </div>
-          </div>
 
-          <div class="card body-cards">
-            <h1 style="margin-top: 10px; margin-left: 10px;">The Mission</h1>
-            <p>
-              The goal of this project was to create a tech job review system
-              that's more curated than what we see on Glassdoor and similar
-              websites. As members of Women in Information and Computer Sciences
-              (<a href="https://wics.ics.uci.edu/" target="_blank">WICS</a>) at
-              UCI, we have had the wonderful opportunity to be part of a
-              hard-working, supportive community, that we often lean on for
-              insight and advice when it comes to our career decisions. We
-              decided to create this webpage as a way to give back to the
-              organization that has done so much for us, by creating a single
-              space to gather peer-reviewed information about the experiences of
-              people like us. The experience of womxn at tech companies is going
-              to be unique in comparison to the general public, therefore
-              highlighting the importance of providing access to reviews
-              submitted primarily by womxn, and any committee members that
-              identify as our allies. An additional perk of this platform is the
-              ability to reach out to members that have worked in a company or
-              position of interest, with our provided contact section. We hope
-              that this collection of honest, anonymous reviews, paired with the
-              possibility of networking with a curent or former employee of
-              listed companies, will empower our fellow WICS members to make
-              informed career decisions.
-            </p>
-          </div>
+            <div class="card body-cards">
+              <h1 style="margin-top: 10px; margin-left: 10px">The Mission</h1>
+              <p>
+                The goal of this project was to create a tech job review system
+                that's more curated than what we see on Glassdoor and similar
+                websites. As members of Women in Information and Computer
+                Sciences (<a href="https://wics.ics.uci.edu/" target="_blank"
+                  >WICS</a
+                >) at UCI, we have had the wonderful opportunity to be part of a
+                hard-working, supportive community, that we often lean on for
+                insight and advice when it comes to our career decisions. We
+                decided to create this webpage as a way to give back to the
+                organization that has done so much for us, by creating a single
+                space to gather peer-reviewed information about the experiences
+                of people like us. The experience of womxn at tech companies is
+                going to be unique in comparison to the general public,
+                therefore highlighting the importance of providing access to
+                reviews submitted primarily by womxn, and any committee members
+                that identify as our allies. An additional perk of this platform
+                is the ability to reach out to members that have worked in a
+                company or position of interest, with our provided contact
+                section. We hope that this collection of honest, anonymous
+                reviews, paired with the possibility of networking with a curent
+                or former employee of listed companies, will empower our fellow
+                WICS members to make informed career decisions.
+              </p>
+            </div>
 
-          <div class="card body-cards">
-            <h1 style="margin-top: 10px; margin-left: 10px;">The Creators</h1>
-            <p>
-              Hi, we're Danielle and Archita, former WICS board and committee
-              members. We created this project just before graduating as a way
-              to do something for WICS that will allow us to continue
-              contributing and remain involved, no matter where life takes us.
-              Thanks for taking the time to check out what we've made!
-            </p>
+            <div class="card body-cards">
+              <h1 style="margin-top: 10px; margin-left: 10px">The Creators</h1>
+              <p>
+                Hi, we're Danielle and Archita, former WICS board and committee
+                members. We created this project just before graduating as a way
+                to do something for WICS that will allow us to continue
+                contributing and remain involved, no matter where life takes us.
+                Thanks for taking the time to check out what we've made!
+              </p>
+            </div>
           </div>
         </div>
-      </div>
 
-      <div id="sortAndContactViewContainer" class="collapse">
-        <div class="section-margins-padding">
-          <div class="row">
-            <div class="col-sm-2">
-              <div class="sidenav">
-                <a id="mapView" class="side-nav-item nav-link active-link">
-                  <span class="material-icons">place</span>Map</a>
-                <a id="summaryView" class="side-nav-item nav-link inactive-link">
-                  <span class="material-icons">table_rows</span>Table</a>
-                <a id="contactView" class="side-nav-item nav-link inactive-link contact-nav-link">
-                  <span class="material-icons">contact_page</span>Contact</a>
-              </div>
-            </div>
-
-            <div class="col-sm-10">
-              <div class="data-section-body" style="margin-right: 19%">
-                <!-- The map container -->
-                <div id="mapViewContainer" class="collapse show">
-                  <div class="card">
-                    <!-- Map image -->
-                    <div id="map" style="
-                        margin-top: 10px;
-                        width: 350px;
-                        height: 250px;
-                        margin: auto;
-                        margin-bottom: -10px;
-                      "></div>
-                  </div>
-
-                  <div class="card state-card">
-                    <div style="text-align: center; padding-top: 10px;">
-                      <div id="stateName" class="state-name"></div>
-                    </div>
-
-                    <div id="stateInfo">
-                      Click a state to see the summary data.<br />
-                      <small>States containing job data are pink in color, with
-                        level of contrast reflecting data amount.</small>
-                    </div>
-
-                    <table id="stateCompanyData" class="table-responsive align-middle state-table">
-                      <thead>
-                        <tr>
-                          <th class="wrapped-th">Company</th>
-                          <th class="wrapped-th">Review Count</th>
-                          <th class="wrapped-th">Overall Rating (Mean)</th>
-                        </tr>
-                      </thead>
-                      <tbody id="stateInfoBody"></tbody>
-                    </table>
-                  </div>
+        <div id="sortAndContactViewContainer" class="collapse">
+          <div class="section-margins-padding">
+            <div class="row">
+              <div class="col-sm-2">
+                <div class="sidenav">
+                  <a id="mapView" class="side-nav-item nav-link active-link">
+                    <span class="material-icons">place</span>Map</a
+                  >
+                  <a
+                    id="summaryView"
+                    class="side-nav-item nav-link inactive-link"
+                  >
+                    <span class="material-icons">table_rows</span>Table</a
+                  >
+                  <a
+                    id="contactView"
+                    class="side-nav-item nav-link inactive-link contact-nav-link"
+                  >
+                    <span class="material-icons">contact_page</span>Contact</a
+                  >
                 </div>
               </div>
 
-              <!-- The tables container -->
-              <div id="summaryViewContainer" class="collapse">
-                <div class="container" style="text-align: center; margin-right: 19%">
-                  <!-- Buttons to switch between summaries and individual reviews -->
-                  <div style="
-                      padding-top: 20px;
-                      text-align: center;
-                      margin-right: 16%;
-                    ">
-                    <button id="overallView" type="button" class="view-switch-button btn btn-primary active">
-                      Summary View
-                    </button>
-                    <button id="individualView" type="button" class="view-switch-button btn btn-primary">
-                      Individual Reviews
-                    </button>
-                  </div>
-
-                  <div id="overallViewContainer" class="collapse show">
-                    <div class="table-container">
-                      <table class="display" id="companyCountTable" style="width: 100%">
-                        <thead>
-                          <tr>
-                            <th>Company</th>
-                            <th>Review Count</th>
-                            <th>Overall Rating (Mean)</th>
-                            <th>Learning & Growth (Mean)</th>
-                            <th>Recomendation Rating (Mean)</th>
-                          </tr>
-                        </thead>
-                        <tbody id="companyCountBody"></tbody>
-                      </table>
+              <div class="col-sm-10">
+                <div class="data-section-body" style="margin-right: 19%">
+                  <!-- The map container -->
+                  <div id="mapViewContainer" class="collapse show">
+                    <div class="card">
+                      <!-- Map image -->
+                      <div
+                        id="map"
+                        style="
+                          margin-top: 10px;
+                          width: 380px;
+                          height: 270px;
+                          margin: auto;
+                          margin-bottom: -10px;
+                        "
+                      ></div>
                     </div>
-                  </div>
 
-                  <!-- The individual review container -->
-                  <div id="individualViewContainer" class="collapse">
-                    <div class="table-container">
-                      <table class="display" id="individualReviewTable" style="width: 100%">
+                    <div class="card state-card">
+                      <div style="text-align: center; padding-top: 10px">
+                        <div id="stateName" class="state-name"></div>
+                      </div>
+
+                      <div id="stateInfo">
+                        Click a state to see the summary data.<br />
+                        <small
+                          >States containing job data are pink in color, with
+                          level of contrast reflecting data amount.</small
+                        >
+                      </div>
+
+                      <table
+                        id="stateCompanyData"
+                        class="table-responsive align-middle state-table"
+                      >
                         <thead>
                           <tr>
-                            <th>Company</th>
-                            <th>Position</th>
-                            <th>Job Type</th>
-                            <th>Duration</th>
-                            <th>Overall Rating</th>
-                            <th>Learning & Growth</th>
-                            <th>Recomendation Rating</th>
-                            <th>Additional Details</th>
+                            <th class="wrapped-th">Company</th>
+                            <th class="wrapped-th">Review Count</th>
+                            <th class="wrapped-th">Overall Rating (Mean)</th>
                           </tr>
                         </thead>
-                        <tbody id="individualReviewBody"></tbody>
+                        <tbody id="stateInfoBody"></tbody>
                       </table>
                     </div>
                   </div>
                 </div>
-              </div>
 
-              <div id="contactViewContainer" class="collapse">
-                <div class="container table-container">
-                  <p class="instruction-text"> Flip the cards below to connect with previous/current WICS Committee
-                    members who have worked at that company.
-                  </p>
-                  <div id="card-container">
+                <!-- The tables container -->
+                <div id="summaryViewContainer" class="collapse">
+                  <div
+                    class="container"
+                    style="text-align: center; margin-right: 19%"
+                  >
+                    <!-- Buttons to switch between summaries and individual reviews -->
+                    <div
+                      style="
+                        padding-top: 20px;
+                        text-align: center;
+                        margin-right: 16%;
+                      "
+                    >
+                      <button
+                        id="overallView"
+                        type="button"
+                        class="view-switch-button btn btn-primary active"
+                      >
+                        Summary View
+                      </button>
+                      <button
+                        id="individualView"
+                        type="button"
+                        class="view-switch-button btn btn-primary"
+                      >
+                        Individual Reviews
+                      </button>
+                    </div>
 
+                    <div id="overallViewContainer" class="collapse show">
+                      <div class="table-container">
+                        <table
+                          class="display"
+                          id="companyCountTable"
+                          style="width: 100%"
+                        >
+                          <thead>
+                            <tr>
+                              <th>Company</th>
+                              <th>Review Count</th>
+                              <th>Overall Rating (Mean)</th>
+                              <th>Learning & Growth (Mean)</th>
+                              <th>Recomendation Rating (Mean)</th>
+                            </tr>
+                          </thead>
+                          <tbody id="companyCountBody"></tbody>
+                        </table>
+                      </div>
+                    </div>
+
+                    <!-- The individual review container -->
+                    <div id="individualViewContainer" class="collapse">
+                      <div class="contain-table">
+                        <div class="table-container">
+                          <table
+                            class="display"
+                            id="individualReviewTable"
+                            style="width: 50%"
+                          >
+                            <thead>
+                              <tr>
+                                <th>Company</th>
+                                <th>Position</th>
+                                <th>Job Type</th>
+                                <th>Duration</th>
+                                <th>Overall Rating</th>
+                                <th>Learning & Growth</th>
+                                <th>Recomendation Rating</th>
+                                <th>Additional Details</th>
+                              </tr>
+                            </thead>
+                            <tbody id="individualReviewBody"></tbody>
+                          </table>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div id="contactViewContainer" class="collapse">
+                  <div class="container table-container">
+                    <p class="instruction-text">
+                      Flip the cards below to connect with previous/current WICS
+                      Committee members who have worked at that company.
+                    </p>
+                    <div id="card-container"></div>
                   </div>
                 </div>
               </div>
@@ -339,59 +419,82 @@
           </div>
         </div>
       </div>
-    </div>
-  </div>
 
-  <div id="submitRatingViewContainer" class="collapse">
-    <div class="container" style="padding-bottom: 50px;">
-      <div style="margin-top: 20px; position: relative;">
-        <div class="section-headers">Submit Your Rating</div>
-
-        <iframe id="contactForm" onload="window.parent.scrollTo(0,0)" style="
-              z-index: 1;
-              display: block;
-              margin: auto;
-              margin-top: 15px;
-              width: 100%;
-              border: 0;
-            "
-          src="https://docs.google.com/forms/d/e/1FAIpQLSfNbVQoo6_imVDuyeV3ZIurws5-6GGl2liFOagCl2alDoVN7w/viewform?embedded=true"
-          height="900">
-        </iframe>
+      <div id="submitRatingViewContainer" class="collapse">
+        <div class="container" style="padding-bottom: 50px">
+          <div style="margin-top: 20px; position: relative">
+            <div class="section-headers">Submit Your Rating</div>
+            <iframe
+              id="contactForm"
+              onload="window.parent.scrollTo(0,0)"
+              style="
+                z-index: 1;
+                display: block;
+                margin: auto;
+                margin-top: 15px;
+                width: 100%;
+                border: 0;
+              "
+              src="https://docs.google.com/forms/d/e/1FAIpQLSfNbVQoo6_imVDuyeV3ZIurws5-6GGl2liFOagCl2alDoVN7w/viewform?embedded=true"
+              height="900"
+            >
+            </iframe>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/5.1.2/math.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/5.1.2/math.min.js"></script>
 
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-    crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-    crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-    crossorigin="anonymous"></script>
-  <script src="//cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+    <script src="//cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js"></script>
 
-  <script src="js/libraries/raphael.js"></script>
-  <script src="js/libraries/usmap.js"></script>
+    <script src="js/libraries/raphael.js"></script>
+    <script src="js/libraries/usmap.js"></script>
 
-  <script src="js/data/stateAbbreviations.js"></script>
-  <script src="js/data/getContactData.js"></script>
-  <script src="js/data/getReviewData.js"></script>
-  <script src="js/data/stateFacts.js"></script>
+    <script src="js/data/stateAbbreviations.js"></script>
+    <script src="js/data/getContactData.js"></script>
+    <script src="js/data/getReviewData.js"></script>
+    <script src="js/data/stateFacts.js"></script>
 
-  <script src="js/contact.js"></script>
-  <script src="js/job.js"></script>
-  <script src="js/view.js"></script>
-  <script src="js/parseAndCalcData.js"></script>
+    <script src="js/contact.js"></script>
+    <script src="js/job.js"></script>
+    <script src="js/view.js"></script>
+    <script src="js/parseAndCalcData.js"></script>
 
-  <script src="js/mapsAndTables.js"></script>
-  <script src="js/parseContactData.js"></script>
+    <script src="js/mapsAndTables.js"></script>
+    <script src="js/parseContactData.js"></script>
 
-</body>
+    <script>
+      window.onscroll = function () {
+        myFunction();
+      };
 
+      var header = document.getElementById("fixed-page-header");
+      var sticky = header.offsetTop;
+
+      function myFunction() {
+        if (window.pageYOffset > sticky) {
+          header.classList.add("sticky");
+        } else {
+          header.classList.remove("sticky");
+        }
+      }
+    </script>
+  </body>
 </html>
