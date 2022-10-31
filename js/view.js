@@ -1,16 +1,11 @@
 function collapseAndExpandInnerContainers(itemId) {
   // Apply the active and inactive styling
-  var containerId = "#" + itemId + "Containter";
   var items = document.getElementsByClassName("side-nav-item");
-
-  // window.parent.scrollTo(0, 0);
 
   // If everything is closed do not close the section
   if ($("#" + itemId).hasClass("active-link")) {
     return;
   }
-
-  window.scrollTo(0, 0);
 
   for (var item in items) {
     if (items[item].id !== itemId) {

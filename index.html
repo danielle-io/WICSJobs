@@ -278,59 +278,58 @@
               </div>
 
               <div class="col-sm-10">
-                <div class="data-section-body" style="margin-right: 19%">
+                <div class="data-section-body">
                   <!-- The map container -->
                   <div id="mapViewContainer" class="collapse show">
-                    <div class="card">
-                      <!-- Map image -->
-                      <div
-                        id="map"
-                        style="
-                          margin-top: 10px;
-                          width: 380px;
-                          height: 270px;
-                          margin: auto;
-                          margin-bottom: -10px;
-                        "
-                      ></div>
-                    </div>
-
-                    <div class="card state-card">
-                      <div style="text-align: center; padding-top: 10px">
-                        <div id="stateName" class="state-name"></div>
+                    <div style="margin-right: 21%">
+                      <div class="card">
+                        <!-- Map image -->
+                        <div
+                          id="map"
+                          style="
+                            margin-top: 10px;
+                            width: 380px;
+                            height: 270px;
+                            margin: auto;
+                            margin-bottom: -10px;
+                          "
+                        ></div>
                       </div>
 
-                      <div id="stateInfo">
-                        Click a state to see the summary data.<br />
-                        <small
-                          >States containing job data are pink in color, with
-                          level of contrast reflecting data amount.</small
+                      <div class="card state-card">
+                        <div style="text-align: center; padding-top: 10px">
+                          <div id="stateName" class="state-name"></div>
+                        </div>
+
+                        <div id="stateInfo">
+                          Click a state to see the summary data.<br />
+                          <small
+                            >States containing job data are pink in color, with
+                            level of contrast reflecting data amount.</small
+                          >
+                        </div>
+
+                        <table
+                          id="stateCompanyData"
+                          class="table-responsive align-middle state-table"
                         >
+                          <thead>
+                            <tr>
+                              <th class="wrapped-th">Company</th>
+                              <th class="wrapped-th">Review Count</th>
+                              <th class="wrapped-th">Overall Rating (Mean)</th>
+                            </tr>
+                          </thead>
+                          <tbody id="stateInfoBody"></tbody>
+                        </table>
                       </div>
-
-                      <table
-                        id="stateCompanyData"
-                        class="table-responsive align-middle state-table"
-                      >
-                        <thead>
-                          <tr>
-                            <th class="wrapped-th">Company</th>
-                            <th class="wrapped-th">Review Count</th>
-                            <th class="wrapped-th">Overall Rating (Mean)</th>
-                          </tr>
-                        </thead>
-                        <tbody id="stateInfoBody"></tbody>
-                      </table>
                     </div>
                   </div>
                 </div>
 
                 <!-- The tables container -->
                 <div id="summaryViewContainer" class="collapse">
-                  <div
-                    class="container"
-                    style="text-align: center; margin-right: 19%"
-                  >
+                  <div class="container" style="text-align: center">
                     <!-- Buttons to switch between summaries and individual reviews -->
                     <div
                       style="
@@ -355,24 +354,27 @@
                       </button>
                     </div>
 
+                    <!-- Summary view container -->
                     <div id="overallViewContainer" class="collapse show">
-                      <div class="table-container">
-                        <table
-                          class="display"
-                          id="companyCountTable"
-                          style="width: 100%"
-                        >
-                          <thead>
-                            <tr>
-                              <th>Company</th>
-                              <th>Review Count</th>
-                              <th>Overall Rating (Mean)</th>
-                              <th>Learning & Growth (Mean)</th>
-                              <th>Recomendation Rating (Mean)</th>
-                            </tr>
-                          </thead>
-                          <tbody id="companyCountBody"></tbody>
-                        </table>
+                      <div class="contain-table">
+                        <div class="table-container">
+                          <table
+                            class="display"
+                            id="companyCountTable"
+                            style="width: 100%"
+                          >
+                            <thead>
+                              <tr>
+                                <th>Company</th>
+                                <th>Review Count</th>
+                                <th>Overall Rating (Mean)</th>
+                                <th>Learning & Growth (Mean)</th>
+                                <th>Recomendation Rating (Mean)</th>
+                              </tr>
+                            </thead>
+                            <tbody id="companyCountBody"></tbody>
+                          </table>
+                        </div>
                       </div>
                     </div>
 
@@ -407,10 +409,12 @@
 
                 <div id="contactViewContainer" class="collapse">
                   <div class="container table-container">
-                    <p class="instruction-text">
-                      Flip the cards below to connect with previous/current WICS
-                      Committee members who have worked at that company.
-                    </p>
+                    <div style="width: 90%">
+                      <p class="instruction-text">
+                        Flip the cards below to connect with previous/current
+                        WICS Committee members who have worked at that company.
+                      </p>
+                    </div>
                     <div id="card-container"></div>
                   </div>
                 </div>
@@ -481,20 +485,8 @@
     <script src="js/parseContactData.js"></script>
 
     <script>
-      window.onscroll = function () {
-        myFunction();
-      };
-
       var header = document.getElementById("fixed-page-header");
       var sticky = header.offsetTop;
-
-      function myFunction() {
-        if (window.pageYOffset > sticky) {
-          header.classList.add("sticky");
-        } else {
-          header.classList.remove("sticky");
-        }
-      }
     </script>
   </body>
 </html>

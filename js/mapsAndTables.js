@@ -33,7 +33,6 @@ $(document).ready(function () {
 
   $("#map").usmap({
     stateSpecificStyles: stateColors,
-
     mouseoverState: {},
 
     // The display of states and job data upon clicking a state on the map
