@@ -35,7 +35,6 @@ body {
   padding-right: 1px;
   padding-left: 1px;
   scale: 300%;
-
 }
 
 .linked-in {
@@ -52,15 +51,12 @@ body {
 }
 
 .text-header {
-  /* justify-content: center; */
   line-height: 1;
   text-align: center;
   font-size: 4em;
   font-family: "Russo One";
   color: #98acf8;
   font-weight: 800;
-  /* left: 0;
-  right: 0; */
   margin-top: 2%;
   margin-bottom: 2px;
 }
@@ -178,7 +174,6 @@ body {
 }
 
 /* The full expanded nav */
-
 @media (min-width: 768px) {
   .collapsed-nav {
     display: -ms-flexbox !important;
@@ -202,7 +197,6 @@ body {
     height: 70px;
     border: 0px;
     font-size: 0.8em;
-    /* text-align: center; */
     justify-content: center;
   }
 }
@@ -213,10 +207,30 @@ a {
 
 /* Drawer is showing */
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
+
+  .navbar-toggler {
+    display: contents;
+  }
+  /* .collapsed-nav {
+    display: -ms-flexbox !important;
+    display: flex !important;
+    -ms-flex-preferred-size: auto;
+    flex-basis: auto;
+  } */
+  /* .navbar-expand-md .navbar-toggler {
+    display: contents;
+  } */
+  .drawer-link {
+    display: contents !important;
+  }
+  /* .nav {
+    display: none;
+  } */
+
 }
 
-
+/* Show icons - full screen */
 @media (max-width: 1092px) {
   .nav-icons {
     display: none !important;
@@ -234,7 +248,8 @@ a {
 }
 
 .table-container {
-  margin: 20px;
+  margin-top: 20px;
+  margin-right: 19%;
   display: block;
 }
 
@@ -391,11 +406,11 @@ a {
   background-size: cover;
 }
 
-.dataTable{
+.dataTable {
   width: 30%;
 }
 
-.shapes{
+.shapes {
   scale: 300%;
 }
 
