@@ -98,6 +98,9 @@ function populateIndividialReviewTable() {
   }
   $("#individualReviewTable").DataTable({
     order: [[1, "desc"]],
+ 
+    scrollX: 700,
+    scrollY: 700,
   });
 }
 

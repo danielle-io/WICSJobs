@@ -77,10 +77,6 @@ body {
   width: 100%;
 }
 
-td {
-  max-width: 80%;
-}
-
 .nav-container {
   margin-left: 1%;
   position: fixed;
