@@ -51,12 +51,12 @@ $(document).ready(function () {
 
         textString +=
           "We have no WICS data for this state yet <span class='material-icons'>sentiment_dissatisfied </span>" +
-          "<br><br>In the meantime, <b>here's a state fact for " +
+          "In the meantime, <b>here's a state fact for " +
           stateConversion.stateAbb +
           ": " +
           "<br><span class='state-facts'>" +
           fact.stateFact +
-          "</b></span><br><br><small>If you've worked in this state please submit your rating using our linked form under 'Submit Your Rating'!</snall>";
+          "</b></span><br><small>If you've worked in this state please submit your rating using our linked form under 'Submit Your Rating'!</snall>";
       }
 
       document.getElementById("stateName").innerHTML =
