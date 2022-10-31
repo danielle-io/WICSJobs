@@ -20,7 +20,7 @@ body {
 .instruction-text {
   font-family: "Roboto", sans-serif;
   font-weight: 300;
-  width: 90%;
+  width: 80%;
 }
 
 .contact-card-back {
@@ -75,6 +75,10 @@ body {
   position: fixed;
   top: 0;
   width: 100%;
+}
+
+td {
+  max-width: 80%;
 }
 
 .nav-container {
@@ -407,10 +411,6 @@ a {
 
 .background-image {
   background-size: cover;
-}
-
-.dataTable {
-  width: 30%;
 }
 
 .shapes {
