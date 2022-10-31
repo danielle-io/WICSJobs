@@ -224,6 +224,9 @@ a {
   .drawer-link {
     display: contents !important;
   }
+   .map-card{
+    overflow: scroll;
+  }
   /* .nav {
     display: none;
   } */
