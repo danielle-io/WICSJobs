@@ -1,4 +1,4 @@
-// Fill the states with jobs recorded with darker opacity based on amount of records
+// Fill states with darker opacity based on amount of records
 $(document).ready(function () {
   var stateColors = {};
   for (var i in stateJobs) {
@@ -98,7 +98,6 @@ function populateIndividialReviewTable() {
   }
   $("#individualReviewTable").DataTable({
     order: [[1, "desc"]],
- 
     scrollX: 700,
     scrollY: 700,
   });
@@ -106,7 +105,7 @@ function populateIndividialReviewTable() {
 
 function populateSummaryTable() {
   // Populate table
-  for (var i in jobData) {
+  for (let i in jobData) {
     var table = document.getElementById("companyCountBody");
     var row = table.insertRow(-1);
     var cell1 = row.insertCell(0);
@@ -131,7 +130,7 @@ function generateCards() {
 
   var counter = 3;
 
-  for (var i in sorted_contact_array) {
+  for (let i in sorted_contact_array) {
     var contactArray = sorted_contact_array[i]
       .toString()
       .replaceAll(",", "<br>");
