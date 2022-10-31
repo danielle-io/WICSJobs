@@ -154,6 +154,7 @@ body {
 
 .card-button:hover {
   box-shadow: 0 0 1em rgb(145, 140, 140) !important;
+  background-color: #dab4c18c;
 }
 
 .btn-primary:not(:disabled):not(.disabled).active,
