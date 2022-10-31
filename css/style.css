@@ -216,24 +216,12 @@ a {
   .navbar-toggler {
     display: contents;
   }
-  /* .collapsed-nav {
-    display: -ms-flexbox !important;
-    display: flex !important;
-    -ms-flex-preferred-size: auto;
-    flex-basis: auto;
-  } */
-  /* .navbar-expand-md .navbar-toggler {
-    display: contents;
-  } */
   .drawer-link {
     display: contents !important;
   }
    .map-card{
     overflow: scroll;
   }
-  /* .nav {
-    display: none;
-  } */
 
 }
 
@@ -291,7 +279,6 @@ a {
 }
 
 .section-margins-padding {
-  /* margin-top: 20px; */
   padding-top: 1%;
   padding-bottom: 30px;
 }
@@ -463,7 +450,6 @@ svg {
 }
 
 /* squigs animation */
-
 #waves {
   animation-iteration-count: 2;
   stroke-dasharray: 100;
